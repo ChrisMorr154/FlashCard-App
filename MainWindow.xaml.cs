@@ -1,7 +1,9 @@
-﻿using Microsoft.Win32;
+﻿using CsvHelper;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using System.Globalization;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
@@ -226,49 +228,49 @@ namespace FlashCardApp
                     command.ExecuteNonQuery();
                 }
 
-                string[] lines = File.ReadAllLines(csvFile);
+                string insert = @"
+            INSERT INTO FlashCards
+            (Question, Answer, Hint)
+            VALUES
+            (@Question, @Answer, @Hint);";
 
-                for (int i = 1; i < lines.Length; i++)
+                using (var command = new SQLiteCommand(insert, connection))
                 {
-                    string[] parts = lines[i].Split(',');
+                    command.Parameters.Add("@Question", System.Data.DbType.String);
+                    command.Parameters.Add("@Answer", System.Data.DbType.String);
+                    command.Parameters.Add("@Hint", System.Data.DbType.String);
 
-                    if (parts.Length < 3)
-                        continue;
-
-                    string question = parts[0];
-                    string answer = parts[1];
-                    string hint = parts[2];
-
-                    string insert = @"
-                        INSERT INTO FlashCards
-                        (Question, Answer, Hint)
-                        VALUES
-                        (@Question, @Answer, @Hint);";
-
-                    using (var command = new SQLiteCommand(insert, connection))
+                    using (var reader = new StreamReader(csvFile))
+                    using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
                     {
-                        command.Parameters.AddWithValue("@Question", question);
-                        command.Parameters.AddWithValue("@Answer", answer);
-                        command.Parameters.AddWithValue("@Hint", hint);
+                        var records = csv.GetRecords<FlashCard>();
 
-                        command.ExecuteNonQuery();
+                        foreach (var card in records)
+                        {
+                            command.Parameters["@Question"].Value = card.Question;
+                            command.Parameters["@Answer"].Value = card.Answer;
+                            command.Parameters["@Hint"].Value = card.Hint;
+
+                            command.ExecuteNonQuery();
+                        }
                     }
                 }
-                File.WriteAllText(
-                        Path.Combine(appFolder, "currentdeck.txt"),
-                        dbName);
-
-                flashCards.Clear();
-                currentCardIndex = 0;
-                isShowingAnswer = false;
-
-                LoadFlashCardsFromDatabase();
-                DisplayCard();
-
-                MessageBox.Show("CSV imported successfully!");
-
-                LoadDeckList();
             }
+
+            File.WriteAllText(
+                Path.Combine(appFolder, "currentdeck.txt"),
+                dbName);
+
+            flashCards.Clear();
+            currentCardIndex = 0;
+            isShowingAnswer = false;
+
+            LoadFlashCardsFromDatabase();
+            DisplayCard();
+
+            LoadDeckList();
+
+            MessageBox.Show("CSV imported successfully!");
         }
 
         private void ComboBoxDecks_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -352,7 +354,6 @@ namespace FlashCardApp
         public string? Hint { get; set; } = string.Empty;
     }
 
-
     public static class Extensions
     {
         private static Random rng = new Random();
@@ -369,5 +370,17 @@ namespace FlashCardApp
                 list[n] = value;
             }
         }
+
+        private void ButtonShuffle_Click(object sender, RoutedEventArgs e)
+        {
+            flashCards.Shuffle();
+
+            currentCardIndex = 0;
+            isShowingAnswer = false;
+
+            DisplayCard();
+        }
+
     }
+
 }

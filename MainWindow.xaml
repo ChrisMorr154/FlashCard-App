@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Flash Card App"
+        Title="Flash Cards"
         Height="450"
         Width="700"
         WindowStartupLocation="CenterScreen"
@@ -78,12 +78,14 @@
 
         <!-- Flashcard text -->
         <Style x:Key="FlashcardText"
-               TargetType="TextBlock">
+       TargetType="TextBlock">
 
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
             <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Margin" Value="10"/>
 
         </Style>
@@ -156,9 +158,10 @@
         <DockPanel Grid.Row="0"
                    Margin="0,0,0,12">
 
-            <TextBlock Text="Flash Cards"
+            <TextBlock Text="The Flash Card App"
                        FontSize="22"
                        FontWeight="Bold"
+                       HorizontalAlignment="Center"
                        Foreground="#111827"/>
 
         </DockPanel>
@@ -307,10 +310,15 @@
                                   Height="32"
                                   Margin="6,0,6,0"
                                   SelectionChanged="ComboBoxDecks_SelectionChanged"/>
-
-
                     </StackPanel>
 
+                    <Button
+                        Grid.Row="2"
+                        Content="Shuffle"
+                        Style="{StaticResource AnswerButton}"
+                        Width="100"
+                        Click="ButtonImportCards_Click"
+                        HorizontalAlignment="Center" Height="33"/>
 
 
 
