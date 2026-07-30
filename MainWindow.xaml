@@ -317,7 +317,7 @@
                         Content="Shuffle"
                         Style="{StaticResource AnswerButton}"
                         Width="100"
-                        Click="ButtonImportCards_Click"
+                        Click="ButtonShuffle_Click"
                         HorizontalAlignment="Center" Height="33"/>
 
 

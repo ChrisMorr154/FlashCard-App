@@ -345,6 +345,16 @@ namespace FlashCardApp
             var currentCard = flashCards[currentCardIndex];
             MessageBox.Show(currentCard.Hint, "Hint");
         }
+
+        private void ButtonShuffle_Click(object sender, RoutedEventArgs e)
+        {
+            flashCards.Shuffle();
+
+            currentCardIndex = 0;
+            isShowingAnswer = false;
+
+            DisplayCard();
+        }
     }
 
     public class FlashCard
@@ -369,16 +379,6 @@ namespace FlashCardApp
                 list[k] = list[n];
                 list[n] = value;
             }
-        }
-
-        private void ButtonShuffle_Click(object sender, RoutedEventArgs e)
-        {
-            flashCards.Shuffle();
-
-            currentCardIndex = 0;
-            isShowingAnswer = false;
-
-            DisplayCard();
         }
 
     }
