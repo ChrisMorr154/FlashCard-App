@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Flash Cards"
+        FontFamily="Arial"
+        FontSize="20"
         Height="450"
         Width="700"
         WindowStartupLocation="CenterScreen"
-        Background="#F4F6FB">
+        Background="#FAF8F3">
 
     <Window.Resources>
 
@@ -114,7 +116,7 @@
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="Background" Value="White"/>
             <Setter Property="Foreground" Value="White"/>
-            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Cursor" Value="Hand"/>
 
@@ -137,6 +139,15 @@
 
                 </Setter.Value>
             </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#D1D5DB"/>
+                </Trigger>
+
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#D1D5DB"/>
+                </Trigger>
+            </Style.Triggers>
 
         </Style>
 
@@ -144,7 +155,8 @@
     </Window.Resources>
 
 
-    <Grid Margin="20">
+    <Grid x:Name="MainContent" 
+        Margin="20">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -157,12 +169,6 @@
 
         <DockPanel Grid.Row="0"
                    Margin="0,0,0,12">
-
-            <TextBlock Text="The Flash Card App"
-                       FontSize="22"
-                       FontWeight="Bold"
-                       HorizontalAlignment="Center"
-                       Foreground="#111827"/>
 
         </DockPanel>
 
@@ -209,7 +215,7 @@
                             Background="#F9FAFB"
                             BorderBrush="#E5E7EB"
                             BorderThickness="1"
-                            Padding="20">
+                            Padding="20" Margin="0,0,0,133">
 
 
                         <TextBlock x:Name="TextBlockQuestionAnswer"
@@ -222,30 +228,41 @@
 
                     <!-- Bottom navigation -->
 
-                    <StackPanel Grid.Row="1"
+                    <StackPanel
                                 Orientation="Horizontal"
                                 HorizontalAlignment="Center"
-                                Margin="0,16,0,0">
+                                Margin="0,201,0,22">
 
 
                         <Button Content="Previous"
-                                Width="90"
-                                Style="{StaticResource SecondaryButton}"
+                                Width="100"
+                                Height="73"
+                                FontSize="20"
+                                Style="{StaticResource AnswerButton}"
                                 Click="ButtonPrevious_Click"/>
 
 
-                        <Button Content="Show Hint"
-                                Width="100"
-                                Style="{StaticResource SecondaryButton}"
-                                Click="ButtonHint_Click"/>
+                        <Button Width="100"
+                                Height="73"
+                                Style="{StaticResource AnswerButton}"
+                                Click="ButtonHint_Click"
+                                FontSize="20"
+                                FontFamily="Arial">
 
+                            <TextBlock TextAlignment="Center" FontWeight="Bold">
+                                Show
+                                <LineBreak/>
+                                Hint
+                            </TextBlock>
+
+                        </Button>
 
                         <Button Content="Next"
-                                Width="90"
-                                Style="{StaticResource SecondaryButton}"
+                                Width="100"
+                                Height="73"
+                                FontSize="20"
+                                Style="{StaticResource AnswerButton}"
                                 Click="ButtonNext_Click"/>
-
-
                     </StackPanel>
 
 
@@ -280,15 +297,45 @@
                     <!-- Import Button -->
 
                     <Button Grid.Row="0"
-                            Width="34"
-                            Height="34"
+                            Width="50"
+                            Height="50"
                             Style="{StaticResource ImportButton}"
                             Click="ButtonImportCards_Click"
-                            HorizontalAlignment="Left" Margin="176,0,0,0">
+                            HorizontalAlignment="Left" Margin="10,25,0,90" RenderTransformOrigin="0.467,-2.4">
 
-                        <Image Source="/assets/ImportIcon.png"
-                               Width="18"
-                               Height="18" RenderTransformOrigin="4.588,0.524"/>
+                        <Image Source="/assets/Import(dark).png"
+                               Width="30"
+                               Height="30" RenderTransformOrigin="4.588,0.524"/>
+
+                    </Button>
+
+                    <!-- shuffle Button -->
+                    <Button 
+                            Grid.Row="0"
+                            Width="50"
+                            Height="50"
+                            Style="{StaticResource ImportButton}"
+                            Click="ButtonShuffle_Click"
+                            HorizontalAlignment="Center" Margin="0,25,0,90">
+
+                        <Image Source="/assets/shuffle.png"
+                                Width="30"
+                                Height="30" RenderTransformOrigin="4.588,0.524"/>
+
+                    </Button>
+
+                    <!-- shuf Button -->
+                    <Button 
+                        Grid.Row="0"
+                        Width="50"
+                        Height="50"
+                        Style="{StaticResource ImportButton}"
+                        Click="ButtonShuffle_Click"
+                        HorizontalAlignment="Left" Margin="160,24,0,91">
+
+                        <Image Source="/assets/settings(dark).png"
+                               Width="30"
+                               Height="30" RenderTransformOrigin="4.588,0.524"/>
 
                     </Button>
 
@@ -296,11 +343,11 @@
 
                     <!-- Deck Selector -->
 
-                    <StackPanel Grid.Row="1"
-                                Margin="0,20,0,0">
+                    <StackPanel
+                                Margin="0,102,0,104" Grid.RowSpan="3">
 
 
-                        <TextBlock Text="Current Deck"
+                        <TextBlock Text="Decks"
                                    FontWeight="SemiBold"
                                    Foreground="#111827"
                                    Margin="6,0,0,5"/>
@@ -312,24 +359,13 @@
                                   SelectionChanged="ComboBoxDecks_SelectionChanged"/>
                     </StackPanel>
 
-                    <Button
-                        Grid.Row="2"
-                        Content="Shuffle"
-                        Style="{StaticResource AnswerButton}"
-                        Width="100"
-                        Click="ButtonShuffle_Click"
-                        HorizontalAlignment="Center" Height="33"/>
-
-
-
                     <!-- Show Answer Button -->
 
-                    <Button Grid.Row="3"
+                    <Button Grid.Row="2"
                             Content="Flip Card"
                             Style="{StaticResource AnswerButton}"
                             Click="ButtonAnswer_Click"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Bottom"/>
+                            HorizontalAlignment="Center" FontFamily="Arial" FontWeight="Bold" FontSize="20"/>
 
 
                 </Grid>
@@ -345,8 +381,8 @@
         <!-- Footer -->
 
         <TextBlock Grid.Row="2"
-                   Text="If this application helped you, please star the repository."
-                   FontSize="11"
+                   Text="Please support by starring the repository."
+                   FontSize="12"
                    Foreground="#6B7280"
                    Margin="2,12,2,0"
                    HorizontalAlignment="Center"/>

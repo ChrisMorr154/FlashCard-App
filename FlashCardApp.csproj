@@ -9,7 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="assets\import%28dark%29.png" />
     <None Remove="assets\ImportIcon.png" />
+    <None Remove="assets\settings%28dark%29.png" />
+    <None Remove="assets\settings.png" />
+    <None Remove="assets\shuffle.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,7 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="assets\import(dark).png" />
     <Resource Include="assets\ImportIcon.png" />
+    <Resource Include="assets\settings(dark).png" />
+    <Resource Include="assets\settings.png" />
+    <Resource Include="assets\shuffle.png" />
   </ItemGroup>
 
 </Project>
