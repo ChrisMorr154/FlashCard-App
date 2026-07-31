@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
+        ResizeMode="CanMinimize" 
         Title="Flash Cards"
         FontFamily="Arial"
         FontSize="20"
@@ -155,41 +156,41 @@
     </Window.Resources>
 
 
-    <Grid x:Name="MainContent" 
-        Margin="20">
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+    <Grid Margin="20">
 
 
-        <!-- Head -->
+        <Grid x:Name="MainContent">
 
-        <DockPanel Grid.Row="0"
-                   Margin="0,0,0,12">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-        </DockPanel>
 
+            <!-- Head -->
 
-
-        <!-- Main -->
-
-        <Grid Grid.Row="1">
-
-            <Grid.ColumnDefinitions>
-
-                <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="2*"/>
-
-            </Grid.ColumnDefinitions>
+            <DockPanel Grid.Row="0"
+                Margin="0,0,0,12"/>
 
 
 
-            <!-- LEFT PANEL -->
+            <!-- Main -->
 
-            <Border Grid.Column="0"
+            <Grid Grid.Row="1">
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="2*"/>
+
+                </Grid.ColumnDefinitions>
+
+
+
+                <!-- LEFT PANEL -->
+
+                <Border Grid.Column="0"
                     CornerRadius="14"
                     Background="White"
                     BorderBrush="#E5E7EB"
@@ -198,43 +199,43 @@
                     Margin="0,0,10,0">
 
 
-                <Grid>
+                    <Grid>
 
-                    <Grid.RowDefinitions>
+                        <Grid.RowDefinitions>
 
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
 
-                    </Grid.RowDefinitions>
+                        </Grid.RowDefinitions>
 
 
 
-                    <!-- Card -->
+                        <!-- Card -->
 
-                    <Border CornerRadius="12"
+                        <Border CornerRadius="12"
                             Background="#F9FAFB"
                             BorderBrush="#E5E7EB"
                             BorderThickness="1"
                             Padding="20" Margin="0,0,0,133">
 
 
-                        <TextBlock x:Name="TextBlockQuestionAnswer"
-                                   Style="{StaticResource FlashcardText}"/>
+                            <TextBlock x:Name="TextBlockQuestionAnswer"
+                                Style="{StaticResource FlashcardText}"/>
 
 
-                    </Border>
+                        </Border>
 
 
 
-                    <!-- Bottom navigation -->
+                        <!-- Bottom navigation -->
 
-                    <StackPanel
-                                Orientation="Horizontal"
-                                HorizontalAlignment="Center"
-                                Margin="0,201,0,22">
+                        <StackPanel
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="0,201,0,22">
 
 
-                        <Button Content="Previous"
+                            <Button Content="Previous"
                                 Width="100"
                                 Height="73"
                                 FontSize="20"
@@ -242,37 +243,33 @@
                                 Click="ButtonPrevious_Click"/>
 
 
-                        <Button Width="100"
+                            <Button Width="100"
                                 Height="73"
                                 Style="{StaticResource AnswerButton}"
                                 Click="ButtonHint_Click"
                                 FontSize="20"
                                 FontFamily="Arial">
 
-                            <TextBlock TextAlignment="Center" FontWeight="Bold">
-                                Show
-                                <LineBreak/>
-                                Hint
-                            </TextBlock>
+                                <TextBlock TextAlignment="Center" FontWeight="Bold"><Run Text="Show"/><LineBreak/><Run Text="Hint"/></TextBlock>
 
-                        </Button>
+                            </Button>
 
-                        <Button Content="Next"
+                            <Button Content="Next"
                                 Width="100"
                                 Height="73"
                                 FontSize="20"
                                 Style="{StaticResource AnswerButton}"
                                 Click="ButtonNext_Click"/>
-                    </StackPanel>
+                        </StackPanel>
 
 
-                </Grid>
+                    </Grid>
 
 
-            </Border>
-            <!-- RIGHT PANEL -->
+                </Border>
+                <!-- RIGHT PANEL -->
 
-            <Border Grid.Column="1"
+                <Border Grid.Column="1"
                     CornerRadius="14"
                     Background="White"
                     BorderBrush="#E5E7EB"
@@ -281,36 +278,36 @@
                     Margin="10,0,0,0">
 
 
-                <Grid>
+                    <Grid>
 
-                    <Grid.RowDefinitions>
+                        <Grid.RowDefinitions>
 
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
 
-                    </Grid.RowDefinitions>
+                        </Grid.RowDefinitions>
 
 
 
-                    <!-- Import Button -->
+                        <!-- Import Button -->
 
-                    <Button Grid.Row="0"
+                        <Button Grid.Row="0"
                             Width="50"
                             Height="50"
                             Style="{StaticResource ImportButton}"
                             Click="ButtonImportCards_Click"
                             HorizontalAlignment="Left" Margin="10,25,0,90" RenderTransformOrigin="0.467,-2.4">
 
-                        <Image Source="/assets/Import(dark).png"
-                               Width="30"
-                               Height="30" RenderTransformOrigin="4.588,0.524"/>
+                            <Image Source="/assets/Import(dark).png"
+                                Width="30"
+                                Height="30" RenderTransformOrigin="4.588,0.524"/>
 
-                    </Button>
+                        </Button>
 
-                    <!-- shuffle Button -->
-                    <Button 
+                        <!-- shuffle Button -->
+                        <Button 
                             Grid.Row="0"
                             Width="50"
                             Height="50"
@@ -318,74 +315,111 @@
                             Click="ButtonShuffle_Click"
                             HorizontalAlignment="Center" Margin="0,25,0,90">
 
-                        <Image Source="/assets/shuffle.png"
+                            <Image Source="/assets/shuffle.png"
                                 Width="30"
                                 Height="30" RenderTransformOrigin="4.588,0.524"/>
 
-                    </Button>
+                        </Button>
 
-                    <!-- shuf Button -->
-                    <Button 
-                        Grid.Row="0"
-                        Width="50"
-                        Height="50"
-                        Style="{StaticResource ImportButton}"
-                        Click="ButtonShuffle_Click"
-                        HorizontalAlignment="Left" Margin="160,24,0,91">
+                        <!-- settings Button -->
+                        <Button 
+                            Grid.Row="0"
+                            Width="50"
+                            Height="50"
+                            Style="{StaticResource ImportButton}"
+                            Click="ButtonSettings_Click"
+                            HorizontalAlignment="Left" Margin="160,24,0,91">
 
-                        <Image Source="/assets/settings(dark).png"
-                               Width="30"
-                               Height="30" RenderTransformOrigin="4.588,0.524"/>
+                            <Image Source="/assets/settings(dark).png"
+                                Width="30"
+                                Height="30" RenderTransformOrigin="4.588,0.524"/>
 
-                    </Button>
-
-
-
-                    <!-- Deck Selector -->
-
-                    <StackPanel
-                                Margin="0,102,0,104" Grid.RowSpan="3">
+                        </Button>
 
 
-                        <TextBlock Text="Decks"
-                                   FontWeight="SemiBold"
-                                   Foreground="#111827"
-                                   Margin="6,0,0,5"/>
+
+                        <!-- Deck Selector -->
+
+                        <StackPanel
+                            Margin="0,102,0,104" Grid.RowSpan="3">
 
 
-                        <ComboBox x:Name="ComboBoxDecks"
-                                  Height="32"
-                                  Margin="6,0,6,0"
-                                  SelectionChanged="ComboBoxDecks_SelectionChanged"/>
-                    </StackPanel>
+                            <TextBlock Text="Decks"
+                                FontWeight="SemiBold"
+                                Foreground="#111827"
+                                Margin="6,0,0,5"/>
 
-                    <!-- Show Answer Button -->
 
-                    <Button Grid.Row="2"
+                            <ComboBox x:Name="ComboBoxDecks"
+                                Height="32"
+                                Margin="6,0,6,0"
+                                SelectionChanged="ComboBoxDecks_SelectionChanged"/>
+                        </StackPanel>
+
+                        <!-- Show Answer Button -->
+
+                        <Button Grid.Row="2"
                             Content="Flip Card"
                             Style="{StaticResource AnswerButton}"
                             Click="ButtonAnswer_Click"
                             HorizontalAlignment="Center" FontFamily="Arial" FontWeight="Bold" FontSize="20"/>
 
 
-                </Grid>
+                    </Grid>
 
 
-            </Border>
+                </Border>
+
+
+            </Grid>
+
+
+
+            <!-- Footer -->
+
+            <TextBlock Grid.Row="2"
+                Text="Please support by starring the repository."
+                FontSize="12"
+                Foreground="#6B7280"
+                Margin="2,12,2,0"
+                HorizontalAlignment="Center"/>
 
 
         </Grid>
 
+        <Grid x:Name="Overlay"
+          Background="#66000000"
+          Visibility="Collapsed"/>
 
+        <!-- setting slide panel -->
+        <Border x:Name="SettingsPanel"
+            Width="320"
+            HorizontalAlignment="Left"
+            Background="White"
+            BorderBrush="#E5E7EB"
+            BorderThickness="1"
+            Padding="20" Margin="360,0,0,0">
 
-        <!-- Footer -->
+            <Border.RenderTransform>
+                <TranslateTransform
+                x:Name="SettingsTransform"
+                X="320"/>
+            </Border.RenderTransform>
 
-        <TextBlock Grid.Row="2"
-                   Text="Please support by starring the repository."
-                   FontSize="12"
-                   Foreground="#6B7280"
-                   Margin="2,12,2,0"
-                   HorizontalAlignment="Center"/>
+            <StackPanel>
+
+                <TextBlock Text="Settings"
+                       FontSize="22"
+                       FontWeight="SemiBold"
+                       Margin="0,0,0,20"/>
+
+                <Button Content="Close"
+                    Width="100"
+                    Click="CloseSettings_Click"/>
+
+            </StackPanel>
+
+        </Border>
 
 
     </Grid>

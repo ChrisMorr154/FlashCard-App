@@ -7,6 +7,8 @@ using System.Globalization;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Media.Animation;
 
 namespace FlashCardApp
 {
@@ -127,6 +129,50 @@ namespace FlashCardApp
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        //settings
+        private bool settingsOpen = false;
+
+        private void ButtonSettings_Click(object sender, RoutedEventArgs e)
+        {
+            DoubleAnimation animation = new DoubleAnimation
+            {
+                Duration = TimeSpan.FromMilliseconds(250),
+                EasingFunction = new CubicEase
+                {
+                    EasingMode = EasingMode.EaseOut
+                }
+            };
+
+            if (!settingsOpen)
+            {
+                Overlay.Visibility = Visibility.Visible;
+
+                animation.From = 320;
+                animation.To = 0;
+            }
+            else
+            {
+                animation.From = 0;
+                animation.To = 320;
+
+                animation.Completed += (s, a) =>
+                {
+                    Overlay.Visibility = Visibility.Collapsed;
+                };
+            }
+
+            SettingsTransform.BeginAnimation(
+                TranslateTransform.XProperty,
+                animation);
+
+            settingsOpen = !settingsOpen;
+        }
+
+        private void CloseSettings_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonSettings_Click(sender, e);
         }
 
         private void ButtonImportCards_Click(object sender, RoutedEventArgs e)
