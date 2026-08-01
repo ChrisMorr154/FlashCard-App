@@ -32,7 +32,7 @@ namespace FlashCardApp
             }
             else
             {
-                TextBlockQuestionAnswer.Text = "Cards: \n\n(EMPTY).";
+                Card.Text = "Cards: \n\n(EMPTY).";
             }
         }
 
@@ -357,11 +357,11 @@ namespace FlashCardApp
 
             if (isShowingAnswer)
             {
-                TextBlockQuestionAnswer.Text = currentCard.Answer;
+                Card.Text = currentCard.Answer;
             }
             else
             {
-                TextBlockQuestionAnswer.Text = currentCard.Question;
+                Card.Text = currentCard.Question;
             }
         }
 
@@ -390,6 +390,75 @@ namespace FlashCardApp
         {
             var currentCard = flashCards[currentCardIndex];
             MessageBox.Show(currentCard.Hint, "Hint");
+        }
+
+        private bool darkMode = false;
+
+        private void ButtonLight_Click(object sender, RoutedEventArgs e)
+        {
+            darkMode = false;
+            LightToggle.FontSize = 18;
+            LightToggle.FontWeight = FontWeights.Bold;
+            LightToggle.Opacity = 1;
+            DarkToggle.FontSize = 15;
+            DarkToggle.FontWeight = FontWeights.Normal;
+            DarkToggle.Opacity = 0.55;
+
+            Background = Brushes.WhiteSmoke;
+
+            LeftPanel.Background = Brushes.White;
+            RightPanel.Background = Brushes.White;
+
+            RealCard.Background = new SolidColorBrush(Color.FromRgb(249, 250, 251));
+            RealCard.BorderBrush = new SolidColorBrush(Color.FromRgb(229, 231, 235));
+            SettingsPanel.Background = new SolidColorBrush(Color.FromRgb(249, 250, 251));
+            ImportBorder.Style = (Style)FindResource("ImportButton");
+            ShuffleBorder.Style = (Style)FindResource("ImportButton");
+            SettingBorder.Style = (Style)FindResource("ImportButton");
+            ComboBoxDecks.Background = Brushes.White;
+            Card.Foreground = Brushes.Black;
+            ComboBoxDecks.Foreground = Brushes.Black;
+
+            DeckSelect.Background = Brushes.White;
+        }
+
+        private void ButtonDark_Click(object sender, RoutedEventArgs e)
+        {
+            darkMode = true;
+
+            // Toggle appearance
+            DarkToggle.FontSize = 18;
+            DarkToggle.FontWeight = FontWeights.Bold;
+            DarkToggle.Opacity = 1;
+
+            LightToggle.FontSize = 15;
+            LightToggle.FontWeight = FontWeights.Normal;
+            LightToggle.Opacity = 0.55;
+
+            // Window
+            Background = Brushes.Black;
+
+            // Panels
+            LeftPanel.Background = new SolidColorBrush(Color.FromRgb(30, 41, 59));
+            RightPanel.Background = new SolidColorBrush(Color.FromRgb(30, 41, 59));
+
+            // Card
+            RealCard.Background = new SolidColorBrush(Color.FromRgb(51, 65, 85));
+            RealCard.BorderBrush = new SolidColorBrush(Color.FromRgb(71, 85, 105));
+            DeckSelect.Background = new SolidColorBrush(Color.FromRgb(30, 41, 59));
+
+            // Buttons
+            ImportBorder.Style = (Style)FindResource("DarkImportButton");
+            ShuffleBorder.Style = (Style)FindResource("DarkImportButton");
+            SettingBorder.Style = (Style)FindResource("DarkImportButton");
+
+            // Text colors
+            Card.Foreground = Brushes.White;
+            ComboBoxDecks.Foreground = Brushes.White;
+            SettingsPanel.Background = new SolidColorBrush(Color.FromRgb(30, 41, 59));
+            SettingsPanel.BorderBrush = new SolidColorBrush(Color.FromRgb(71, 85, 105));
+            ComboBoxDecks.Background = Brushes.Black;
+            DropDownName.Foreground = Brushes.White;
         }
 
         private void ButtonShuffle_Click(object sender, RoutedEventArgs e)

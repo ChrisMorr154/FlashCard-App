@@ -78,6 +78,181 @@
 
         </Style>
 
+        <!-- Dark primary button -->
+        <Style x:Key="DarkPrimaryButton" TargetType="Button">
+            <Setter Property="Margin" Value="6"/>
+            <Setter Property="Padding" Value="10,6"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="#334155"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#475569"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Cursor" Value="Hand"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+
+                        <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="8">
+
+                            <ContentPresenter
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+
+                        </Border>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+
+            <Style.Triggers>
+
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#475569"/>
+                </Trigger>
+
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#64748B"/>
+                </Trigger>
+
+            </Style.Triggers>
+
+        </Style>
+
+        <Style x:Key="DarkImportButton"
+       TargetType="Button">
+
+            <Setter Property="Width" Value="22"/>
+            <Setter Property="Height" Value="22"/>
+            <Setter Property="Background" Value="Gray"/>
+            <Setter Property="BorderBrush" Value="#64748B"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Cursor" Value="Hand"/>
+
+
+            <Setter Property="Template">
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="Button">
+
+                        <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="21">
+
+                            <ContentPresenter
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+
+                        </Border>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+
+
+            <Style.Triggers>
+
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#334155"/>
+                </Trigger>
+
+
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#475569"/>
+                </Trigger>
+
+
+            </Style.Triggers>
+
+        </Style>
+
+        <Style x:Key="DropDownBox" TargetType="ComboBox">
+            <Setter Property="Background" Value="#F3F4F6"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="#D1D5DB"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="8,4"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <Border x:Name="Border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="4">
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="30"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <ContentPresenter
+                                Margin="8,0,0,0"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                                Content="{TemplateBinding SelectionBoxItem}"/>
+
+                                    <ToggleButton
+                                Grid.Column="1"
+                                Focusable="False"
+                                IsChecked="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}">
+                                        <TextBlock Text="▼"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"/>
+                                    </ToggleButton>
+                                </Grid>
+                            </Border>
+
+                            <Popup
+                        IsOpen="{TemplateBinding IsDropDownOpen}"
+                        Placement="Bottom"
+                        AllowsTransparency="True"
+                        Focusable="False">
+
+                                <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="1">
+
+                                    <ScrollViewer>
+                                        <StackPanel IsItemsHost="True"/>
+                                    </ScrollViewer>
+
+                                </Border>
+
+                            </Popup>
+                        </Grid>
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border"
+                                Property="Background"
+                                Value="SlateGray"/>
+                            </Trigger>
+
+                            <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                                <Setter TargetName="Border"
+                                Property="BorderBrush"
+                                Value="#3B82F6"/>
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
 
         <!-- Flashcard text -->
         <Style x:Key="FlashcardText"
@@ -190,7 +365,9 @@
 
                 <!-- LEFT PANEL -->
 
-                <Border Grid.Column="0"
+                <Border 
+                    x:Name="LeftPanel"
+                    Grid.Column="0"
                     CornerRadius="14"
                     Background="White"
                     BorderBrush="#E5E7EB"
@@ -212,14 +389,16 @@
 
                         <!-- Card -->
 
-                        <Border CornerRadius="12"
+                        <Border 
+                            x:Name="RealCard"
+                            CornerRadius="12"
                             Background="#F9FAFB"
                             BorderBrush="#E5E7EB"
                             BorderThickness="1"
                             Padding="20" Margin="0,0,0,133">
 
 
-                            <TextBlock x:Name="TextBlockQuestionAnswer"
+                            <TextBlock x:Name="Card"
                                 Style="{StaticResource FlashcardText}"/>
 
 
@@ -237,7 +416,7 @@
 
                             <Button Content="Previous"
                                 Width="100"
-                                Height="73"
+                                Height="58"
                                 FontSize="20"
                                 Style="{StaticResource AnswerButton}"
                                 Click="ButtonPrevious_Click"/>
@@ -256,7 +435,7 @@
 
                             <Button Content="Next"
                                 Width="100"
-                                Height="73"
+                                Height="58"
                                 FontSize="20"
                                 Style="{StaticResource AnswerButton}"
                                 Click="ButtonNext_Click"/>
@@ -269,7 +448,9 @@
                 </Border>
                 <!-- RIGHT PANEL -->
 
-                <Border Grid.Column="1"
+                <Border 
+                    x:Name="RightPanel"
+                    Grid.Column="1"
                     CornerRadius="14"
                     Background="White"
                     BorderBrush="#E5E7EB"
@@ -293,7 +474,9 @@
 
                         <!-- Import Button -->
 
-                        <Button Grid.Row="0"
+                        <Button 
+                            x:Name="ImportBorder"
+                            Grid.Row="0"
                             Width="50"
                             Height="50"
                             Style="{StaticResource ImportButton}"
@@ -308,12 +491,13 @@
 
                         <!-- shuffle Button -->
                         <Button 
+                            x:Name="ShuffleBorder"
                             Grid.Row="0"
                             Width="50"
                             Height="50"
                             Style="{StaticResource ImportButton}"
                             Click="ButtonShuffle_Click"
-                            HorizontalAlignment="Center" Margin="0,25,0,90">
+                            HorizontalAlignment="Center" Margin="0,25,0,90" RenderTransformOrigin="-0.06,0.481">
 
                             <Image Source="/assets/shuffle.png"
                                 Width="30"
@@ -323,6 +507,7 @@
 
                         <!-- settings Button -->
                         <Button 
+                            x:Name="SettingBorder"
                             Grid.Row="0"
                             Width="50"
                             Height="50"
@@ -339,25 +524,33 @@
 
 
                         <!-- Deck Selector -->
-
                         <StackPanel
+                            x:Name="DeckSelect"
                             Margin="0,102,0,104" Grid.RowSpan="3">
-
-
-                            <TextBlock Text="Decks"
+                            <TextBlock 
+                                x:Name="DropDownName"
+                                Text="Decks"
                                 FontWeight="SemiBold"
-                                Foreground="#111827"
+                                Foreground="Black"
                                 Margin="6,0,0,5"/>
-
-
-                            <ComboBox x:Name="ComboBoxDecks"
-                                Height="32"
+                            <ComboBox 
+                                x:Name="ComboBoxDecks"
+                                Style="{StaticResource DropDownBox}"
+                                Height="25"
                                 Margin="6,0,6,0"
-                                SelectionChanged="ComboBoxDecks_SelectionChanged"/>
+                                SelectionChanged="ComboBoxDecks_SelectionChanged" FontWeight="Bold" Opacity="1.5">
+                                <ComboBox.Background>
+                                    <LinearGradientBrush EndPoint="0,1">
+                                        <GradientStop Color="White"/>
+                                    </LinearGradientBrush>
+                                </ComboBox.Background>
+                                <ComboBox.Effect>
+                                    <DropShadowEffect/>
+                                </ComboBox.Effect>
+                            </ComboBox>
                         </StackPanel>
 
                         <!-- Show Answer Button -->
-
                         <Button Grid.Row="2"
                             Content="Flip Card"
                             Style="{StaticResource AnswerButton}"
@@ -413,9 +606,69 @@
                        FontWeight="SemiBold"
                        Margin="0,0,0,20"/>
 
+                <Border Width="220"
+                        Height="45"
+                        CornerRadius="12"
+                        Background="#E8EEF2"
+                        BorderBrush="#B7C8D6"
+                        BorderThickness="1"
+                        Margin="0,10">
+
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Divider -->
+                        <Border Grid.Column="1"
+                                Width="1"
+                                Background="#B7C8D6"
+                                HorizontalAlignment="Left"/>
+
+                        <!-- Light -->
+                        <Button x:Name="ButtonLight"
+                                Grid.Column="0"
+                                Click="ButtonLight_Click"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Cursor="Hand">
+
+                            <TextBlock x:Name="LightToggle"
+                                       Text="Light"
+                                       FontSize="18"
+                                       FontWeight="Bold"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Foreground="black"/>
+                        </Button>
+
+                        <!-- Dark -->
+                        <Button x:Name="ButtonDark"
+                                Grid.Column="1"
+                                Click="ButtonDark_Click"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Cursor="Hand">
+
+                            <TextBlock x:Name="DarkToggle"
+                                       Text="Dark"
+                                       FontSize="15"
+                                       FontWeight="Normal"
+                                       Opacity="0.55"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Foreground="Black"/>
+                        </Button>
+
+                    </Grid>
+
+                </Border>
+
                 <Button Content="Close"
-                    Width="100"
-                    Click="CloseSettings_Click"/>
+                        Width="100"
+                        Click="CloseSettings_Click"/>
 
             </StackPanel>
 
