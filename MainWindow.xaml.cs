@@ -366,24 +366,32 @@ namespace FlashCardApp
         }
 
 
-        private void ButtonAnswer_Click(object sender, RoutedEventArgs e)
+        private async void ButtonAnswer_Click(object sender, RoutedEventArgs e)
         {
             isShowingAnswer = !isShowingAnswer;
-            DisplayCard();
+
+            var current = flashCards[currentCardIndex];
+
+            await FlipCardAni(
+                isShowingAnswer
+                    ? current.Answer
+                    : current.Question);
         }
 
-        private void ButtonNext_Click(object sender, RoutedEventArgs e)
+        private async void ButtonNext_Click(object sender, RoutedEventArgs e)
         {
             currentCardIndex = (currentCardIndex + 1) % flashCards.Count;
             isShowingAnswer = false;
-            DisplayCard();
+
+            await FlipCardAni(flashCards[currentCardIndex].Question);
         }
 
-        private void ButtonPrevious_Click(object sender, RoutedEventArgs e)
+        private async void ButtonPrevious_Click(object sender, RoutedEventArgs e)
         {
             currentCardIndex = (currentCardIndex - 1 + flashCards.Count) % flashCards.Count;
             isShowingAnswer = false;
-            DisplayCard();
+
+            await FlipCardAni(flashCards[currentCardIndex].Question);
         }
 
         private void ButtonHint_Click(object sender, RoutedEventArgs e)
@@ -470,6 +478,49 @@ namespace FlashCardApp
 
             DisplayCard();
         }
+
+        private async Task FlipCardAni(string newText)
+        {
+            var hide = new DoubleAnimation
+            {
+                To = 0,
+                Duration = TimeSpan.FromMilliseconds(150),
+                EasingFunction = new CubicEase
+                {
+                    EasingMode = EasingMode.EaseIn
+                }
+            };
+
+            var tcs = new TaskCompletionSource<bool>();
+
+            hide.Completed += (s, e) =>
+            {
+                Card.Text = newText;
+                tcs.SetResult(true);
+            };
+
+            CardFlip.BeginAnimation(
+                ScaleTransform.ScaleXProperty,
+                hide);
+
+            await tcs.Task;
+
+
+            var show = new DoubleAnimation
+            {
+                To = 1,
+                Duration = TimeSpan.FromMilliseconds(150),
+                EasingFunction = new CubicEase
+                {
+                    EasingMode = EasingMode.EaseOut
+                }
+            };
+
+            CardFlip.BeginAnimation(
+                ScaleTransform.ScaleXProperty,
+                show);
+        }
+
     }
 
     public class FlashCard
@@ -497,5 +548,4 @@ namespace FlashCardApp
         }
 
     }
-
 }

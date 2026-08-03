@@ -172,6 +172,52 @@
 
         </Style>
 
+        <!-- Styles for drop down toggle button -->
+        <Style x:Key="CustomToggle" TargetType="ToggleButton">
+
+            <Setter Property="Background" Value="#3B82F6"/>
+            <Setter Property="Foreground" Value="#111827"/>
+            <Setter Property="BorderBrush" Value="#D1D5DB"/>
+            <Setter Property="BorderThickness" Value="1"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToggleButton">
+
+                        <Border x:Name="Border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="10">
+
+                            <ContentPresenter
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border"
+                                Property="Background"
+                                Value="#E5E7EB"/>
+                            </Trigger>
+
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border"
+                                Property="Background"
+                                Value="#D1D5DB"/>
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+
         <Style x:Key="DropDownBox" TargetType="ComboBox">
             <Setter Property="Background" Value="#F3F4F6"/>
             <Setter Property="Foreground" Value="Black"/>
@@ -187,12 +233,12 @@
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="4">
+                            CornerRadius="10">
 
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition/>
-                                        <ColumnDefinition Width="30"/>
+                                        <ColumnDefinition Width="35"/>
                                     </Grid.ColumnDefinitions>
 
                                     <ContentPresenter
@@ -204,6 +250,7 @@
                                     <ToggleButton
                                 Grid.Column="1"
                                 Focusable="False"
+                                Style="{StaticResource CustomToggle}"
                                 IsChecked="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}">
                                         <TextBlock Text="▼"
                                            HorizontalAlignment="Center"
@@ -252,7 +299,6 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
 
         <!-- Flashcard text -->
         <Style x:Key="FlashcardText"
@@ -373,7 +419,7 @@
                     BorderBrush="#E5E7EB"
                     BorderThickness="1"
                     Padding="20"
-                    Margin="0,0,10,0">
+                    Margin="0,0,10,-20">
 
 
                     <Grid>
@@ -395,7 +441,15 @@
                             Background="#F9FAFB"
                             BorderBrush="#E5E7EB"
                             BorderThickness="1"
-                            Padding="20" Margin="0,0,0,133">
+                            Padding="20" Margin="0,0,0,133"
+                            RenderTransformOrigin="0.5,0.5">
+                            <Border.Effect>
+                                <DropShadowEffect/>
+                            </Border.Effect>
+
+                            <Border.RenderTransform>
+                                <ScaleTransform x:Name="CardFlip"/>
+                            </Border.RenderTransform>
 
 
                             <TextBlock x:Name="Card"
@@ -411,23 +465,28 @@
                         <StackPanel
                             Orientation="Horizontal"
                             HorizontalAlignment="Center"
-                            Margin="0,201,0,22">
+                            Margin="0,201,0,-35" Grid.RowSpan="2">
 
 
                             <Button Content="Previous"
                                 Width="100"
-                                Height="58"
+                                Height="40"
                                 FontSize="20"
                                 Style="{StaticResource AnswerButton}"
-                                Click="ButtonPrevious_Click"/>
-
-
+                                Click="ButtonPrevious_Click">
+                                <Button.Effect>
+                                    <DropShadowEffect/>
+                                </Button.Effect>
+                            </Button>
                             <Button Width="100"
-                                Height="73"
+                                Height="64"
                                 Style="{StaticResource AnswerButton}"
                                 Click="ButtonHint_Click"
                                 FontSize="20"
                                 FontFamily="Arial">
+                                <Button.Effect>
+                                    <DropShadowEffect/>
+                                </Button.Effect>
 
                                 <TextBlock TextAlignment="Center" FontWeight="Bold"><Run Text="Show"/><LineBreak/><Run Text="Hint"/></TextBlock>
 
@@ -435,10 +494,14 @@
 
                             <Button Content="Next"
                                 Width="100"
-                                Height="58"
+                                Height="40"
                                 FontSize="20"
                                 Style="{StaticResource AnswerButton}"
-                                Click="ButtonNext_Click"/>
+                                Click="ButtonNext_Click">
+                                <Button.Effect>
+                                    <DropShadowEffect/>
+                                </Button.Effect>
+                            </Button>
                         </StackPanel>
 
 
@@ -482,6 +545,9 @@
                             Style="{StaticResource ImportButton}"
                             Click="ButtonImportCards_Click"
                             HorizontalAlignment="Left" Margin="10,25,0,90" RenderTransformOrigin="0.467,-2.4">
+                            <Button.Effect>
+                                <DropShadowEffect/>
+                            </Button.Effect>
 
                             <Image Source="/assets/Import(dark).png"
                                 Width="30"
@@ -498,6 +564,9 @@
                             Style="{StaticResource ImportButton}"
                             Click="ButtonShuffle_Click"
                             HorizontalAlignment="Center" Margin="0,25,0,90" RenderTransformOrigin="-0.06,0.481">
+                            <Button.Effect>
+                                <DropShadowEffect/>
+                            </Button.Effect>
 
                             <Image Source="/assets/shuffle.png"
                                 Width="30"
@@ -514,6 +583,9 @@
                             Style="{StaticResource ImportButton}"
                             Click="ButtonSettings_Click"
                             HorizontalAlignment="Left" Margin="160,24,0,91">
+                            <Button.Effect>
+                                <DropShadowEffect/>
+                            </Button.Effect>
 
                             <Image Source="/assets/settings(dark).png"
                                 Width="30"
@@ -555,7 +627,11 @@
                             Content="Flip Card"
                             Style="{StaticResource AnswerButton}"
                             Click="ButtonAnswer_Click"
-                            HorizontalAlignment="Center" FontFamily="Arial" FontWeight="Bold" FontSize="20"/>
+                            HorizontalAlignment="Center" FontFamily="Arial" FontWeight="Bold" FontSize="20">
+                            <Button.Effect>
+                                <DropShadowEffect/>
+                            </Button.Effect>
+                        </Button>
 
 
                     </Grid>
@@ -565,19 +641,6 @@
 
 
             </Grid>
-
-
-
-            <!-- Footer -->
-
-            <TextBlock Grid.Row="2"
-                Text="Please support by starring the repository."
-                FontSize="12"
-                Foreground="#6B7280"
-                Margin="2,12,2,0"
-                HorizontalAlignment="Center"/>
-
-
         </Grid>
 
         <Grid x:Name="Overlay"
