@@ -372,7 +372,7 @@ namespace FlashCardApp
 
             var current = flashCards[currentCardIndex];
 
-            await FlipCardAni(
+            await FlipCardAnswer(
                 isShowingAnswer
                     ? current.Answer
                     : current.Question);
@@ -405,6 +405,8 @@ namespace FlashCardApp
         private void ButtonLight_Click(object sender, RoutedEventArgs e)
         {
             darkMode = false;
+
+            // Toggle
             LightToggle.FontSize = 18;
             LightToggle.FontWeight = FontWeights.Bold;
             LightToggle.Opacity = 1;
@@ -414,15 +416,30 @@ namespace FlashCardApp
 
             Background = Brushes.WhiteSmoke;
 
+            // Main Panels
             LeftPanel.Background = Brushes.White;
+            LeftPanel.BorderBrush = Brushes.White;
             RightPanel.Background = Brushes.White;
+            RightPanel.BorderBrush = Brushes.White;
 
+            // Card
             RealCard.Background = new SolidColorBrush(Color.FromRgb(249, 250, 251));
             RealCard.BorderBrush = new SolidColorBrush(Color.FromRgb(229, 231, 235));
+
+            // Right Panel
             SettingsPanel.Background = new SolidColorBrush(Color.FromRgb(249, 250, 251));
+
+            // Light Button Styles
+            PreviousButton.Style = (Style)FindResource("AnswerButton");
+            HintButton.Style = (Style)FindResource("AnswerButton");
+            NextButton.Style = (Style)FindResource("AnswerButton");
+            FlipCard.Style = (Style)FindResource("AnswerButton");
             ImportBorder.Style = (Style)FindResource("ImportButton");
             ShuffleBorder.Style = (Style)FindResource("ImportButton");
             SettingBorder.Style = (Style)FindResource("ImportButton");
+            ComboBoxDecks.Style = (Style)FindResource("DropDownBox");
+
+            // DropDown Color
             ComboBoxDecks.Background = Brushes.White;
             Card.Foreground = Brushes.Black;
             ComboBoxDecks.Foreground = Brushes.Black;
@@ -434,39 +451,56 @@ namespace FlashCardApp
         {
             darkMode = true;
 
-            // Toggle appearance
+            // Toggle
             DarkToggle.FontSize = 18;
             DarkToggle.FontWeight = FontWeights.Bold;
+            DarkToggle.Foreground = Brushes.White;
             DarkToggle.Opacity = 1;
 
             LightToggle.FontSize = 15;
             LightToggle.FontWeight = FontWeights.Normal;
-            LightToggle.Opacity = 0.55;
+            LightToggle.Foreground = new SolidColorBrush(Color.FromRgb(179, 179, 179));
+            LightToggle.Opacity = 0.7;
 
             // Window
-            Background = Brushes.Black;
+            Background = new SolidColorBrush(Color.FromRgb(18, 18, 18));
 
             // Panels
-            LeftPanel.Background = new SolidColorBrush(Color.FromRgb(30, 41, 59));
-            RightPanel.Background = new SolidColorBrush(Color.FromRgb(30, 41, 59));
+            var panel = new SolidColorBrush(Color.FromRgb(30, 30, 30)); 
+            LeftPanel.Background = panel;
+            RightPanel.Background = panel;
+            LeftPanel.BorderBrush = new SolidColorBrush(Color.FromRgb(58, 58, 58));
+            RightPanel.BorderBrush = new SolidColorBrush(Color.FromRgb(58, 58, 58));
 
-            // Card
-            RealCard.Background = new SolidColorBrush(Color.FromRgb(51, 65, 85));
-            RealCard.BorderBrush = new SolidColorBrush(Color.FromRgb(71, 85, 105));
-            DeckSelect.Background = new SolidColorBrush(Color.FromRgb(30, 41, 59));
+            // Flash card
+            RealCard.Background = new SolidColorBrush(Color.FromRgb(36, 36, 36));
+            RealCard.BorderBrush = new SolidColorBrush(Color.FromRgb(58, 58, 58));
+
+            // Deck section
+            DeckSelect.Background = panel;
+
+            // Settings
+            SettingsPanel.Background = panel;
+            SettingsPanel.BorderBrush = new SolidColorBrush(Color.FromRgb(58, 58, 58));
+
+            // ComboBox
+            ComboBoxDecks.Background = Brushes.Gray;
+            ComboBoxDecks.Foreground = Brushes.White;
+            ComboBoxDecks.BorderBrush = Brushes.Black;
+
+            // Text
+            Card.Foreground = Brushes.White;
+            DropDownName.Foreground = Brushes.White;
 
             // Buttons
             ImportBorder.Style = (Style)FindResource("DarkImportButton");
             ShuffleBorder.Style = (Style)FindResource("DarkImportButton");
             SettingBorder.Style = (Style)FindResource("DarkImportButton");
-
-            // Text colors
-            Card.Foreground = Brushes.White;
-            ComboBoxDecks.Foreground = Brushes.White;
-            SettingsPanel.Background = new SolidColorBrush(Color.FromRgb(30, 41, 59));
-            SettingsPanel.BorderBrush = new SolidColorBrush(Color.FromRgb(71, 85, 105));
-            ComboBoxDecks.Background = Brushes.Black;
-            DropDownName.Foreground = Brushes.White;
+            PreviousButton.Style = (Style)FindResource("DarkPrimaryButton");
+            HintButton.Style = (Style)FindResource("DarkPrimaryButton");
+            NextButton.Style = (Style)FindResource("DarkPrimaryButton");
+            FlipCard.Style = (Style)FindResource("DarkPrimaryButton");
+            ComboBoxDecks.Style = (Style)FindResource("DarkDropDownBox");
         }
 
         private void ButtonShuffle_Click(object sender, RoutedEventArgs e)
@@ -518,6 +552,48 @@ namespace FlashCardApp
 
             CardFlip.BeginAnimation(
                 ScaleTransform.ScaleXProperty,
+                show);
+        }
+
+        private async Task FlipCardAnswer(string newText)
+        {
+            var hide = new DoubleAnimation
+            {
+                To = 0,
+                Duration = TimeSpan.FromMilliseconds(150),
+                EasingFunction = new CubicEase
+                {
+                    EasingMode = EasingMode.EaseIn
+                }
+            };
+
+            var tcs = new TaskCompletionSource<bool>();
+
+            hide.Completed += (s, e) =>
+            {
+                Card.Text = newText;
+                tcs.SetResult(true);
+            };
+
+            CardFlip.BeginAnimation(
+                ScaleTransform.ScaleYProperty,
+                hide);
+
+            await tcs.Task;
+
+
+            var show = new DoubleAnimation
+            {
+                To = 1,
+                Duration = TimeSpan.FromMilliseconds(150),
+                EasingFunction = new CubicEase
+                {
+                    EasingMode = EasingMode.EaseOut
+                }
+            };
+
+            CardFlip.BeginAnimation(
+                ScaleTransform.ScaleYProperty,
                 show);
         }
 
