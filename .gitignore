@@ -1,6 +1,9 @@
 .vs/
+.git/
 bin/
 obj/
+Properties/
+Publish/
 *.user
 *.suo
 
