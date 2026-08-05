@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        ResizeMode="CanMinimize" 
+        ResizeMode="CanMinimize"
+        WindowStyle="None"
         Title="Flash Cards"
         FontFamily="Arial"
         FontSize="20"
@@ -20,7 +21,7 @@
             <Setter Property="Margin" Value="6"/>
             <Setter Property="Padding" Value="10,6"/>
             <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Background" Value="#3B82F6"/>
+            <Setter Property="Background" Value="#456CE1"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="BorderBrush" Value="#2563EB"/>
             <Setter Property="BorderThickness" Value="1"/>
@@ -143,9 +144,9 @@
        TargetType="Button"
        BasedOn="{StaticResource AnswerButton}">
 
-            <Setter Property="Background" Value="#3700B3"/>
+            <Setter Property="Background" Value="#456CE1"/>
             <Setter Property="Foreground" Value="White"/>
-            <Setter Property="BorderBrush" Value="#3700B3"/>
+            <Setter Property="BorderBrush" Value="blue"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Cursor" Value="Hand"/>
 
@@ -174,25 +175,16 @@
 
                 <!-- Hover -->
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#9575CD"/>
-                    <Setter Property="BorderBrush" Value="#3700B3"/>
+                    <Setter Property="Background" Value="Blue"/>
+                    <Setter Property="BorderBrush" Value="Blue"/>
                 </Trigger>
 
 
                 <!-- Pressed -->
                 <Trigger Property="IsPressed" Value="True">
-                    <Setter Property="Background" Value="#673AB7"/>
-                    <Setter Property="BorderBrush" Value="#512DA8"/>
+                    <Setter Property="Background" Value="DarkBlue"/>
+                    <Setter Property="BorderBrush" Value="DarkBlue"/>
                 </Trigger>
-
-
-                <!-- Disabled -->
-                <Trigger Property="IsEnabled" Value="False">
-                    <Setter Property="Background" Value="#424242"/>
-                    <Setter Property="Foreground" Value="#9E9E9E"/>
-                    <Setter Property="BorderBrush" Value="#424242"/>
-                </Trigger>
-
 
             </Style.Triggers>
 
@@ -202,7 +194,7 @@
         <Style x:Key="CustomToggle" TargetType="ToggleButton">
 
             <Setter Property="Background" Value="#3B82F6"/>
-            <Setter Property="Foreground" Value="black"/>
+            <Setter Property="Foreground" Value="Black"/>
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="BorderThickness" Value="1"/>
 
@@ -214,7 +206,7 @@
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="10">
+                        CornerRadius="8">
 
                             <TextBlock Text="▼"
                                Foreground="{TemplateBinding Foreground}"
@@ -250,22 +242,10 @@
         <Style x:Key="DarkCustomToggle"
                TargetType="ToggleButton"
                BasedOn="{StaticResource CustomToggle}">
-
-            <Setter Property="Background" Value="#3700B3"/>
+            <!--Yo-->
+            <Setter Property="Background" Value="#3B82F6"/>
             <Setter Property="Foreground" Value="White"/>
-            <Setter Property="BorderBrush" Value="#3700B3"/>
-
-            <Style.Triggers>
-
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#9575CD"/>
-                </Trigger>
-
-                <Trigger Property="IsPressed" Value="True">
-                    <Setter Property="Background" Value="#673AB7"/>
-                </Trigger>
-
-            </Style.Triggers>
+            <Setter Property="BorderBrush" Value="Black"/>
 
         </Style>
 
@@ -385,7 +365,7 @@
                                 Focusable="False"
                                 Style="{StaticResource DarkCustomToggle}"
                                 IsChecked="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}">
-                                        <TextBlock Text="▼"
+                                        <TextBlock Text="▼" 
                                         HorizontalAlignment="Center"
                                         VerticalAlignment="Center"/>
                                     </ToggleButton>
@@ -456,7 +436,7 @@
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="Background" Value="White"/>
             <Setter Property="Foreground" Value="White"/>
-            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderBrush" Value="White"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Cursor" Value="Hand"/>
 
@@ -495,24 +475,86 @@
     </Window.Resources>
 
 
-    <Grid Margin="20">
+    <Grid>
 
 
-        <Grid x:Name="MainContent">
+        <Grid>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="40"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
+            <!-- Custom Title Bar -->
+            <Border Grid.Row="0"
+            x:Name="TitleBar"
+            Background="White"
+            MouseLeftButtonDown="TitleBar_Drag">
 
-            <!-- Head -->
+                <Grid>
 
-            <DockPanel Grid.Row="0"
-                Margin="0,0,0,12"/>
+                    <TextBlock 
+                        x:Name="title"
+                        Text="FlashCard App"
+                        Margin="15,0"
+                        VerticalAlignment="Center"
+                        Foreground="Black"
+                        FontWeight="Normal"/>
+
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Right"
+                                Margin="20, 0">
+
+                        <Button 
+                                x:Name="Mini"
+                                Width="45"
+                                Content="—"
+                                Background="Transparent"
+                                BorderBrush="White"
+                                Click="Minimize_Click"
+                                Margin="20, 0"/>
+
+                        <Button 
+                                x:Name="Exit"
+                                Width="45"
+                                Content="✕"
+                                Background="Transparent"
+                                BorderBrush="White"
+                                Click="Close_Click"/>
+
+                    </StackPanel>
+                    <ComboBox 
+                                x:Name="ComboBoxDecks"
+                                Style="{StaticResource DropDownBox}"
+                                HorizontalAlignment="Center"
+                                Margin="0,7,0,8"
+                                BorderThickness="1"
+                                SelectionChanged="ComboBoxDecks_SelectionChanged" FontWeight="Thin" FontSize="14" Opacity="1.5" Width="172">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1">
+                                <GradientStop Color="White"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
 
 
+                    <!--Settings Button-->
+                    <Button 
+                            x:Name="SettingBorder"
+                            Grid.Row="0"
+                            Style="{StaticResource ImportButton}"
+                            Click="ButtonSettings_Click"
+                            HorizontalAlignment="Left" Margin="528,8,0,10">
+
+                        <Image Source="/assets/settings(dark).png"
+                               RenderTransformOrigin="4.588,0.524"/>
+
+                    </Button>
+
+                </Grid>
+
+            </Border>
 
             <!-- Main -->
 
@@ -537,7 +579,7 @@
                     BorderBrush="White"
                     BorderThickness="1"
                     Padding="20"
-                    Margin="0,0,10,0">
+                    Margin="0,0,10,32">
 
 
                     <Grid>
@@ -559,7 +601,7 @@
                             Background="#F9FAFB"
                             BorderBrush="#E5E7EB"
                             BorderThickness="1"
-                            Padding="20" Margin="0,0,0,133"
+                            Padding="20" Margin="0,0,0,152"
                             RenderTransformOrigin="0.5,0.5">
                             <Border.Effect>
                                 <DropShadowEffect/>
@@ -582,8 +624,8 @@
 
                         <StackPanel
                             Orientation="Horizontal"
-                            HorizontalAlignment="Center"
-                            Margin="0,201,0,-35" Grid.RowSpan="2">
+                            HorizontalAlignment="Left"
+                            Margin="10,166,0,0" Height="192" VerticalAlignment="Top" Grid.RowSpan="2">
 
 
                             <Button Content="Previous" x:Name="PreviousButton"
@@ -638,7 +680,7 @@
                     BorderBrush="White"
                     BorderThickness="1"
                     Padding="16"
-                    Margin="10,0,0,0">
+                    Margin="10,0,0,32">
 
 
                     <Grid>
@@ -682,7 +724,7 @@
                             Height="50"
                             Style="{StaticResource ImportButton}"
                             Click="ButtonShuffle_Click"
-                            HorizontalAlignment="Center" Margin="0,25,0,90" RenderTransformOrigin="-0.06,0.481">
+                            HorizontalAlignment="Left" Margin="85,24,0,91" RenderTransformOrigin="-0.06,0.481">
                             <Button.Effect>
                                 <DropShadowEffect/>
                             </Button.Effect>
@@ -693,53 +735,6 @@
 
                         </Button>
 
-                        <!-- settings Button -->
-                        <Button 
-                            x:Name="SettingBorder"
-                            Grid.Row="0"
-                            Width="50"
-                            Height="50"
-                            Style="{StaticResource ImportButton}"
-                            Click="ButtonSettings_Click"
-                            HorizontalAlignment="Left" Margin="160,24,0,91">
-                            <Button.Effect>
-                                <DropShadowEffect/>
-                            </Button.Effect>
-
-                            <Image Source="/assets/settings(dark).png"
-                                Width="30"
-                                Height="30" RenderTransformOrigin="4.588,0.524"/>
-
-                        </Button>
-
-
-
-                        <!-- Deck Selector -->
-                        <StackPanel
-                            x:Name="DeckSelect"
-                            Margin="0,102,0,104" Grid.RowSpan="3">
-                            <TextBlock 
-                                x:Name="DropDownName"
-                                Text="Decks"
-                                FontWeight="SemiBold"
-                                Foreground="Black"
-                                Margin="6,0,0,5"/>
-                            <ComboBox 
-                                x:Name="ComboBoxDecks"
-                                Style="{StaticResource DropDownBox}"
-                                Height="25"
-                                Margin="6,0,6,0"
-                                SelectionChanged="ComboBoxDecks_SelectionChanged" FontWeight="Bold" Opacity="1.5">
-                                <ComboBox.Background>
-                                    <LinearGradientBrush EndPoint="0,1">
-                                        <GradientStop Color="White"/>
-                                    </LinearGradientBrush>
-                                </ComboBox.Background>
-                                <ComboBox.Effect>
-                                    <DropShadowEffect/>
-                                </ComboBox.Effect>
-                            </ComboBox>
-                        </StackPanel>
 
                         <!-- Show Answer Button -->
                         <Button x:Name="FlipCard"
@@ -774,7 +769,7 @@
             Background="White"
             BorderBrush="#E5E7EB"
             BorderThickness="1"
-            Padding="20" Margin="360,0,0,0">
+            Padding="20" Margin="378,0,0,0">
 
             <Border.RenderTransform>
                 <TranslateTransform

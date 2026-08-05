@@ -7,6 +7,7 @@ using System.Globalization;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 
@@ -414,7 +415,7 @@ namespace FlashCardApp
             DarkToggle.FontWeight = FontWeights.Normal;
             DarkToggle.Opacity = 0.55;
 
-            Background = Brushes.WhiteSmoke;
+            Background = Brushes.White;
 
             // Main Panels
             LeftPanel.Background = Brushes.White;
@@ -443,8 +444,15 @@ namespace FlashCardApp
             ComboBoxDecks.Background = Brushes.White;
             Card.Foreground = Brushes.Black;
             ComboBoxDecks.Foreground = Brushes.Black;
+            ComboBoxDecks.BorderBrush = Brushes.LightGray;
 
-            DeckSelect.Background = Brushes.White;
+            // title bar style
+            TitleBar.Background = Brushes.White;
+            Mini.Foreground = Brushes.Black;
+            Exit.Foreground = Brushes.Black;
+            Exit.BorderBrush = Brushes.White;
+            Mini.BorderBrush = Brushes.White;
+            title.Foreground = Brushes.Black;
         }
 
         private void ButtonDark_Click(object sender, RoutedEventArgs e)
@@ -476,9 +484,6 @@ namespace FlashCardApp
             RealCard.Background = new SolidColorBrush(Color.FromRgb(36, 36, 36));
             RealCard.BorderBrush = new SolidColorBrush(Color.FromRgb(58, 58, 58));
 
-            // Deck section
-            DeckSelect.Background = panel;
-
             // Settings
             SettingsPanel.Background = panel;
             SettingsPanel.BorderBrush = new SolidColorBrush(Color.FromRgb(58, 58, 58));
@@ -490,7 +495,6 @@ namespace FlashCardApp
 
             // Text
             Card.Foreground = Brushes.White;
-            DropDownName.Foreground = Brushes.White;
 
             // Buttons
             ImportBorder.Style = (Style)FindResource("DarkImportButton");
@@ -501,6 +505,14 @@ namespace FlashCardApp
             NextButton.Style = (Style)FindResource("DarkPrimaryButton");
             FlipCard.Style = (Style)FindResource("DarkPrimaryButton");
             ComboBoxDecks.Style = (Style)FindResource("DarkDropDownBox");
+
+            // title bar style
+            TitleBar.Background = Brushes.Black;
+            Mini.Foreground = Brushes.White;
+            Mini.BorderBrush = Brushes.Black;
+            Exit.Foreground = Brushes.White;
+            Exit.BorderBrush = Brushes.Black;
+            title.Foreground = Brushes.White;
         }
 
         private void ButtonShuffle_Click(object sender, RoutedEventArgs e)
@@ -595,6 +607,30 @@ namespace FlashCardApp
             CardFlip.BeginAnimation(
                 ScaleTransform.ScaleYProperty,
                 show);
+        }
+
+        // title bar methods
+        private void TitleBar_Drag(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 2)
+            {
+                WindowState = WindowState == WindowState.Maximized
+                    ? WindowState.Normal : WindowState.Minimized;
+            }
+            else
+            {
+                DragMove();
+            }
+        }
+
+        private void Minimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
 
     }
