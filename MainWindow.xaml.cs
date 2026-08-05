@@ -633,6 +633,10 @@ namespace FlashCardApp
             Close();
         }
 
+        private void Mini_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 
     public class FlashCard

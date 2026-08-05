@@ -206,7 +206,8 @@
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="8">
+                        CornerRadius="8"
+                        Margin="4">
 
                             <TextBlock Text="▼"
                                Foreground="{TemplateBinding Foreground}"
@@ -471,6 +472,94 @@
 
         </Style>
 
+        <!-- Styles for minimize button -->
+        <Style x:Key="MiniButton" TargetType="Button">
+            <Setter Property="Width" Value="46"/>
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#111827"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+
+                        <Border x:Name="Border"
+                        Background="{TemplateBinding Background}">
+
+                            <ContentPresenter
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border"
+                                Property="Background"
+                                Value="LightBlue"/>
+                            </Trigger>
+
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border"
+                                Property="Background"
+                                Value="CadetBlue"/>
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Styles exit button -->
+        <Style x:Key="ExitButton" TargetType="Button">
+            <Setter Property="Width" Value="46"/>
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#111827"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+
+                        <Border x:Name="Border"
+                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border"
+                                Property="Background"
+                                Value="Coral"/>
+                            </Trigger>
+
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border"
+                                Property="Background"
+                                Value="LightCoral"/>
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+        </Style>
+
 
     </Window.Resources>
 
@@ -496,7 +585,7 @@
 
                     <TextBlock 
                         x:Name="title"
-                        Text="FlashCard App"
+                        Text="Flash Cards"
                         Margin="15,0"
                         VerticalAlignment="Center"
                         Foreground="Black"
@@ -513,7 +602,7 @@
                                 Background="Transparent"
                                 BorderBrush="White"
                                 Click="Minimize_Click"
-                                Margin="20, 0"/>
+                                Style="{StaticResource ResourceKey=MiniButton}"/>
 
                         <Button 
                                 x:Name="Exit"
@@ -521,7 +610,8 @@
                                 Content="✕"
                                 Background="Transparent"
                                 BorderBrush="White"
-                                Click="Close_Click"/>
+                                Click="Close_Click"
+                                Style="{StaticResource ResourceKey=ExitButton}"/>
 
                     </StackPanel>
                     <ComboBox 
@@ -579,7 +669,7 @@
                     BorderBrush="White"
                     BorderThickness="1"
                     Padding="20"
-                    Margin="0,0,10,32">
+                    Margin="10,16,10,16">
 
 
                     <Grid>
@@ -680,7 +770,7 @@
                     BorderBrush="White"
                     BorderThickness="1"
                     Padding="16"
-                    Margin="10,0,0,32">
+                    Margin="10,16,10,16">
 
 
                     <Grid>
@@ -701,11 +791,11 @@
                         <Button 
                             x:Name="ImportBorder"
                             Grid.Row="0"
-                            Width="50"
+                            Width="114"
                             Height="50"
                             Style="{StaticResource ImportButton}"
                             Click="ButtonImportCards_Click"
-                            HorizontalAlignment="Left" Margin="10,25,0,90" RenderTransformOrigin="0.467,-2.4">
+                            HorizontalAlignment="Center" Margin="0,22,0,93" RenderTransformOrigin="0.467,-2.4">
                             <Button.Effect>
                                 <DropShadowEffect/>
                             </Button.Effect>
@@ -720,11 +810,11 @@
                         <Button 
                             x:Name="ShuffleBorder"
                             Grid.Row="0"
-                            Width="50"
+                            Width="114"
                             Height="50"
                             Style="{StaticResource ImportButton}"
                             Click="ButtonShuffle_Click"
-                            HorizontalAlignment="Left" Margin="85,24,0,91" RenderTransformOrigin="-0.06,0.481">
+                            HorizontalAlignment="Center" Margin="0,105,0,10" RenderTransformOrigin="-0.06,0.481">
                             <Button.Effect>
                                 <DropShadowEffect/>
                             </Button.Effect>
