@@ -8,7 +8,7 @@ Learn faster. Stay organized. Focus on what matters.
 
 <br>
 
-![Hero Image](assets/images/MainImage.png)
+![Hero Image](assets/Images/MainImage.png)
 
 <br>
 
