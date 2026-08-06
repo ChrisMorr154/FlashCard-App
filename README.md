@@ -18,7 +18,7 @@ The latest installer is available under **Releases**.
 
 ➡️ Download `FlashCardAppSetup.exe`
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Latest%20Release-2ea44f?style=for-the-badge)](https://github.com/ChrisMorr154/FlashCardApp/releases/latest)
+[![Download Latest Release](https://img.shields.io/badge/Download-Latest%20Release-2ea44f?style=for-the-badge)](https://github.com/ChrisMorr154/FlashCard-App/releases/latest)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE.txt)
 
 </div>
