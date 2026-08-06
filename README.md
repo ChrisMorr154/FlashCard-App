@@ -16,7 +16,7 @@ Learn faster. Stay organized. Focus on what matters.
 
 The latest installer is available under **Releases**.
 
-➡️ Download the latest version **[here](https://github.com/ChrisMorr154/FlashCard-App/releases/latest/download/FlashCardSetup.exe)
+➡️ Download the latest version [here](https://github.com/ChrisMorr154/FlashCard-App/releases/latest/download/FlashCardAppSetup.exe)
 
 [![Download Latest Release](https://img.shields.io/badge/Download-Latest%20Release-2ea44f?style=for-the-badge)](https://github.com/ChrisMorr154/FlashCard-App/releases/latest)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE.txt)
