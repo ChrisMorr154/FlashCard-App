@@ -24,11 +24,9 @@ Learn faster. Stay organized. Focus on what matters.
 - [Why FlashCardApp?](#-why-flashcardapp)
 - [Demo](#-demo)
 - [Features](#-features)
-- [Screenshots](#-screenshots)
 - [Installation](#-installation)
 - [Getting Started](#-getting-started)
-- [Technology Stack](#-technology-stack)
-- [Roadmap](#-roadmap)
+- [Tech Stack](#-technology-stack)
 - [Contributing](#-contributing)
 - [License](#-license)
 
@@ -36,7 +34,7 @@ Learn faster. Stay organized. Focus on what matters.
 
 # 💡 Why FlashCardApp?
 
-There are countless lame flashcard applications available, but many of them are either overloaded with features, require an internet connection, or locking the most important features behind a subscription. 
+There are countless lame flashcard applications available, but many of them require you to sign up using your data, an internet connection, or locking the most important features behind a subscription. 
 
 I wanted something simple, quick, and easy to use.
 
@@ -163,8 +161,6 @@ FlashCardApp
 ```
 
 ---
-
-# 🗺 Roadmap
 
 ## Version 1.0
 
