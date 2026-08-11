@@ -46,13 +46,9 @@ I wanted something simple, quick, and easy to use.
 
 My main goal was to build a solution that I would actually use. 
 
-I want  to provide a clean, fast, and native Windows experience focused on one goal:
+I want  to provide a clean, fast, and native Windows experience.
 
-> **Helping users study.**
-
-Whether you're learning a new language, preparing for exams, or simply memorizing important information, This application keeps the experience simple and enjoyable.
-
-So far I have used this applicaton to study for my A+ core 1 & 2 and Security+.
+So far I have used this application to study for my A+ core 1 & 2 and Security+.
 
 ---
 
@@ -63,19 +59,14 @@ So far I have used this applicaton to study for my A+ core 1 & 2 and Security+.
 
 </p>
 
-Or watch the complete walkthrough on YouTube:
-
-📺 **Coming Soon**
-
 ---
 
 # ✨ Features
 
-- 🎴 Create unlimited flashcard decks, both .CSV & .db
+- 🎴 Create unlimited flashcard decks, both .csv & .db
 - 🌙 Dark Mode / ☀️ Light Mode
 - ⚡ Fast and responsive WPF interface
 - 💾 Local storage
-- 🔍 Quick search
 - 🎯 Simple and distraction-free design
 - 🖥 Native Windows desktop experience
 - 🚀 Lightweight and fast startup
@@ -86,6 +77,9 @@ Or watch the complete walkthrough on YouTube:
 
 ![Upload Gif](assets/gifs/ImportCSV.gif)
 
+
+### Create Your own Flash Cards
+- Ensure your .db or .csv file contain three columns "Question", "Hint", "Answer".
 ---
 
 ## Dark Mode
@@ -163,7 +157,7 @@ FlashCardApp
 ├── README.md
 ├── LICENSE.txt
 ├── FlashCardApp.sln
-└── Source Files
+└── src
 ```
 
 ---
@@ -208,12 +202,6 @@ This project is licensed under the MIT License.
 See the `LICENSE.txt` file for more information.
 
 ---
-
-<div align="center">
-
-**Made with ❤️ using C# and WPF**
-
-</div>
 
 ## License
 

@@ -1,0 +1,633 @@
+Question,Hint,Answer
+What is the primary purpose of an operating system?,Think about everything sitting between the user/apps and the hardware.,An operating system manages hardware resources and provides services and an interface for applications and users.
+Which operating system is developed by Microsoft for desktop and workstation computers?,Think Windows 11.,Microsoft Windows.
+Which operating system is commonly used on Apple Mac computers?,Apple's desktop operating system.,macOS.
+Which operating system is open source and commonly used on servers and workstations?,"Think Ubuntu, Fedora, Debian.",Linux.
+Which operating system is designed primarily for lightweight devices that use Google's ecosystem?,Think Chromebooks.,Chrome OS.
+Which mobile operating system is developed by Apple for iPhones?,Apple's phone OS.,iOS.
+Which mobile operating system is used by many manufacturers including Samsung and Google?,It's based on the Linux kernel.,Android.
+Which mobile operating system is designed for Apple's iPad?,Apple's tablet-specific OS.,iPadOS.
+What is NTFS primarily used for?,Think modern Windows internal drives.,"NTFS is the primary Windows file system and supports features such as permissions, encryption, and large files."
+What is FAT32's major limitation compared with NTFS?,Think about the maximum size of one file.,FAT32 has a maximum individual file size of 4 GB.
+What is exFAT commonly used for?,Think removable storage that needs compatibility between operating systems.,exFAT is commonly used on flash drives and other removable media because it supports large files and broad OS compatibility.
+What file system is commonly used by modern Linux distributions?,Think ext4.,ext4.
+What file system is commonly associated with modern macOS?,Apple's modern file system.,APFS.
+What is ReFS designed to provide?,Think Windows storage resilience and integrity.,"ReFS is Microsoft's Resilient File System, designed for data integrity, resiliency, and large-scale storage."
+What does EOL mean when discussing an operating system?,The vendor has stopped supporting it.,End of life; the vendor no longer provides normal support or updates.
+Why is running an EOL operating system a security risk?,Think vulnerabilities that never get patched.,Newly discovered vulnerabilities may remain unpatched.
+What is a clean installation of an operating system?,You're starting fresh rather than preserving the existing installation.,A clean install installs the OS from scratch and normally removes the existing OS and applications from the target installation.
+What is an OS upgrade?,Think moving to a newer version while preserving existing data and applications when supported.,An upgrade replaces the existing OS with a newer version while attempting to preserve compatible applications and user data.
+What is multiboot?,"One computer, multiple operating systems.",A configuration that allows multiple operating systems to be installed and selected during startup.
+What is a network-based OS installation?,The installation files come across the network.,The computer boots or loads installation files from a network source.
+What is an Internet-based OS installation?,The installer obtains required files from online services.,An installation method that downloads the operating system or installation components over the Internet.
+Why should hardware and software compatibility be checked before an OS upgrade?,"An OS can require specific CPU, RAM, storage, drivers, or application support.","To prevent unsupported hardware, drivers, or applications from failing after the upgrade."
+What is a Windows Home edition primarily intended for?,Think consumers rather than corporate domain management.,Consumer-focused Windows with fewer business-management features.
+What is a major feature available in Windows Pro that is not normally available in Home?,Think joining a Windows domain.,Windows Pro supports features such as domain joining.
+What Windows feature provides full-volume encryption for supported drives?,Think encryption tied to Windows security hardware.,BitLocker.
+What is BitLocker To Go used for?,Think removable drives.,Encrypting removable storage such as USB drives.
+What Windows tool shows running applications and processes?,You probably use it when a program freezes.,Task Manager.
+What Windows tool is used to manage partitions and volumes?,"Think creating, deleting, formatting, or resizing volumes.",Disk Management.
+What Windows tool lets you manage hardware devices and their drivers?,Think yellow warning icons next to hardware.,Device Manager.
+What Windows tool displays system and application event logs?,Think investigating crashes and errors after the fact.,Event Viewer.
+What Windows tool can be used to manage local users and groups?,Think user accounts from the Windows management console.,Computer Management or the appropriate Local Users and Groups management tools.
+What Windows tool can manage services running in the background?,Think programs that start and run without a normal application window.,Services.
+What is the purpose of Windows Registry Editor?,Think the central configuration database.,Regedit is used to view and modify the Windows Registry.
+What does msconfig primarily help configure?,Think startup and boot configuration.,System Configuration settings such as boot options and selected startup behavior.
+What is the purpose of Windows System Information?,Think a detailed inventory of the computer's configuration.,"It displays detailed information about hardware resources, components, drivers, and software environment."
+What does Event Viewer help a technician determine?,Think logs.,"It provides logged events that can help identify errors, warnings, and system activity."
+What does ipconfig display?,Think Windows network configuration.,IP addressing and related network configuration information.
+What does ipconfig /all provide that basic ipconfig does not?,You want the complete adapter configuration.,"Detailed adapter information including MAC address, DHCP status, DNS servers, and lease information."
+What does ipconfig /release do?,You're throwing away the current DHCP lease.,It releases the current DHCP-assigned IPv4 address.
+What does ipconfig /renew do?,You want a fresh DHCP address.,It requests a new DHCP lease.
+What does ipconfig /flushdns do?,Think stale DNS information.,It clears the local DNS resolver cache.
+What does ping test?,Think basic reachability.,It tests IP connectivity and measures response time to a destination.
+What does tracert show?,Think the path packets take toward a destination.,It shows the network hops between the source and destination.
+What does nslookup test?,Think translating names into IP addresses.,It queries DNS information.
+What does netstat display?,Think active connections and listening services.,"It displays network connections, listening ports, and related network statistics."
+What does chkdsk do?,Think checking the file system and disk.,It checks a file system and can identify or repair certain file-system errors.
+What does sfc /scannow do?,Think damaged Windows system files.,It scans protected Windows system files and repairs corrupted files when possible.
+What does DISM commonly repair?,Think the Windows component store behind system-file repair.,It services and repairs the Windows image/component store.
+What does taskkill do?,Think terminating a process from the command line.,It terminates a running process.
+What does tasklist display?,Think Task Manager from the command line.,It lists running processes.
+What does shutdown /r do?,The /r option means restart.,It restarts the computer.
+What does gpupdate do?,Think refreshing Group Policy.,It refreshes Group Policy settings on a Windows computer.
+What does gpresult show?,Think which Group Policy settings actually applied.,It displays resulting Group Policy settings and related information.
+What does net user do?,Think Windows user accounts from the command line.,It manages or displays local user-account information.
+What does net use do?,Think mapping a network resource.,It connects to or manages network resources such as mapped drives.
+What does the Linux pwd command display?,Think where you currently are.,The current working directory.
+What does the Linux ls command do?,Think listing files.,It lists files and directories.
+What does the Linux cd command do?,Think changing location.,It changes the current working directory.
+What does the Linux mkdir command do?,The name gives it away.,It creates a directory.
+What does the Linux rm command do?,Be careful with this one.,It removes files or directories.
+What does the Linux cp command do?,Think copying.,It copies files or directories.
+What does the Linux mv command do?,It can do two jobs.,It moves or renames files and directories.
+What does the Linux cat command do?,Think displaying file contents.,It displays the contents of a file.
+What does the Linux grep command do?,Think finding matching text.,It searches text for lines matching a specified pattern.
+What does the Linux chmod command change?,Think file permissions.,It changes file or directory permissions.
+What does the Linux chown command change?,Think ownership rather than permissions.,It changes the owner or group ownership of a file or directory.
+What does the Linux ps command show?,Think processes.,It displays running processes.
+What does the Linux top command provide?,Think Task Manager-style process monitoring.,It provides a real-time view of processes and resource usage.
+What does the Linux man command provide?,Think built-in documentation.,It displays manual pages for commands.
+What does sudo allow a Linux user to do?,Think temporarily using elevated privileges.,It runs a command with elevated privileges when the user is authorized.
+What is a GUI?,Think graphical interaction.,"A graphical user interface that uses windows, icons, menus, and pointers."
+What is a CLI?,Think typing commands rather than clicking.,A command-line interface.
+What is a driver?,Think software that lets the OS communicate with hardware.,Software that allows an operating system to communicate with and control a hardware device.
+Why should a driver be compatible with the OS version?,The OS needs to know how to communicate correctly with the hardware.,"An incompatible driver can cause hardware failures, instability, or missing functionality."
+What is the purpose of Device Manager when troubleshooting a driver problem?,Look for warnings or driver information.,"It identifies hardware devices, driver status, and device errors."
+What is a system restore point?,Think rolling Windows configuration back without restoring everything.,A snapshot of system configuration that can be used to revert certain system settings and files.
+What is Windows Safe Mode used for?,Think starting Windows with minimal drivers and services.,It starts Windows with a limited set of drivers and services to help troubleshoot problems.
+What is a Windows recovery environment used for?,Think repairing a computer that cannot boot normally.,It provides recovery and troubleshooting tools for Windows startup and system problems.
+What is the purpose of Startup Repair?,The computer has trouble starting Windows.,It attempts to diagnose and repair problems preventing Windows from booting.
+What is a bootloader?,It runs before the operating system is fully loaded.,Software responsible for loading the operating system during startup.
+What is a file system?,Think how the OS organizes data on storage.,"A structure and set of rules used to organize, store, name, and access files."
+What is application compatibility?,Think whether software will actually work on the target OS.,Whether an application can run correctly on a particular operating system and environment.
+What is an application dependency?,An app may rely on something else.,A software component or service required for an application to function.
+What is a software repository?,Think a managed source of software packages.,A centralized collection from which software packages can be obtained and installed.
+What is a package manager used for in Linux?,Think installing and updating software from repositories.,"It manages software packages, including installation, removal, and updates."
+What is SaaS?,You use the application rather than managing its underlying infrastructure.,Software as a Service provides software applications through a service provider.
+What is a cloud-based productivity application?,"Think documents, email, spreadsheets, or collaboration delivered online.",A productivity application hosted or delivered through cloud services.
+What is authentication?,It answers one key question about an identity.,Verifying that a user or entity is who they claim to be.
+What is authorization?,It happens after identity is established.,Determining what an authenticated user is allowed to access or do.
+What is accounting in AAA?,Think tracking activity.,Recording and tracking user or system activity.
+What are the three components of AAA?,Three A's.,"Authentication, authorization, and accounting."
+What is multifactor authentication?,Think requiring different categories of evidence.,Authentication using two or more factors from different categories.
+What are the three authentication factor categories?,Know these cold.,"Something you know, something you have, and something you are."
+Which authentication factor is a password?,You know it.,Something you know.
+Which authentication factor is a security token?,You possess it.,Something you have.
+Which authentication factor is a fingerprint?,It's a physical characteristic.,Something you are.
+What is single sign-on?,Think one authentication used for multiple services.,SSO allows a user to authenticate once and access multiple authorized services.
+What is least privilege?,Give users only what they actually need.,Users and processes should receive only the permissions necessary to perform their tasks.
+What is zero trust?,Don't automatically trust something just because it is inside the network.,A security model that continuously verifies access and does not inherently trust users or devices based on location.
+What is defense in depth?,Don't rely on one security control.,Using multiple layers of security controls so one failure does not expose the entire system.
+What is an access control vestibule?,Think two doors preventing unrestricted entry.,A physical security area with controlled entry between two doors.
+What is a mantrap?,Same general idea as controlled two-door entry.,A physical access-control area designed to prevent unauthorized people from entering by requiring controlled passage.
+What is CCTV used for?,Think physical surveillance.,Closed-circuit television used to monitor and record physical areas.
+What is a badge reader used for?,Think physical access control.,It authenticates an access credential to control entry.
+What is a biometric control?,Think fingerprint or facial recognition.,A security control that identifies or authenticates a person using a biological characteristic.
+What is a security camera an example of?,Think physical security.,A physical security control.
+What is a firewall used for?,Think controlling network traffic.,It permits or blocks network traffic based on configured rules.
+What is Windows Defender Firewall?,Windows' built-in network filtering control.,A host-based firewall included with Windows.
+What is UAC in Windows?,Think preventing silent administrative changes.,User Account Control prompts for authorization when actions require elevated privileges.
+What is BitLocker protecting against?,Think stolen drives being read elsewhere.,It provides full-volume encryption to help protect data if a drive is removed or stolen.
+What hardware feature commonly works with BitLocker to protect encryption keys?,Think a security chip on the motherboard.,"A TPM, or Trusted Platform Module."
+What is EFS?,Think encrypting individual Windows files rather than an entire drive.,Encrypting File System provides file-level encryption on supported NTFS volumes.
+What is an NTFS permission?,Think who can access a file or folder.,A permission controlling access to files and folders on an NTFS volume.
+What is a share permission?,Think permissions applied through a network share.,A permission controlling access to resources through a shared network path.
+"When both NTFS and share permissions apply over a network, which effective permission is generally enforced?",Think the more restrictive combination wins.,The most restrictive effective permission applies.
+What does permission inheritance mean?,Think permissions flowing down from a parent folder.,Child files and folders can inherit permissions from their parent.
+What is WPA3?,Think modern Wi-Fi security.,A modern Wi-Fi security protocol designed to improve wireless authentication and protection.
+What encryption algorithm is commonly associated with WPA2 and WPA3?,Think the standard symmetric encryption used by modern Wi-Fi.,AES.
+What is an evil twin attack?,Think a fake Wi-Fi network pretending to be legitimate.,An attacker creates a rogue wireless access point that imitates a legitimate network.
+What is phishing?,Think a fraudulent message trying to trick the victim.,A social-engineering attack that attempts to obtain information or cause an unsafe action through deceptive communication.
+What is spear phishing?,Phishing aimed at a specific target.,A targeted phishing attack directed at a particular person or organization.
+What is whaling?,Think phishing aimed at important people.,A phishing attack targeting high-value individuals such as executives.
+What is smishing?,Think SMS plus phishing.,Phishing delivered through text messages.
+What is vishing?,Think voice plus phishing.,Phishing conducted through voice calls.
+What is tailgating?,Think following an authorized person through a secured entrance.,An unauthorized person gains physical access by following an authorized person.
+What is shoulder surfing?,Think someone watching you enter information.,Obtaining sensitive information by visually observing a victim.
+What is dumpster diving?,Think trash as an information source.,Searching discarded materials for sensitive information.
+What is a Trojan?,Think malware disguised as something legitimate.,Malware that appears legitimate or useful but performs malicious actions.
+What is ransomware?,Think files held hostage.,Malware that encrypts or otherwise blocks access to data and demands payment.
+What is spyware?,Think secretly watching or collecting information.,Malware that covertly monitors activity or collects information.
+What is a keylogger?,Think recording keystrokes.,Software or hardware that records keyboard input.
+What is a rootkit?,Think malware trying to hide deeply in the system.,Malware designed to maintain privileged access and conceal its presence.
+What is a worm?,Think malware that spreads on its own.,Malware capable of self-propagating across systems or networks.
+What is a virus?,Think malicious code attached to another executable or file.,Malware that generally requires a host file or user action to propagate.
+What is a botnet?,Think many compromised systems controlled together.,A collection of compromised devices controlled by an attacker.
+What is a logic bomb?,Think malicious code triggered by a condition.,Malware or malicious code that executes when a specified condition or event occurs.
+What is a backdoor?,Think bypassing normal authentication.,A hidden or unauthorized method of gaining access to a system.
+What is a zero-day vulnerability?,The vendor has little or no time to fix it.,A vulnerability unknown to the vendor or for which no effective patch is yet available.
+What is social engineering?,The target is the person rather than the technology.,Manipulating people into revealing information or performing actions that compromise security.
+What is a brute-force attack?,Think trying many passwords automatically.,An attack that systematically tries many possible credentials.
+What is password spraying?,Think one common password against many accounts.,Trying a small number of likely passwords across many accounts to avoid account lockouts.
+What is credential stuffing?,Think reusing stolen passwords.,Using previously stolen username/password combinations against other services.
+What is a strong password characteristic?,Think length and unpredictability.,"It should be long, unique, and difficult to guess."
+What is account lockout designed to prevent?,Think repeated password guessing.,It limits authentication attempts after repeated failures.
+What is a security patch?,Think fixing a known software weakness.,"A software update that addresses vulnerabilities, bugs, or security defects."
+What is endpoint protection?,Think protecting individual computers and devices.,"Security controls such as anti-malware, firewall, and endpoint detection used to protect endpoint devices."
+What does real-time antivirus protection do?,Think protection while files and processes are being accessed.,It continuously monitors activity and files for known or suspicious threats.
+What is application allowlisting?,Think only approved applications can run.,A security control that permits execution only for explicitly approved applications.
+What is application blocklisting?,Think known bad applications are denied.,A security control that prevents specified applications from running.
+What is screen locking an example of?,Think preventing someone nearby from using an unattended computer.,A workstation security control.
+What is a secure boot process intended to protect against?,Think unauthorized software loading before the OS.,It helps ensure trusted boot components are loaded during startup.
+What is mobile device encryption used for?,Think a lost phone containing data.,It protects stored data from unauthorized access if the device is lost or stolen.
+What is a device PIN used for?,Think local device authentication.,It helps authenticate the user to the mobile device.
+What is remote wipe?,Think a lost phone that you cannot physically retrieve.,A management feature that remotely erases data from a lost or stolen device.
+What is mobile device management?,Think centrally controlling company phones and tablets.,"MDM allows an organization to manage, configure, secure, and enforce policies on mobile devices."
+What is a mobile screen lock timeout?,Think automatically locking after inactivity.,A security setting that locks the device after a period of inactivity.
+What is sideloading?,Think installing an app outside the normal official app store.,Installing an application from a source other than the standard approved app marketplace.
+Why can sideloading be a security concern?,The app may not have gone through the normal store review process.,It can expose the device to malicious or untrusted applications.
+What is a VPN on a mobile device used for?,Think protecting traffic when using an untrusted network.,It creates an encrypted connection to a VPN service or network.
+What is SIM swapping?,Think an attacker transferring your cellular number to another SIM.,An attack where an attacker convinces a carrier to transfer a victim's phone number to a SIM they control.
+What is a mobile device backup used for?,Think replacing a lost or damaged phone.,It preserves data and settings so they can be restored to a device.
+What is the first step when investigating suspected malware?,Don't start deleting random files.,Investigate and verify the symptoms before taking remediation actions.
+What should you do with an infected computer before malware removal?,Think stop it from spreading or communicating.,Quarantine or isolate the infected system.
+Why should System Restore be disabled during malware remediation when required by the procedure?,Malware may hide in restore points.,To prevent malware from being restored from infected restore points.
+What should be updated before performing a malware scan?,Think the security software's knowledge of threats.,Update the anti-malware software and its definitions.
+What is Safe Mode useful for during malware removal?,Think fewer drivers and services running.,It can allow troubleshooting and malware removal while limiting the software that starts normally.
+What is a preinstallation environment useful for malware removal?,Think scanning a Windows installation without booting the infected OS normally.,A bootable environment can scan or repair a system while the infected operating system is not fully running.
+When should System Restore be re-enabled after malware removal?,Only after the system is clean.,After remediation is complete and the system has been verified clean.
+What should be done after malware remediation to reduce reinfection risk?,Think the person using the computer is part of the security system.,"Update the system, schedule scans as appropriate, and educate the user about the cause and prevention."
+What Windows symptom can indicate corrupted system files?,Think Windows behaving incorrectly even though hardware appears fine.,"Repeated system errors, crashes, missing functionality, or unexpected Windows behavior can indicate corrupted system files."
+What does a BSOD indicate?,Think Windows encountered a serious system-level failure.,A Blue Screen of Death indicates a critical Windows error that halted normal operation.
+What is a common cause of repeated BSODs?,Think drivers and hardware.,"Faulty or incompatible drivers, hardware failures, or corrupted system components."
+What Windows tool is useful for identifying the cause of a recent crash?,Think logs.,Event Viewer.
+What is a boot loop?,The computer keeps restarting instead of reaching the desktop.,A condition where the system repeatedly attempts to start but never completes the boot process.
+What is a missing boot device error?,Think the firmware cannot find something bootable.,The system cannot locate a valid boot device or operating system.
+What can cause a Windows application to crash immediately after starting?,"Think damaged software, dependencies, or compatibility.","Corrupted application files, incompatible software, missing dependencies, or damaged user settings."
+What is application freezing?,The program stops responding to input.,The application becomes unresponsive and does not process normal user interaction.
+What is a runaway process?,Think a process consuming resources without stopping.,"A process that uses excessive CPU, memory, or other resources and fails to terminate normally."
+What Windows tool is useful for identifying a process consuming excessive CPU?,Think the graphical process list.,Task Manager.
+What is a memory leak?,The application keeps taking memory and doesn't release it properly.,"A software defect where allocated memory is not properly released, causing memory usage to grow."
+What can cause a mobile app to crash repeatedly?,"Think bad app data, compatibility, or updates.","Corrupted app data, bugs, insufficient resources, incompatible versions, or an outdated app or OS."
+What should you try if a mobile app repeatedly crashes after an update?,Think remove corrupted local app state before blaming the phone.,"Force stop the app, clear its cache/data when appropriate, update it, or reinstall it."
+What is a common cause of a mobile device running out of storage?,"Think photos, videos, downloads, and app data.","Large user files, cached data, downloads, and applications."
+What can cause rapid mobile battery drain after installing an application?,Think something running constantly in the background.,"A poorly behaved application may use excessive CPU, network access, location services, or background activity."
+What can cause a mobile device to overheat during normal use?,Think heavy workload or a malfunctioning process.,"Excessive CPU activity, demanding applications, poor ventilation, environmental heat, or battery problems."
+What should you check if a mobile device cannot install an application?,Think compatibility and storage first.,"Check available storage, OS version, application compatibility, permissions, and app-store/account issues."
+What does an application permission control on a mobile device?,Think access to sensitive device resources.,"It controls whether an app can access resources such as location, camera, microphone, contacts, or storage."
+What is excessive permission access a security concern?,An app shouldn't need everything.,An app requesting unnecessary sensitive permissions can increase privacy and security risk.
+What is a rogue application?,Think software installed without proper trust or authorization.,An unauthorized or potentially malicious application installed on a device.
+What is a browser hijacker?,Think the browser suddenly goes somewhere you didn't choose.,Malware or unwanted software that changes browser settings or redirects browsing.
+What is adware?,Think unwanted advertising generated by software.,"Software that displays unwanted advertisements, often aggressively or persistently."
+What is a pop-up flood a possible sign of?,Think unwanted software in the browser or system.,"Adware, potentially unwanted software, or malware."
+What should be checked if a user suddenly has unauthorized browser extensions?,Think software changed browser behavior.,Remove unapproved extensions and investigate for unwanted or malicious software.
+What is a restore point useful for after a bad software change?,Think reverting system configuration.,It can return supported Windows system settings and files to an earlier state.
+What is a ticket in an IT support system?,Think the formal record of a support issue.,"A documented record of a user's problem, troubleshooting, actions, and resolution."
+What information should be recorded in a support ticket?,Think someone else needs to understand what happened.,"The issue, affected system or user, symptoms, troubleshooting performed, findings, resolution, and relevant timestamps."
+What is an asset inventory?,Think knowing what equipment the organization owns.,"A record of hardware, software, devices, and other technology assets."
+What is an asset tag used for?,Think identifying equipment physically.,A unique identifier attached to equipment for inventory and tracking.
+What is a knowledge base?,Think reusable solutions for recurring problems.,"A repository of documented technical information, procedures, and solutions."
+What is change management?,Think controlling modifications to production systems.,"A formal process for planning, approving, implementing, documenting, and reviewing changes."
+What is a rollback plan?,Think what you do if the change breaks something.,A documented method for returning a system to its previous working state.
+What is a change window?,Think when changes are allowed.,A scheduled period during which approved changes can be performed.
+What is a standard change?,Think predictable and already approved.,"A low-risk, repeatable change that follows an established procedure."
+What is an emergency change?,Think waiting could cause serious damage.,A change that must be implemented quickly to address an urgent issue.
+What is a baseline in change management?,Think the known-good state before a change.,A documented reference configuration or performance state used for comparison.
+What is a backup?,Think a separate copy of data.,A copy of data kept so it can be restored after loss or corruption.
+What is the 3-2-1 backup rule?,"Three copies, two types of media, one somewhere else.","Keep at least three copies of data, on two different media types, with at least one copy off-site."
+What is a full backup?,Think everything selected gets copied.,A backup that copies all selected data.
+What is an incremental backup?,Think only changes since the last backup of any type.,A backup that contains data changed since the most recent backup.
+What is a differential backup?,Think changes since the last full backup.,A backup containing data changed since the most recent full backup.
+Which backup type generally requires the fewest backups to restore a full dataset?,Think one full plus one more backup.,A full backup followed by the latest differential backup.
+Which backup type usually requires the latest full backup plus every subsequent incremental backup?,Think incremental means a chain.,A full backup plus all required incremental backups since that full backup.
+What is an image backup?,Think a snapshot of an entire system or volume.,A backup that captures a complete system or disk image that can be restored as a whole.
+What is a recovery point objective?,Think acceptable amount of data loss measured in time.,RPO is the maximum acceptable amount of data loss measured as time.
+What is a recovery time objective?,Think how long the system can be unavailable.,RTO is the target maximum amount of time allowed to restore a service.
+What is the purpose of testing backups?,A backup you cannot restore is a problem.,To verify that backup data is usable and can actually be restored.
+What is electrostatic discharge?,Think a tiny static spark damaging electronics.,A sudden transfer of static electrical charge that can damage electronic components.
+What should you use to reduce ESD risk when working inside a computer?,Think grounding yourself to the equipment.,An antistatic wrist strap or other approved ESD-control method.
+Why should a technician disconnect power before opening equipment?,Think electrical hazards and accidental operation.,To reduce electrical shock and equipment-damage risks.
+What is a safety data sheet?,Think information about hazardous substances.,"An SDS provides information about hazards, handling, storage, and emergency procedures for a substance."
+What does a fire extinguisher's class indicate?,Think different fires require different extinguishing agents.,The class identifies the type of fire the extinguisher is designed to address.
+What is a Class C fire associated with?,Think electrical equipment.,Fires involving energized electrical equipment.
+What environmental condition can shorten electronic component life?,Think heat.,Excessive temperature.
+Why is humidity control important in a computer room?,Think moisture versus static electricity.,"Excessive humidity can cause moisture-related problems, while very low humidity can increase static electricity."
+What is a UPS?,Think backup power plus protection.,An Uninterruptible Power Supply provides temporary battery power and can help protect equipment from power disturbances.
+What is a surge protector?,Think voltage spikes rather than battery backup.,A device designed to protect connected equipment from transient voltage surges.
+What is ergonomics?,Think designing the workspace around the human.,Designing equipment and workspaces to reduce physical strain and injury.
+What is data privacy?,Think controlling how personal information is handled.,"Protecting personal or sensitive information from unauthorized collection, access, use, or disclosure."
+What is PII?,Think information that can identify a person.,Personally Identifiable Information.
+What is an acceptable use policy?,Think what users are allowed to do with company technology.,A policy defining permitted and prohibited use of organizational systems and resources.
+What is an NDA?,Think keeping confidential information confidential.,A Non-Disclosure Agreement legally restricts the disclosure of specified confidential information.
+What is software licensing?,Think legal permission to use software.,"The legal terms and permissions governing how software may be installed, copied, used, or distributed."
+What is open-source software?,Think source code is available under its license.,Software whose source code is made available under an open-source license that defines permitted use and modification.
+What is proprietary software?,Think controlled by its owner.,Software owned and controlled by an organization or individual under its licensing terms.
+What is copyright?,Think legal protection for creative works and software.,A legal right protecting original works from unauthorized copying or distribution.
+What is incident response?,Think handling a security incident in a controlled way.,"A structured process for identifying, containing, responding to, and recovering from security incidents."
+What should a technician do if they discover a suspected security incident outside their authority?,Don't freelance a major security investigation.,Follow the organization's incident-response and escalation procedures.
+What is chain of custody?,Think proving who handled evidence and when.,"A documented record of evidence handling, transfers, and custody."
+What is the principle of need to know?,Think access only when required for the job.,Sensitive information should be accessible only to people who require it to perform authorized duties.
+What should you do with confidential customer information found during a repair?,Treat it as protected information.,Protect it from unauthorized disclosure and follow company privacy and handling procedures.
+What is professional communication in technical support supposed to avoid?,Think arguing with or blaming the customer.,"Blame, unnecessary jargon, hostility, interruptions, and dismissive behavior."
+What should a technician do when a customer describes a vague problem?,Don't guess; narrow it down.,Ask clarifying questions and restate the issue to verify understanding.
+What is active listening?,Think listening before preparing your response.,"Giving the customer attention, avoiding interruptions, and confirming understanding."
+What is a service-level agreement?,Think an agreed level of service.,"An SLA defines expected service performance, response, or resolution commitments."
+What is escalation?,Think handing an issue to someone with the authority or expertise to handle it.,Moving an issue to a higher support level or appropriate team.
+What is a script?,Think a set of commands executed automatically.,A sequence of commands or instructions used to automate tasks.
+What file extension is commonly used for Windows batch scripts?,Think command prompt automation.,.bat
+What file extension is commonly used for PowerShell scripts?,Think Microsoft's scripting shell.,.ps1
+What file extension is commonly used for Windows VBScript files?,Think Visual Basic scripting.,.vbs
+What file extension is commonly used for shell scripts on Linux and Unix-like systems?,Think Bash.,.sh
+What file extension is commonly used for Python scripts?,Think Python.,.py
+What file extension is commonly associated with JavaScript?,Think web scripting.,.js
+What is a common IT use of scripting?,Think repetitive work done automatically.,"Automating repetitive tasks such as software installation, configuration, backups, updates, and information gathering."
+What is a risk of running an untested script?,Automation can make mistakes very quickly.,"It can unintentionally modify settings, delete data, introduce malware, or disrupt systems."
+What is RDP used for?,Think graphical remote access to Windows.,Remote Desktop Protocol provides remote graphical access to Windows systems.
+What is SSH used for?,Think secure command-line administration.,Secure Shell provides encrypted remote command-line access.
+What is a VPN used for in remote access?,Think creating a protected connection to a private network.,A Virtual Private Network creates an encrypted tunnel between the remote user and a private network or VPN service.
+What is VNC used for?,Think remote graphical control across platforms.,Virtual Network Computing provides remote access to a graphical desktop.
+What is RMM?,Think an IT department managing many computers remotely.,"Remote Monitoring and Management software allows technicians to monitor, manage, and maintain remote systems."
+What is WinRM used for?,Think remote Windows management and commands.,Windows Remote Management allows remote management and command execution on Windows systems.
+What is SPICE used for?,Think virtual machines.,SPICE provides remote display and interaction with virtual machines.
+What is screen-sharing software used for?,Think seeing and potentially controlling another user's screen.,It allows a technician or participant to view or control a remote display.
+What is remote file-transfer software used for?,Think moving files between systems.,It transfers files between remote systems or users.
+What is a major security concern with remote access tools?,Remote access is powerful if compromised.,Unauthorized access can give an attacker direct control over systems or data.
+Why should remote access accounts use MFA when supported?,A stolen password alone shouldn't be enough.,"MFA adds another authentication factor, reducing the impact of stolen credentials."
+Why should remote access tools be restricted to authorized users?,Remote access is effectively a doorway into systems.,Limiting access reduces the attack surface and unauthorized control.
+What is AI hallucination?,The AI gives an answer that sounds convincing but is wrong.,A generated output that contains fabricated or inaccurate information presented as if it were factual.
+What is AI bias?,Think the system producing systematically skewed results.,"AI bias occurs when outputs are systematically influenced by biased data, design, or assumptions."
+Why should an IT technician verify AI-generated technical information?,AI can confidently be wrong.,"AI output may contain inaccurate, incomplete, outdated, or fabricated information."
+What is a privacy risk of entering confidential company information into a public AI service?,Think about where the submitted data goes.,Sensitive information may be exposed to an external service or processed under policies the organization does not control.
+What is the difference between public and private AI services?,Think who controls the environment and data.,"Public AI services are generally externally hosted and shared, while private AI environments provide greater organizational control over access and data handling."
+What is appropriate use of AI in IT support?,"Use it as a tool, not an unquestioned authority.","Use AI for appropriate tasks such as drafting, summarizing, brainstorming, or assistance while following organizational policy and verifying results."
+Why is plagiarism a concern when using AI?,Generated content is not automatically yours to submit.,"Using AI-generated work without following applicable attribution, academic, or organizational rules can constitute plagiarism."
+What is AI application integration?,Think AI built directly into another application.,"Integrating AI capabilities into software or services to automate tasks, analyze information, or assist users."
+What is the biggest operational risk of an inaccurate AI-generated script?,Imagine running bad commands on hundreds of machines.,It can automate incorrect or destructive changes at scale.
+What is the safest approach before deploying an AI-generated script?,Don't run unknown code blindly.,"Review, test, validate, and approve the script according to organizational procedures before deployment."
+What is a system restore point NOT designed to replace?,Think it isn't a real backup.,A full data backup.
+What is the difference between restoring a system and restoring a file from backup?,One targets system state; the other targets preserved data.,"System restoration can revert supported system configuration, while backup restoration retrieves previously backed-up data."
+What Windows command can verify DNS resolution for a hostname?,Think DNS query tool.,nslookup
+What Windows command can show active TCP connections and listening ports?,Think network statistics.,netstat
+What Windows command can show the route packets take to a destination?,Think traceroute on Windows.,tracert
+What Windows command can test whether another host responds over IP?,Think ICMP echo.,ping
+What Windows command can repair protected system files after corruption is detected?,Think System File Checker.,sfc
+What Windows command-line tool can repair the Windows component store?,Think Deployment Image Servicing and Management.,DISM
+What Windows command can terminate a process by process ID?,Think killing a process from the CLI.,taskkill
+What Windows command lists currently running processes?,Think command-line Task Manager.,tasklist
+What Windows command refreshes Group Policy?,Think policy update.,gpupdate
+What Windows command displays resulting Group Policy settings?,Think policy results.,gpresult
+What Linux command changes file permissions?,Think chmod.,chmod
+What Linux command changes file ownership?,Think chown.,chown
+What Linux command searches text for a pattern?,Think grep.,grep
+What Linux command shows the current directory?,Think present working directory.,pwd
+What Linux command lists directory contents?,Think ls.,ls
+What Linux command changes directories?,Think cd.,cd
+What Linux command displays a file's contents?,Think cat.,cat
+What Linux command provides documentation for another command?,Think manual pages.,man
+What Linux command executes a command with elevated privileges?,Think superuser temporarily.,sudo
+What is the difference between authentication and authorization?,One proves who you are; the other determines what you're allowed to do.,Authentication verifies identity; authorization determines permissions.
+What is the difference between encryption and hashing?,One is designed to be reversed with the proper key; the other normally isn't.,Encryption is reversible with the appropriate key; hashing is a one-way transformation commonly used for integrity or password verification.
+What is full-disk or full-volume encryption primarily protecting?,Think data at rest.,It protects stored data from unauthorized access if the storage device is lost or stolen.
+What is the difference between a virus and a worm?,Focus on how they spread.,"A virus generally relies on a host file or user action, while a worm can self-propagate."
+What is the difference between phishing and social engineering?,One is a specific technique; the other is the broader category.,Phishing is a type of social engineering that uses deceptive messages to manipulate victims.
+What is the difference between a full backup and an incremental backup?,Think everything versus changes since the last backup.,A full backup copies all selected data; an incremental backup copies data changed since the previous backup.
+What is the difference between an incremental and differential backup?,Ask: changed since when?,Incremental: changed since the last backup. Differential: changed since the last full backup.
+What is the difference between RPO and RTO?,One measures data; the other measures downtime.,RPO is acceptable data loss measured in time; RTO is acceptable recovery time.
+What is the difference between RDP and SSH?,Think GUI versus command line.,RDP provides graphical remote Windows access; SSH provides encrypted command-line remote access.
+What is the difference between RMM and a one-time remote-support session?,Think continuous management versus individual assistance.,RMM provides ongoing monitoring and management capabilities across systems; remote-support software is typically used for individual remote assistance.
+What is the difference between a clean install and an upgrade?,Think fresh versus preserving the existing environment.,A clean install starts fresh; an upgrade replaces the existing OS while attempting to preserve supported applications and data.
+What is the difference between NTFS and FAT32?,Think Windows features and file-size limits.,NTFS supports advanced Windows features such as permissions and encryption; FAT32 has a 4 GB individual-file limit and fewer security features.
+What is the difference between a security control and a security policy?,One is a mechanism; the other is a rule or requirement.,"A security control is a technical, administrative, or physical measure; a policy defines organizational rules and requirements."
+What is the purpose of documenting a change after it is completed?,Future technicians need to know what happened.,"It provides a record of what changed, when, why, by whom, and whether the change succeeded or required rollback."
+What is the purpose of a rollback plan before making a major change?,Think failure recovery.,It provides a defined method for returning the system to its previous known-good state.
+What should you do if a change causes unexpected production problems?,Don't keep pushing forward blindly.,Follow the approved rollback or incident procedure and escalate as required.
+What is the purpose of a knowledge base article?,Think solve the same problem faster next time.,It documents a repeatable solution or useful technical information for future support cases.
+What should happen when a technician cannot resolve an issue within their authority?,Don't exceed your permissions.,Escalate the issue according to the organization's support and escalation procedures.
+What is the purpose of a ticket's resolution field?,Think future reference.,It records how the issue was resolved and provides useful information for future incidents.
+What is a local user account?,Think account stored on one Windows computer.,An account whose credentials and permissions are managed locally on the device.
+What is a domain account?,Think centrally managed organizational identity.,An account managed through a directory/domain environment and usable across authorized organizational resources.
+What is Group Policy used for?,Think centrally applying Windows configuration rules.,It allows administrators to centrally configure and enforce Windows settings for users and computers.
+What is an organizational unit in Active Directory?,Think grouping objects for administration.,An OU is a logical container used to organize directory objects and apply management policies.
+What is folder redirection?,Think moving certain user folders to another location.,"A Windows management feature that redirects folders such as Documents to another path, often a network location."
+What is a roaming profile?,Think user settings following the user between systems.,A user profile stored or managed so supported settings and data can follow the user across domain-joined computers.
+What is the Windows Event Viewer especially useful for during troubleshooting?,Look for timestamps around when the failure occurred.,"Examining logged system, application, and security events to identify errors and relevant activity."
+What is Task Manager's Startup section used for?,Think programs that launch when Windows starts.,Managing and viewing applications configured to start with Windows.
+What is the Windows Services console used for?,Think background services.,"Starting, stopping, configuring, and viewing Windows services."
+What is the Windows Registry?,Think hierarchical configuration database.,A database containing configuration information used by Windows and applications.
+What is the purpose of Windows Disk Management?,Think storage layout.,"Creating, deleting, formatting, and managing partitions and volumes."
+What is a partition?,Think logical division of a physical storage device.,A defined section of a storage device that can contain a file system or volume.
+What is a volume?,Think storage space presented to the operating system.,A logical storage unit that can be formatted with a file system and assigned a drive letter or mount point.
+What is a mount point?,Think Linux-style attachment of a file system.,A directory where a file system is attached and made accessible.
+What is the purpose of a package repository?,Think trusted source for software packages.,It provides software packages that a package manager can download and install.
+What is an OS update?,Think maintenance after installation.,"A software release that fixes bugs, improves functionality, or addresses security vulnerabilities."
+What is an OS feature update?,Think larger update that can change capabilities.,A substantial operating-system update that may add features and modify system behavior.
+What is a compatibility issue caused by an unsupported application?,"The OS changed, but the app didn't keep up.","The application may fail to install, crash, or lose functionality because it is not compatible with the OS."
+What is a driver rollback used for?,Think the newest driver made things worse.,It restores a previous driver version when a newer driver causes problems.
+What is a driver update used for?,Think newer hardware support or fixes.,"It installs a newer driver version to add compatibility, fix bugs, or improve device functionality."
+What is the purpose of Windows Recovery options after a failed update?,Think getting Windows back to a working state.,"Recovery options can uninstall problematic updates, restore system state, repair startup, or reset/reinstall Windows depending on the situation."
+What is a reset of Windows?,Think reinstalling or refreshing Windows rather than simply restoring a setting.,A recovery operation that reinstalls Windows while offering options for preserving or removing user data.
+What is a bootable USB installer?,Think an external device containing OS installation files.,A USB device configured so a computer can boot from it and launch an operating-system installer.
+What is a network boot?,Think booting installation or operating files from a network server.,A system starts using boot resources provided over the network.
+What is a security baseline?,Think the organization's known-good minimum configuration.,A documented set of security configuration requirements used as a standard for systems.
+What is hardening?,Think reducing attack opportunities.,"Applying security settings and removing unnecessary services, software, permissions, and access paths to reduce attack surface."
+What is disabling unnecessary services an example of?,Less software exposed means fewer opportunities for attack.,System hardening.
+What is an unpatched system an example of?,Think a known weakness left open.,A security vulnerability caused by missing updates.
+What is a default password a security risk?,Attackers know common defaults.,Default credentials are often publicly known or easily guessed and should be changed.
+What is a password manager used for?,Think unique passwords without memorizing them all.,It securely stores and helps generate/manage credentials.
+What is account privilege escalation?,Think gaining more permissions than intended.,Obtaining higher-level privileges than the user or process was originally authorized to have.
+What is UAC designed to reduce?,Think unauthorized administrative changes.,It helps prevent applications or users from silently making privileged system changes.
+What is a secure browser configuration intended to reduce?,Think malicious sites and unwanted tracking or execution.,"It reduces exposure to unsafe content, malicious scripts, unwanted tracking, and insecure browser behavior."
+What is private browsing mode primarily designed to do?,It isn't a security cloak.,It limits local browser history and related stored browsing data; it does not make the user anonymous or prevent network monitoring.
+What is a browser certificate warning telling you?,Think the browser cannot establish expected certificate trust.,"The site's certificate may be invalid, expired, mismatched, untrusted, or otherwise problematic."
+What is a pop-up blocker used for?,Think unwanted browser windows.,It prevents or limits unsolicited browser pop-up windows.
+What is a browser extension?,Think an add-on that modifies browser functionality.,A software component that adds functionality or changes browser behavior.
+What is the risk of installing an unknown browser extension?,Extensions can often access browser data.,"A malicious or excessive-permission extension can steal information, alter browsing, or track activity."
+What is data sanitization?,Think making old data difficult or impossible to recover.,A process of removing sensitive data so it cannot be reasonably recovered.
+What is shredding used for?,Think physically destroying paper or suitable media.,Physical destruction that makes the material difficult or impossible to reconstruct.
+What is degaussing?,Think using a strong magnetic field.,A method of erasing magnetic media by disrupting its magnetic patterns.
+What is cryptographic erasure?,Think destroying the key instead of overwriting every bit.,Making encrypted data inaccessible by securely destroying the encryption key.
+What is physical destruction?,Think the storage medium is no longer usable.,Destroying the physical media so stored information cannot be practically recovered.
+What is the purpose of secure disposal of storage devices?,Think sensitive information can survive deletion.,To prevent unauthorized recovery of data from discarded media.
+What is an administrative security control?,Think policies and procedures.,"A security measure implemented through management, policy, training, or procedures."
+What is a technical security control?,Think technology enforcing security.,"A security measure implemented using technology such as firewalls, encryption, or access controls."
+What is a physical security control?,Think something protecting the physical facility or equipment.,"A security measure such as locks, cameras, guards, or access barriers."
+What is a security guard an example of?,Think human physical protection.,A physical security control.
+What is a firewall an example of?,Think technical access control for network traffic.,A technical security control.
+What is security awareness training an example of?,Think people and procedures.,An administrative security control.
+What is the purpose of network segmentation from a security perspective?,Think limiting how far an attacker can move.,It separates systems or networks to limit unauthorized access and lateral movement.
+What is a guest network used for?,Think visitors shouldn't be on the same trusted network as internal devices.,It provides isolated or restricted network access for untrusted or guest devices.
+What is MAC filtering?,Think allowing or denying devices based on their hardware addresses.,A wireless access-control feature that permits or blocks devices based on MAC addresses.
+Why is MAC filtering not sufficient as the primary wireless security control?,MAC addresses can be observed and spoofed.,An attacker can potentially bypass it by spoofing an allowed MAC address.
+What is disabling SSID broadcast?,Think hiding the network name.,A configuration that prevents the access point from openly advertising its SSID; it is not strong security by itself.
+What is the purpose of changing default router administrator credentials?,Think attackers know manufacturer defaults.,It prevents attackers from using publicly known default credentials.
+What is firmware updating on a SOHO router used for?,Think fixing bugs and vulnerabilities.,"It provides security fixes, bug fixes, and sometimes new functionality."
+What is a router administration interface?,Think where you configure network settings.,A web or command-line interface used to configure the router.
+What is a firewall rule?,Think a condition controlling traffic.,A configured condition specifying whether matching network traffic is allowed or denied.
+What is port forwarding?,Think exposing an internal service through the router.,A router configuration that forwards incoming traffic from a public address/port to an internal device and port.
+Why is unnecessary port forwarding a security risk?,It creates an externally reachable path into the internal network.,It exposes internal services to potential Internet-based attacks.
+What is a DMZ in a SOHO router context?,Think placing a device outside normal inbound filtering.,A router feature that places a specified internal device in a less-restricted inbound network position.
+Why can placing a computer in a SOHO DMZ be dangerous?,The device becomes much more exposed.,It can expose many services directly to unsolicited inbound Internet traffic.
+What is a software firewall?,Think firewall running on the endpoint.,A host-based firewall implemented in software on an individual device.
+What is an intrusion detection system?,Think detect rather than necessarily block.,A system that monitors activity for suspicious behavior or known attack patterns.
+What is an intrusion prevention system?,Think detect and actively stop.,A system that detects malicious activity and can take action to block or prevent it.
+What is malware quarantine?,Think isolate the suspicious file instead of letting it run.,Moving suspected malicious files into an isolated location where they cannot normally execute.
+What is reimaging a computer?,Think replacing the system with a known-good image.,Restoring a computer using a prepared operating-system image and configuration.
+When is reimaging appropriate during malware remediation?,Think when you need high confidence that the system is clean.,When malware cannot be reliably removed or the organization requires a known-good rebuild.
+What should be done before reimaging if user data must be preserved?,Don't destroy the only copy.,Back up or otherwise securely preserve required user data according to procedure.
+What is the purpose of scheduling anti-malware scans?,Think continuous protection rather than one emergency scan.,To regularly check systems for malware and reduce the chance that threats remain undetected.
+What is the purpose of user education after malware removal?,"Fix the cause, not just the symptoms.",To reduce the chance of reinfection by teaching the user how the malware was introduced and how to avoid similar threats.
+What Windows feature can help troubleshoot a problematic startup application?,Think controlling startup behavior.,Task Manager's Startup controls or System Configuration can help identify startup programs.
+What can cause Windows to display a black screen after login?,"Think graphics, shell, display, or startup problems.","Driver problems, shell/startup failures, display issues, or corrupted system components can cause it."
+What is a missing DLL error?,Think Windows cannot find a required library.,An application or system component cannot locate a required dynamic-link library.
+What can cause an application to report a missing DLL?,Think incomplete software installation or corruption.,"A missing or corrupted dependency, incomplete installation, or incompatible software version."
+What is application compatibility mode in Windows used for?,Think old software on newer Windows.,It can apply compatibility settings intended to help older applications run on newer Windows versions.
+What is a file association?,Think what application opens a particular file type.,A Windows setting that associates a file extension or type with a default application.
+What can cause files to open in the wrong application?,Think the association changed.,An incorrect or changed file association.
+What is a default application?,Think the program Windows chooses automatically.,The application Windows uses by default to open a particular file type or perform a particular action.
+What is a permissions error when opening a file?,Think identity versus access.,The user or process does not have sufficient permissions to access the file or folder.
+What is a corrupted user profile?,Think the account works strangely while another account works normally.,"A damaged Windows user profile can cause settings, applications, or desktop behavior to malfunction."
+What is a temporary user profile symptom?,Think Windows logs in but your normal settings are missing.,Windows may display a temporary profile when it cannot load the normal user profile.
+What is the purpose of creating a new user profile during troubleshooting?,Think determining whether the problem belongs to the user profile.,It helps determine whether a problem is isolated to the original profile.
+What is a kernel panic?,Think Linux/macOS equivalent of a serious system-level crash.,A critical operating-system failure that stops normal execution.
+What is a Linux distribution?,Think Linux plus its software and management ecosystem.,"A packaged operating-system environment built around the Linux kernel, including tools, libraries, and software."
+What is a shell in Linux?,Think command interpreter.,A program that interprets and executes user commands.
+What is Bash?,Think common Linux shell.,A widely used Unix/Linux command shell.
+What is a process ID?,Think the number identifying a running process.,A PID is a numeric identifier assigned to a running process.
+What is the purpose of kill in Linux?,Think sending a signal to a process.,"It sends a signal to a process, commonly to request termination."
+What is grep commonly paired with in Linux troubleshooting?,Think filtering command output.,It can filter text output from other commands to find relevant lines.
+What is the purpose of chmod 755 conceptually?,Think owner can modify; others can execute/read.,It gives the owner read/write/execute permissions and group/others read/execute permissions.
+What is a Linux file permission's read bit?,Think viewing file contents or listing directory information.,It grants read access.
+What is a Linux file permission's write bit?,Think modifying content.,It grants write access.
+What is a Linux file permission's execute bit?,"For a file, think running it; for a directory, think entering/searching it.",It permits execution of a file or traversal/search of a directory.
+What is a command-line pipe in Linux?,Think sending one command's output into another.,The pipe operator passes the output of one command as input to another.
+What does grep combined with a pipe allow you to do?,Think narrow a large command output.,It filters command output to lines matching a specified pattern.
+What is a shell script commonly used for?,Think automating multiple commands.,Automating a sequence of commands and administrative tasks.
+What is a batch file commonly used for?,Think Windows command automation.,Automating command-line tasks in Windows.
+What is PowerShell especially useful for?,Think Windows administration at scale.,"Automating and managing Windows systems using commands, objects, and scripts."
+What is a script's exit code?,Think how the script tells the caller whether it succeeded.,A numeric status returned by a program or script indicating success or failure.
+What is a script idempotency concern?,Think running the same script twice.,A script should be designed carefully so repeated execution does not cause unintended duplicate or destructive changes.
+What is the purpose of testing a script in a lab environment first?,Think catch mistakes before production.,"To identify syntax, logic, permission, compatibility, and destructive behavior before affecting real systems."
+What is remote desktop access?,Think controlling another computer's graphical desktop.,Accessing and interacting with a remote computer's desktop through a network.
+What is remote command-line access?,Think managing a system without its graphical desktop.,Executing commands on a remote system through a command-line protocol such as SSH or WinRM.
+What is a VPN concentrator?,Think the endpoint that terminates many VPN connections.,A network device or service that terminates and manages VPN connections.
+What is split tunneling?,Think only some traffic enters the VPN.,A VPN configuration where some traffic uses the VPN while other traffic goes directly to the Internet.
+What is full-tunnel VPN?,Think all appropriate remote traffic goes through the VPN.,A configuration where the VPN carries the client's network traffic through the organization's or VPN provider's tunnel.
+What is RMM auditing important for?,Think accountability.,It records or helps track who accessed systems and what remote-management actions occurred.
+What is the security risk of unattended remote sessions?,Think someone else could use an authenticated session.,An unauthorized person may gain control of the remote system if the session is exposed.
+What is screen sharing different from remote desktop control?,Think viewing versus controlling.,Screen sharing primarily displays another user's screen; remote control additionally allows interaction with the remote system.
+What is an AI data source problem?,Think garbage or incomplete training information.,AI output quality depends partly on the data used to train or provide context to the system.
+What is AI accuracy a concern?,Think confident output can still be wrong.,AI-generated information should be verified before being relied upon for technical or business decisions.
+What is an AI policy used for in an organization?,Think rules for employees using AI.,"It defines acceptable AI use, data handling, privacy, security, and other organizational requirements."
+What is the security concern when uploading customer data to a public AI service?,Think the data leaves your controlled environment.,Confidential or personally identifiable information could be exposed or processed outside organizational controls.
+What is a good use of AI for an IT technician?,Think assistance that still gets reviewed.,"Drafting documentation, summarizing information, generating ideas, or assisting with routine work while validating the output."
+What is a bad use of AI for an IT technician?,Think blindly trusting generated commands.,Running unverified AI-generated commands or scripts against production systems.
+What is an AI hallucination especially dangerous for technical support?,A believable wrong command can cause real damage.,"It may produce incorrect troubleshooting steps, commands, configuration values, or technical explanations."
+What is the purpose of documentation in IT support beyond closing a ticket?,Think institutional memory.,It preserves technical history and allows other technicians to understand the environment and repeat successful solutions.
+What is the purpose of a standard operating procedure?,Think everyone follows the same proven process.,An SOP documents a standardized procedure for performing a task consistently and safely.
+What is the purpose of change approval?,Think preventing unauthorized production changes.,"It ensures changes are reviewed for risk, impact, authorization, and rollback before implementation."
+What is a maintenance window?,Think scheduled downtime or reduced-risk period.,A planned period when maintenance or changes can be performed with minimal business impact.
+What is a business impact analysis concerned with?,Think what happens to the organization if something fails.,It identifies how disruptions affect business operations and helps prioritize recovery requirements.
+What is disaster recovery?,Think restoring IT operations after a major disruption.,The processes and plans used to restore systems and services after a disaster or major outage.
+What is business continuity?,Think keeping critical business functions operating.,Plans and capabilities that allow essential business operations to continue during disruptions.
+What is a recovery site?,Think another location where systems can be restored.,A facility or environment prepared to support IT recovery after a disruption.
+What is an off-site backup?,Think backup stored away from the primary location.,A backup copy stored in a different physical or logical location to protect against local disasters.
+What is a cloud backup?,Think backup stored with a cloud provider.,A backup service that stores copies of data in cloud infrastructure.
+What is retention policy?,Think how long backups or records are kept.,"Rules defining how long data, backups, or records must be retained before deletion or disposal."
+What is data minimization?,Think don't collect or keep more sensitive data than necessary.,Limiting collection and retention of personal or sensitive data to what is necessary.
+What is clean desk policy?,Think sensitive documents shouldn't sit unattended.,A policy requiring sensitive information and materials to be secured when not actively in use.
+What is shoulder surfing an example of?,Think physical observation of secrets.,A social-engineering or information-disclosure attack.
+What is a locked server room an example of?,Think restricting physical access.,A physical security control.
+What is an access badge an example of?,Think proving permission to enter.,A physical authentication/access-control mechanism.
+What is a privacy screen used for?,Think people beside you shouldn't see the display.,It reduces visual exposure of sensitive information to nearby observers.
+What is the purpose of shredding sensitive paper documents?,Think discarded documents can still reveal information.,To physically destroy sensitive information so it cannot be reconstructed easily.
+What is the purpose of secure erase software?,Think normal deletion doesn't necessarily erase the data.,It overwrites or otherwise sanitizes storage data to reduce the chance of recovery.
+What does deleting a file normally do?,Think the data may still exist until overwritten.,"It removes the file's directory/reference information, but the underlying data may remain recoverable until overwritten or sanitized."
+What is the purpose of an incident ticket?,Think track a security event separately from normal support.,"To document, track, escalate, and coordinate response to a security incident."
+What should a technician do if they suspect a compromised workstation?,Think contain first and follow procedure.,"Follow the organization's incident-response process, which may include isolating the system and escalating to security personnel."
+What is the difference between a vulnerability and an exploit?,One is the weakness; the other takes advantage of it.,A vulnerability is a weakness; an exploit is a technique or code that takes advantage of that weakness.
+What is a threat?,Think potential cause of harm.,"A person, event, condition, or activity capable of causing harm to a system or organization."
+What is risk?,Think likelihood combined with potential impact.,The potential for loss or harm resulting from a threat exploiting a vulnerability.
+What is a security incident?,Think an event that violates or threatens security.,"An event that compromises or threatens confidentiality, integrity, or availability or violates security policy."
+What is confidentiality?,Think preventing unauthorized disclosure.,Ensuring information is accessible only to authorized parties.
+What is integrity?,Think preventing unauthorized changes.,Ensuring information remains accurate and unaltered except by authorized actions.
+What is availability?,Think keeping systems and data accessible when needed.,Ensuring authorized users can access systems and information when required.
+What three concepts make up the CIA triad?,Three fundamental security goals.,"Confidentiality, integrity, and availability."
+What does encryption primarily protect?,Think confidentiality.,Encryption primarily protects the confidentiality of data by making it unreadable without the appropriate key.
+What does hashing primarily help provide?,Think detecting changes or securely storing password representations.,Hashing can support integrity verification and password verification without storing the original password.
+What is a salt used for with password hashing?,Think making identical passwords produce different hashes.,A random value added to a password before hashing to make precomputed attacks more difficult.
+What is a password hash?,Think stored representation rather than plaintext.,A one-way cryptographic representation of a password used for verification.
+What is a brute-force attack against passwords?,Think exhaustive guessing.,Trying many possible passwords until one succeeds.
+What is account enumeration?,Think discovering which usernames/accounts exist.,Determining whether specific accounts or usernames are valid.
+What is multifactor authentication stronger than password-only authentication?,Think stolen passwords aren't sufficient.,It requires additional authentication evidence beyond the password.
+What is a security token?,Think something you possess.,A physical or software-based credential used as an authentication factor.
+What is a hardware security key?,Think physical cryptographic authentication device.,"A hardware token used to provide strong authentication, often using public-key cryptography."
+What is biometric authentication?,Think a physical characteristic.,"Authentication using characteristics such as fingerprints, facial features, or iris patterns."
+What is a false acceptance in biometrics?,Think the system accepts the wrong person.,A biometric system incorrectly authenticates an unauthorized person.
+What is a false rejection in biometrics?,Think the system rejects the legitimate user.,A biometric system incorrectly denies an authorized person.
+What is the purpose of account permissions?,Think controlling access to resources.,They determine which actions a user or group may perform on resources.
+What is group-based access control?,Think assign permissions to groups instead of individuals.,Users receive permissions through membership in authorized groups.
+What is the principle of least privilege applied to administrators?,Even admins should only use elevated rights when needed.,Administrative privileges should be limited to necessary tasks and used only when required.
+What is Run as administrator used for in Windows?,Think a task needs elevated privileges.,It launches a program with elevated administrative privileges when authorized.
+What is the security risk of always running as administrator?,Every malicious program inherits your power.,A compromised application or user action can make privileged system changes more easily.
+What is a standard user account useful for?,Think reducing unnecessary administrative access.,It limits the user's ability to make system-wide changes without elevation.
+What is a local firewall rule useful for?,Think allowing one service while blocking another.,It controls inbound or outbound traffic according to configured criteria.
+What is an inbound connection?,Think traffic coming into a system.,Network traffic entering a host.
+What is an outbound connection?,Think traffic leaving a system.,Network traffic originating from a host and going outward.
+What is a browser's certificate authority?,Think trusted organization validating certificates.,A CA is an entity trusted to issue or validate digital certificates.
+What does HTTPS provide that HTTP does not?,Think encryption and authentication of the connection.,HTTPS uses TLS to protect data in transit and authenticate the server through certificates.
+What is a malicious browser redirect?,Think you enter one site and end up somewhere unexpected.,"A redirection to an unintended or potentially malicious website, often caused by malware, extensions, DNS manipulation, or compromised sites."
+What is private browsing NOT designed to hide from an employer or ISP?,Think local history versus network visibility.,"Private browsing does not inherently hide activity from network administrators, employers, ISPs, or websites."
+What is the purpose of clearing browser cache?,Think stale locally stored web resources.,It removes cached web content and can help resolve certain stale or corrupted browser-content problems.
+What is the purpose of clearing browser cookies?,Think stored website state.,"It removes stored website session and preference data, which can log users out and reset site state."
+What is a browser cache?,Think locally stored copies of web resources.,Temporary locally stored web content used to improve page-loading performance.
+What is a browser cookie?,Think small piece of website-related state stored by the browser.,"Data stored by websites in the browser to maintain sessions, preferences, or tracking information."
+What is a browser's password manager used for?,Think storing credentials in the browser.,It stores and can autofill saved usernames and passwords.
+What is the security risk of saving passwords in an unmanaged browser?,Think someone else may access the browser profile.,An unauthorized person or malware with access to the browser profile may obtain saved credentials.
+What is a software update channel?,Think how updates are distributed to systems.,A mechanism or source through which software updates are delivered.
+What is patch management?,Think keeping systems updated in a controlled way.,"The process of identifying, testing, approving, deploying, and tracking software patches."
+What is a vulnerability scan?,Think looking for known weaknesses.,An automated assessment that identifies potential vulnerabilities in systems or software.
+What is the purpose of endpoint isolation?,Think disconnecting an infected machine from the environment.,To limit an endpoint's ability to communicate with other systems while it is investigated or remediated.
+What is the difference between quarantine and deletion during malware removal?,One isolates it; the other removes it.,Quarantine isolates the suspected malware so it cannot normally execute; deletion removes it.
+What is reinstallation of an application useful for?,Think replacing damaged application files.,It can repair a corrupted or incomplete application installation.
+What is clearing application cache useful for on mobile devices?,Think temporary app data became corrupted.,It can remove cached data that may be causing application problems without necessarily removing all application data.
+What is a factory reset?,Think returning the mobile device to its original software state.,A reset that removes user data and settings and restores the device to its factory software configuration.
+What should be backed up before a factory reset?,Think reset can erase the device.,"Any required user data, settings, or other information that must be preserved."
+What is a mobile OS update useful for?,Think security plus compatibility.,"It can provide security patches, bug fixes, and new features."
+What is the security risk of rooting or jailbreaking a mobile device?,Think bypassing built-in restrictions.,"It can weaken security controls, bypass application restrictions, and increase exposure to malicious software."
+What is a rooted Android device?,Think elevated control beyond normal user restrictions.,An Android device modified to provide root-level privileges.
+What is a jailbroken iPhone?,Think bypassing Apple's normal software restrictions.,An iPhone modified to bypass Apple's standard security and software restrictions.
+What is mobile app sandboxing?,Think isolating applications from each other.,A security mechanism that limits an application's access to other applications and protected system resources.
+What is a secure lock screen?,Think the first barrier when the phone is unattended.,"A PIN, password, pattern, or biometric control that prevents unauthorized local access."
+What is remote lock?,Think locking a lost device from somewhere else.,A management feature that remotely locks a device.
+What is GPS location tracking a security concern?,Think privacy.,Location data can reveal sensitive information about a person's movements and activities.
+What is an MDM policy used to enforce?,Think organization-wide mobile security settings.,"Requirements such as screen locks, encryption, application controls, remote wipe, and configuration settings."
+What is the purpose of a VPN profile on a managed mobile device?,Think standardized secure remote network access.,It configures the device to connect to an organization's VPN service using approved settings.
+What is a mobile device certificate used for?,Think stronger device or user authentication.,A digital certificate can authenticate a device or user to an organizational service.
+What is an application crash log useful for?,Think clues about why the app failed.,It provides diagnostic information that can help identify the cause of application failures.
+What is a memory-pressure problem on a mobile device?,Think too many apps or insufficient available RAM.,"Insufficient available memory can cause apps to close, slow down, or become unstable."
+What is a software compatibility matrix?,Think matching software versions to supported environments.,"A reference showing which software versions are supported with particular operating systems, hardware, or dependencies."
+What is the purpose of verifying system requirements before software installation?,Think avoid installing something that cannot run.,"To ensure the device meets CPU, memory, storage, OS, architecture, and dependency requirements."
+What is a 32-bit versus 64-bit application compatibility issue?,Think architecture.,Some applications or drivers are limited to a particular CPU/OS architecture.
+What is a service dependency?,Think one service needs another service running.,A service or component required for another service or application to function.
+What is the purpose of restarting a service?,Think a background component is stuck.,It can reload the service and clear certain transient failures without rebooting the entire system.
+What is the purpose of rebooting after installing a driver or update?,Think some changes require a fresh system start.,It allows components that load during boot to initialize with the new configuration.
+What is a hard reboot?,Think power cycling rather than a normal shutdown.,Forcing a system to restart or power off when normal software shutdown is unavailable.
+What is a soft reboot?,Think normal operating-system restart.,Restarting the system through the operating system's normal shutdown/restart process.
+What is a system log?,Think recorded events.,"A record of system activity, errors, warnings, or other events used for monitoring and troubleshooting."
+What is a crash dump?,Think snapshot of system state when a serious failure occurs.,A file containing diagnostic information captured after a system crash.
+What is a kernel-mode driver problem capable of causing?,Think driver operates at a privileged level.,A faulty kernel-mode driver can cause serious system instability or a BSOD.
+What is the purpose of Windows Memory Diagnostic?,Think testing RAM.,It tests system memory for potential hardware errors.
+What is disk cleanup used for?,Think unnecessary files.,A Windows utility for removing certain temporary and unnecessary files to recover storage space.
+What is storage sense?,Think Windows automatically cleaning unnecessary storage.,A Windows feature that can automatically remove certain temporary and unnecessary files.
+What is a temporary file?,Think software-created data that may only be needed briefly.,A file created for temporary use by an application or operating system.
+What is an environment variable?,Think configuration value accessible to processes.,A named value used by the operating system or applications to provide configuration information.
+What is PATH used for?,Think finding executable commands.,The PATH environment variable tells the system where to search for executable programs.
+What is a mapped drive?,Think a network share appears as a drive letter.,A network resource assigned a local drive-letter mapping.
+What is a network share?,Think folder made available over the network.,A shared resource that authorized users can access over a network.
+What is the purpose of net use when troubleshooting mapped drives?,"Think connect, disconnect, or inspect network resources.",It manages connections to shared network resources.
+What is an administrative share in Windows?,Think hidden system share used by administrators.,A built-in Windows network share such as C$ that provides administrative access when authorized.
+What is a hidden share?,Think share name ending with a dollar sign.,A Windows network share that is not normally displayed when browsing available shares.
+What is the purpose of Windows Firewall profiles?,Think different network trust environments.,"Windows uses profiles such as Domain, Private, and Public to apply different firewall configurations."
+Which Windows firewall profile is intended for an untrusted network such as public Wi-Fi?,Think coffee shop.,Public.
+What is the purpose of the Windows Private network profile?,Think trusted local network.,It is intended for trusted networks where device discovery and related functionality may be appropriate.
+What is the purpose of the Domain network profile?,Think organization-managed Windows environment.,It applies when a computer is connected to an authenticated domain network.
+What is the purpose of Windows Defender Antivirus?,Think built-in malware protection.,"It detects, blocks, and removes malware and other threats."
+What is real-time protection versus a scheduled scan?,One watches continuously; the other checks at a planned time.,Real-time protection monitors activity continuously; a scheduled scan performs a deliberate malware scan at a configured time.
+What is the purpose of an antivirus exclusion?,Think telling security software not to scan something.,"It prevents specified files, folders, processes, or extensions from being scanned; exclusions should be used cautiously."
+What is the security risk of excessive antivirus exclusions?,Think attackers could hide there.,Malware could exploit excluded locations or processes to avoid detection.
+What is a security event log useful for?,Think authentication and security-related activity.,It records security-related events such as logons and other audited actions.
+What is auditing?,Think recording activity for accountability.,"The process of recording and reviewing events or actions for security, compliance, and troubleshooting."
+What is nonrepudiation?,Think proving someone performed an action.,The ability to provide evidence that a specific party performed or approved an action.
+What is digital signing used for?,Think proving origin and integrity.,A digital signature helps verify who signed data and whether it was altered after signing.
+What is a certificate used for in TLS?,Think binding an identity to a public key.,A digital certificate helps authenticate a server or other entity and associates its identity with a public key.
+What is a public key?,Think cryptographic key that can be shared.,A key intended to be distributed publicly and used in asymmetric cryptography.
+What is a private key?,Think secret half of an asymmetric key pair.,A key that must be protected and is used for operations such as decryption or digital signing.
+What is asymmetric encryption?,Think public/private key pair.,Cryptography that uses a mathematically related public and private key pair.
+What is symmetric encryption?,Think one shared secret key.,Cryptography that uses the same secret key for encryption and decryption.
+What is the purpose of TLS?,Think protecting network communications.,"TLS provides encryption, integrity, and authentication for supported network communications."
+What is a VPN tunnel protecting?,Think traffic between endpoints.,It protects traffic traveling through an untrusted network by encapsulating and encrypting it according to the VPN technology.
+What is a remote-access security consideration when using third-party screen-sharing software?,Think the vendor's infrastructure may be part of the trust chain.,"Verify the tool is approved, authenticated, encrypted, properly configured, and compliant with organizational policy."
+What is a remote-access security consideration for SSH?,Think credentials and keys.,"Use strong authentication, protect private keys, restrict access, and keep the SSH service patched."
+What is a remote-access security consideration for RDP?,Think exposed Windows graphical access.,"Restrict exposure, use strong authentication and MFA where supported, patch the system, and use VPN or other approved protections when appropriate."
+What is a remote-access security consideration for VPN?,Think the VPN becomes a gateway into the organization.,"Protect VPN credentials, enforce MFA, restrict access, patch VPN infrastructure, and monitor connections."
+What is an AI-generated answer's source problem?,Think the AI may not provide trustworthy provenance.,The output may not have a verifiable source or may combine information without reliable attribution.
+What should you do if an AI tool generates a suspicious technical command?,Don't copy-paste it into production.,Verify the command against trusted documentation and test it safely before use.
+What is an AI privacy policy likely to address?,Think what employees can submit.,"It can define what data may be entered into AI systems, approved services, retention, access, and confidentiality requirements."
+What is an AI hallucination versus an AI bias?,One is fabricated information; the other is systematic skew.,A hallucination is an inaccurate or fabricated output; bias is a systematic tendency toward skewed outcomes.
+What is an AI model's accuracy limitation?,Think correct-sounding output is not guaranteed.,AI systems can produce incorrect or incomplete answers even when the response appears confident.
+What is the purpose of a documented incident timeline?,Think reconstructing what happened.,"It records events and actions in chronological order to support investigation, response, and accountability."
+What is a ticket escalation path?,Think who gets the problem next.,"A predefined route for transferring issues to the appropriate higher-level technician, team, or authority."
+What is the purpose of categorizing support tickets?,Think routing and reporting.,Categories help route issues to the appropriate team and analyze recurring problem types.
+What is ticket prioritization based on?,Think impact and urgency.,"Priority is generally determined by factors such as business impact, number of users affected, urgency, and service criticality."
+What is the difference between incident and problem management?,One restores service; the other seeks underlying causes.,Incident management focuses on restoring normal service quickly; problem management investigates underlying causes and prevents recurrence.
+What is root cause analysis?,Think find why the problem happened rather than just fixing the symptom.,A structured process for identifying the underlying cause of a problem.
+What is a workaround?,Think temporary way to keep the user working.,A temporary method that reduces or bypasses the impact of an issue without necessarily fixing its root cause.
+What is a permanent fix?,Think eliminates the underlying problem.,A corrective action intended to resolve the root cause rather than merely bypassing the symptom.
+What is a maintenance record?,Think history of work performed.,"Documentation showing maintenance actions, dates, technicians, findings, and relevant changes."
+What is configuration documentation?,Think how the system is currently set up.,"Documentation describing system settings, hardware/software configuration, network information, and other relevant technical details."
+What is a network diagram useful for in Core 2 support work?,Think understanding the environment before making changes.,It documents relationships and connectivity between systems and can assist troubleshooting and change planning.
+What is the purpose of documenting configuration before a major change?,Think rollback and comparison.,It provides a known reference state that can be used to verify changes or restore the previous configuration.
+What is the purpose of a change request?,Think formally asking permission to modify a system.,"It documents the proposed change, reason, impact, risk, schedule, and implementation/recovery information."
+What is change rollback testing?,Think proving you can undo the change.,Verifying that the documented rollback procedure works before or during change planning.
+What is a post-change review?,Think checking whether the change actually worked.,A review confirming the change achieved its objectives and identifying unexpected effects or follow-up work.
+What is the purpose of a backup before a risky change?,Think safety net.,It provides a recovery source if the change causes data loss or system failure.
+What is the difference between backup and archive?,Think recovery versus long-term retention.,A backup is primarily for restoring operational data; an archive preserves information for long-term retention or reference.
+What is a hot site?,Think recovery location already running or nearly ready.,A disaster-recovery site with systems and infrastructure available for relatively rapid failover.
+What is a cold site?,Think space and infrastructure but little ready-to-run equipment.,A recovery location requiring significant setup before systems can operate.
+What is a warm site?,Think between hot and cold.,A partially equipped recovery site requiring some additional configuration or restoration before operation.
+What is the purpose of a UPS shutdown configuration?,Think controlled shutdown when battery runs low.,It can automatically shut down systems safely before the UPS battery is exhausted.
+What is the difference between a surge protector and a UPS?,Think one handles spikes; the other also provides temporary power.,A surge protector protects against voltage surges; a UPS provides battery-backed power and may also provide surge protection.
+What is ESD-safe handling?,Think controlling static while touching components.,Using grounding and antistatic procedures to prevent electrostatic damage.
+What is an ESD mat?,Think a grounded work surface.,A conductive or dissipative mat used with proper grounding to reduce static discharge risk.
+What is the purpose of proper lifting technique in IT work?,Think equipment can be heavy.,To reduce the risk of strains and injuries when moving equipment.
+What is a ladder safety rule relevant to technicians?,Think don't improvise with unstable furniture.,Use an appropriate ladder or step platform and follow safety procedures rather than standing on chairs or unstable objects.
+What is an environmental control used in server rooms?,Think temperature and humidity.,HVAC and environmental monitoring systems help maintain safe temperature and humidity ranges.
+What is the purpose of temperature monitoring?,Think heat can cause failures.,It detects environmental conditions that could lead to overheating or equipment damage.
+What is the purpose of proper ventilation around equipment?,Think heat needs somewhere to go.,It allows heat to dissipate and helps prevent overheating.
+What is a licensing violation?,Think using software outside the terms granted by the license.,"Using, copying, distributing, or installing software in a way that violates its license."
+What is unauthorized software?,Think software installed without organizational approval.,Software that has not been approved or authorized under organizational policy.
+What is shadow IT?,Think employees using technology without IT approval.,"Hardware, software, or cloud services used by an organization without appropriate IT authorization or oversight."
+What is the purpose of an NDA in IT support?,Think technicians see sensitive information.,It legally restricts disclosure of specified confidential information.
+What is the purpose of a privacy policy?,Think rules governing personal information.,"It explains how personal information is collected, used, stored, shared, and protected."
+What is a BYOD policy?,Think employees using their own phones or computers for work.,A policy governing the use and security of personally owned devices for organizational activities.
+What is remote wipe especially useful for in BYOD?,Think employee loses their phone.,It can remove organizational data from a lost or stolen managed device when supported and authorized.
+What is the purpose of an acceptable-use policy?,Think boundaries for technology use.,It defines allowed and prohibited use of organizational technology and resources.
+What is a prohibited activity policy designed to prevent?,Think misuse of company systems.,"Activities such as unauthorized access, illegal use, harassment, inappropriate content, or other policy violations."
+What is the purpose of professional titles and culturally appropriate communication?,Think respectful support interactions.,To communicate respectfully and professionally with customers from different backgrounds.
+What should a technician do if a customer becomes angry?,"Think calm, listen, clarify, and follow procedure.","Remain professional, listen actively, acknowledge the concern, avoid arguing, and work toward an appropriate resolution or escalation."
+What should a technician avoid when explaining a technical problem to a nontechnical user?,Don't bury them in jargon.,Unnecessary technical jargon and explanations that do not help the user understand what they need to do.
+What is a closed-ended question?,Think yes/no or a limited answer.,"A question that can usually be answered with a short, specific response."
+What is an open-ended question useful for in troubleshooting?,Think getting the customer to describe the symptoms.,It encourages the user to provide detailed information about what happened and what they observed.
+What is restating a customer's problem useful for?,Think confirm you understood them.,It verifies understanding and gives the customer an opportunity to correct misunderstandings.
+What is the purpose of an escalation note?,Think don't make the next technician start from zero.,"It summarizes symptoms, troubleshooting performed, findings, and relevant information needed by the next support level."
+What is an automation script's greatest benefit in repetitive IT work?,Think consistency and speed.,It can perform repeatable tasks quickly and consistently while reducing manual effort.
+What is a script's greatest operational danger?,Think automation magnifies mistakes.,A flawed script can make incorrect changes across many systems quickly.
+What is PowerShell's advantage over traditional batch files?,Think structured objects and extensive Windows management capabilities.,PowerShell provides powerful command and object-based administration capabilities for Windows and other platforms.
+What is a shell script's interpreter?,Think program that reads the script's commands.,A shell such as Bash interprets and executes shell-script commands.
+What is a .py file?,Think Python.,A Python script.
+What is a .ps1 file?,Think PowerShell.,A PowerShell script.
+What is a .bat file?,Think Windows batch.,A Windows batch script.
+What is a .sh file?,Think Unix/Linux shell.,A shell script.
+What is a .vbs file?,Think VBScript.,A VBScript file.
+What is a .js file?,Think JavaScript.,A JavaScript file.
+What is remote monitoring?,Think observing system health without being physically present.,"Monitoring the status, performance, or health of remote systems."
+What is remote management?,Think making administrative changes remotely.,"Managing configuration, software, services, or other system functions from a remote location."
+What is a remote-access audit trail?,Think records of remote activity.,"Logs or records showing remote connections, users, times, and potentially actions performed."
+What is SPICE particularly suited to?,Think virtualization.,Remote interaction with virtual machine displays and related VM functionality.
+What is WinRM particularly suited to?,Think Windows command and management.,"Remote Windows administration, including executing commands and scripts."
+What is VNC particularly suited to?,Think graphical desktop access.,Remote viewing and control of a graphical desktop.
+What is RDP particularly suited to?,Think Windows graphical sessions.,Remote graphical access to Windows systems.
+What is SSH particularly suited to?,Think secure text-based administration.,Secure remote command-line administration.
+What is RMM particularly suited to?,Think managing many endpoints.,Ongoing monitoring and management of remote endpoints.
+What is a VPN particularly suited to?,Think secure network access from outside.,Providing an encrypted connection to a private network or protected service.

@@ -1,0 +1,268 @@
+Question,Hint,Answer
+,,
+What is the AWS shared responsibility model?,AWS secures the cloud; the customer secures what they put in the cloud.,A model that divides security responsibilities between AWS and the customer.
+What does AWS mean by security 'of' the cloud?,Think about the infrastructure AWS operates.,"AWS is responsible for protecting the underlying infrastructure, including hardware, software, networking, and facilities that run AWS Cloud services."
+What does the customer secure under the shared responsibility model?,Think about configuration and customer-controlled resources.,"The customer is responsible for security in the cloud, such as data, identities, access controls, and configurations depending on the service."
+What is the customer's responsibility when using Amazon EC2?,"With EC2, you control much more than with a fully managed service.","The customer is responsible for the guest operating system, applications, data, security groups, and other configurations within the instance."
+What is AWS responsible for when providing Amazon EC2?,AWS still owns the physical infrastructure.,"AWS is responsible for the physical hosts, networking, facilities, and virtualization infrastructure."
+How does the shared responsibility model change for managed services such as Amazon S3?,"The more AWS manages, the more infrastructure responsibility shifts to AWS.","AWS manages more of the underlying infrastructure, while the customer remains responsible for data, permissions, and service-specific configuration."
+What is the AWS Cloud value proposition?,Think why organizations move from traditional data centers to AWS.,"AWS provides on-demand resources, elasticity, global reach, managed services, agility, and a pay-as-you-go consumption model."
+What is elasticity in cloud computing?,Think automatically adding and removing resources as demand changes.,The ability to increase or decrease resources to match demand.
+What is scalability?,Think ability to handle increasing workload.,The ability of a system to accommodate increased workload by adding resources.
+What is the difference between elasticity and scalability?,One emphasizes changing capacity with demand; the other emphasizes growing capacity.,Elasticity is the ability to dynamically adjust resources to demand; scalability is the ability to increase capacity to handle growth.
+What is high availability?,Think keeping a service accessible despite failures.,Designing systems so they remain operational and accessible with minimal downtime.
+What is fault tolerance?,Think continuing operation even when a component fails.,The ability of a system to continue operating despite the failure of a component.
+What is agility in the AWS Cloud?,Think speed of making changes and obtaining resources.,"The ability to rapidly provision resources, experiment, and adapt to changing requirements."
+What is economies of scale in cloud computing?,AWS buys infrastructure at enormous scale.,Lower per-unit costs achieved because AWS operates infrastructure at very large scale.
+What is the benefit of variable expense in cloud computing?,You pay based on consumption instead of buying everything upfront.,Costs can vary with actual usage rather than requiring large upfront infrastructure purchases.
+What is capital expenditure (CapEx)?,Think buying physical infrastructure upfront.,Spending money upfront on physical assets such as servers and data-center equipment.
+What is operational expenditure (OpEx)?,Think ongoing operating costs.,Spending associated with operating and consuming resources rather than purchasing major physical assets upfront.
+What is the AWS pay-as-you-go model?,You pay for what you consume.,A pricing model in which customers pay for AWS resources based largely on their actual usage.
+What is infrastructure as code (IaC)?,Think defining infrastructure in files instead of manually clicking everything.,Managing and provisioning infrastructure through machine-readable configuration or code.
+What is the AWS Cloud Adoption Framework (AWS CAF)?,Think organizational guidance for moving to and adopting AWS.,A framework that provides guidance for organizations to transform and accelerate business outcomes through AWS Cloud adoption.
+What are the six perspectives of AWS CAF?,"Think business, people, governance, platform, security, and operations.","Business, People, Governance, Platform, Security, and Operations."
+What is the AWS Well-Architected Framework?,Think AWS's framework for evaluating cloud workloads.,A framework for designing and reviewing cloud workloads using established architectural best practices.
+What are the six pillars of the AWS Well-Architected Framework?,"Remember operational, security, reliability, performance, cost, and sustainability.","Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization, and Sustainability."
+What is the Operational Excellence pillar?,Think running and improving workloads effectively.,The ability to run and monitor systems to deliver business value and continually improve supporting processes and procedures.
+What is the Security pillar of the Well-Architected Framework?,Think protecting information and systems.,"Protecting information, systems, and assets while delivering business value through risk assessments and security controls."
+What is the Reliability pillar?,Think recovery from failures.,Ensuring workloads perform their intended functions correctly and consistently and can recover from failures.
+What is the Performance Efficiency pillar?,Think using resources efficiently as requirements change.,Using computing resources efficiently to meet system requirements and maintaining that efficiency as demand and technology change.
+What is the Cost Optimization pillar?,Think avoiding unnecessary cloud spending.,Running systems to deliver business value at the lowest price point appropriate for the organization.
+What is the Sustainability pillar?,Think reducing environmental impact.,Minimizing environmental impacts of running cloud workloads.
+What are the three common cloud deployment models?,"Think public, private, and hybrid.","Public cloud, private cloud, and hybrid cloud."
+What is a public cloud?,Think AWS's shared provider infrastructure.,Cloud resources provided by a third-party provider over the internet and shared among customers.
+What is a private cloud?,Think dedicated cloud environment for one organization.,Cloud infrastructure dedicated to a single organization.
+What is a hybrid cloud?,Think connecting on-premises/private resources with public cloud resources.,An environment combining public cloud resources with private or on-premises infrastructure.
+What is a migration strategy called rehost?,Think lift and shift.,Moving an application to AWS with minimal changes.
+What is refactor in cloud migration?,Think redesign the application to use cloud-native capabilities.,Re-architecting or substantially modifying an application to take advantage of cloud-native features.
+What is replatforming?,"Think move it, but make limited optimizations.",Migrating an application while making some changes to take advantage of cloud capabilities without fundamentally changing its architecture.
+What is repurchasing in migration?,Think replace the existing solution with a different product.,"Moving to a different product or service, often a SaaS solution."
+What is retaining in migration?,Sometimes the workload stays where it is.,Keeping an application in its existing environment.
+What is retiring in migration?,Don't migrate something you no longer need.,Removing applications or workloads that are no longer necessary.
+What is a Region in AWS?,Think geographic area containing AWS infrastructure.,A separate geographic area containing multiple AWS Availability Zones.
+What is an Availability Zone?,Think isolated location inside a Region.,"One or more discrete data centers with redundant power, networking, and connectivity within an AWS Region."
+Why deploy resources across multiple Availability Zones?,Don't let one AZ failure take everything down.,To improve availability and resilience against failures affecting a single Availability Zone.
+What is an AWS edge location?,Think locations closer to end users.,A site used by AWS services such as Amazon CloudFront to deliver content with lower latency to users.
+What is an AWS Local Zone?,Think AWS infrastructure placed closer to a specific metropolitan area.,"An AWS infrastructure deployment that places selected compute, storage, and other resources closer to end users in a specific geographic location."
+What is AWS Outposts?,Think AWS infrastructure in your own facility.,A service that provides AWS infrastructure and services on premises for workloads requiring local processing or connectivity.
+What is Amazon EC2?,Think virtual servers.,A service providing resizable compute capacity as virtual servers in the AWS Cloud.
+What is an EC2 instance?,Think one virtual server running on EC2.,A virtual server running in Amazon EC2.
+What is an EC2 AMI?,Think template used to launch instances.,Amazon Machine Image: a template containing software configuration needed to launch an EC2 instance.
+What is an EC2 instance type?,It determines the hardware characteristics available to the virtual machine.,"A predefined combination of CPU, memory, storage, and networking capabilities for an EC2 instance."
+What is an On-Demand EC2 Instance?,No long-term commitment.,An EC2 pricing option where you pay for compute capacity without a long-term commitment.
+What is a Reserved Instance?,Think commitment in exchange for a discounted rate.,A purchasing option that provides a discount in exchange for a commitment to a specified configuration and term.
+What is a Spot Instance?,Think use spare AWS capacity at a deep discount.,An EC2 instance using spare AWS capacity at a discounted price and subject to interruption.
+What is an EC2 Dedicated Host?,Think physical server dedicated to one customer.,"A physical EC2 server dedicated to a single customer, providing visibility and control over physical placement for licensing or compliance needs."
+What is an EC2 Dedicated Instance?,Think instance running on hardware dedicated to a single customer but without the same host-level visibility as Dedicated Hosts.,An EC2 instance running on hardware dedicated to a single customer.
+What is an EC2 Capacity Reservation?,Think reserve capacity in a specific Availability Zone.,A reservation of EC2 capacity for a specified instance type in a specific Availability Zone.
+What are AWS Savings Plans?,Think commit to a consistent amount of usage for lower pricing.,Flexible pricing plans offering discounted rates in exchange for a commitment to a consistent amount of compute usage.
+What is Amazon EC2 Auto Scaling?,Think automatically adjust the number of EC2 instances.,A service that automatically adds or removes EC2 instances based on demand or configured conditions.
+What is Elastic Load Balancing?,Think distribute incoming traffic across resources.,A service that distributes incoming application or network traffic across multiple targets.
+What is AWS Lambda?,Think run code without managing servers.,A serverless compute service that runs code in response to events and charges based on usage.
+What is AWS Fargate?,Think serverless compute for containers.,"A serverless, pay-as-you-go compute engine for running containers without managing servers."
+What is Amazon ECS?,Think AWS container orchestration service.,"Amazon Elastic Container Service, a managed service for running and managing containers."
+What is Amazon EKS?,Think managed Kubernetes.,"Amazon Elastic Kubernetes Service, a managed Kubernetes service."
+What is Amazon ECR?,Think container image storage.,"Amazon Elastic Container Registry, a managed registry for storing and managing container images."
+What is AWS Elastic Beanstalk?,Think deploy applications without managing the underlying infrastructure directly.,A managed application platform that automatically handles deployment and infrastructure provisioning for supported applications.
+What is Amazon Lightsail?,Think simplified AWS for small applications.,"A simplified cloud service providing virtual servers, storage, networking, and other resources with predictable pricing."
+What is Amazon S3?,Think object storage.,A highly scalable object storage service.
+What is an S3 bucket?,Think container for S3 objects.,A logical container in Amazon S3 used to store objects.
+What is an S3 object?,Think the actual stored file plus metadata.,A file and its associated metadata stored in Amazon S3.
+What is S3 Standard designed for?,Think frequently accessed data.,S3 storage designed for frequently accessed data with high durability and availability.
+What is S3 Intelligent-Tiering?,Think storage class that automatically optimizes costs based on access patterns.,An S3 storage class that automatically moves objects between access tiers based on changing access patterns.
+What is S3 Glacier?,Think long-term archival storage.,Amazon S3 storage classes designed for low-cost long-term data archiving.
+What is S3 versioning?,Think keeping multiple versions of objects.,An S3 feature that preserves multiple versions of objects in the same bucket.
+What is S3 lifecycle management?,Think automatically change or delete objects based on rules.,A mechanism for automatically transitioning objects between storage classes or deleting them according to defined rules.
+What is Amazon EBS?,Think block storage attached to EC2.,A persistent block storage service designed for use with EC2 instances.
+What is Amazon EFS?,Think shared Linux file system.,"A managed, elastic file system that can be mounted by multiple compute resources."
+What is Amazon FSx?,Think managed file systems for specific workloads.,A family of managed file system services for workloads requiring file-system capabilities such as Windows or high-performance file systems.
+What is AWS Storage Gateway?,Think connect on-premises environments to AWS storage.,A hybrid cloud storage service that provides on-premises applications access to cloud-backed storage.
+What is AWS Backup?,Think centralized backup management.,"A managed service for centrally configuring, managing, and automating backups across supported AWS services."
+What is Amazon RDS?,Think managed relational database.,A managed service for relational databases that handles many common administrative tasks.
+What database engines can Amazon RDS support?,Know that RDS supports several relational engines.,"Supported engines include Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle, and SQL Server."
+What is Amazon Aurora?,Think AWS-built relational database compatible with MySQL and PostgreSQL.,A fully managed relational database engine compatible with MySQL and PostgreSQL.
+What is Amazon DynamoDB?,Think serverless NoSQL key-value/document database.,A fully managed serverless NoSQL database service providing key-value and document data models.
+What is Amazon ElastiCache?,Think cache frequently accessed data in memory.,A managed in-memory caching service used to improve application performance.
+What is Amazon Neptune?,Think graph database.,A managed graph database service.
+What is Amazon DocumentDB?,Think document database compatible with MongoDB workloads.,A managed document database service designed to support MongoDB-compatible applications.
+What is Amazon VPC?,Think your isolated virtual network in AWS.,"Amazon Virtual Private Cloud, a logically isolated virtual network in AWS."
+What is a subnet?,Think subdivision of a VPC's IP address range.,A range of IP addresses within a VPC.
+What is a public subnet?,Think subnet with a route to an internet gateway.,A subnet whose route table provides a path to an internet gateway.
+What is a private subnet?,Think no direct route to an internet gateway.,A subnet without a direct route to an internet gateway.
+What is an Internet Gateway?,Think VPC connection to the public internet.,A VPC component that provides communication between a VPC and the internet.
+What is a NAT Gateway?,Think private subnet resources need outbound internet access.,A managed VPC service allowing resources in private subnets to initiate outbound connections to the internet.
+What is a security group?,Think virtual firewall attached to network interfaces or instances.,A stateful virtual firewall that controls inbound and outbound traffic for supported resources.
+What is a Network ACL?,Think subnet-level traffic filtering.,A stateless network access control list that controls traffic entering or leaving a subnet.
+What is Amazon Route 53?,Think DNS.,A highly available and scalable DNS and domain registration service.
+What is Amazon CloudFront?,Think CDN.,A content delivery network that caches and delivers content from edge locations closer to users.
+What is AWS Direct Connect?,Think dedicated network connection from your location to AWS.,A dedicated network connection between an on-premises environment and AWS.
+What is AWS VPN?,Think encrypted connection over the internet.,A service providing secure VPN connectivity between networks or clients and AWS.
+What is a Site-to-Site VPN?,Connect entire networks rather than individual users.,A VPN connection between an on-premises network and an AWS VPC.
+What is AWS Client VPN?,Think individual users connecting remotely.,A managed client-based VPN service that provides secure remote access to AWS resources and on-premises networks.
+What is AWS Transit Gateway?,Think central hub connecting multiple networks.,A service that acts as a central network transit hub for connecting VPCs and on-premises networks.
+What is AWS PrivateLink?,Think private access to services without traversing the public internet.,A service that provides private connectivity to supported services through VPC endpoints.
+What is AWS Global Accelerator?,Think improve global application network performance using AWS's network.,A networking service that uses AWS global infrastructure and static IP addresses to improve availability and performance for global applications.
+What is Amazon API Gateway?,Think create and manage APIs.,"A managed service for creating, publishing, monitoring, and securing APIs."
+What is IAM?,Think AWS identity and permissions.,"AWS Identity and Access Management, used to control authentication and authorization to AWS resources."
+What is an IAM user?,Think individual identity within an AWS account.,An identity representing a person or application that can have AWS credentials and permissions.
+What is an IAM group?,Think collection of IAM users.,A collection of IAM users to which permissions can be assigned.
+What is an IAM role?,Think temporary permissions assumed by users or services.,An IAM identity with permissions that can be assumed by trusted entities.
+What is an IAM policy?,Think permission rules.,A document defining permissions for AWS resources and actions.
+What is the principle of least privilege in IAM?,Give only the permissions actually required.,Granting only the minimum permissions necessary to perform required tasks.
+What is IAM Identity Center?,Think centralized workforce access to AWS accounts and applications.,A service for centrally managing workforce identities and access to AWS accounts and applications.
+What is Amazon Cognito?,Think authentication for application users.,"A service that provides authentication, authorization, and user management capabilities for web and mobile applications."
+What is AWS KMS?,Think encryption keys.,A managed service for creating and controlling cryptographic keys used to protect data.
+What is AWS Secrets Manager?,Think store passwords and API keys securely.,"A service for storing, managing, and retrieving secrets such as database credentials and API keys."
+What is AWS Certificate Manager?,Think TLS/SSL certificates.,"A service for provisioning, managing, and deploying public and private SSL/TLS certificates."
+What is Amazon GuardDuty?,Think threat detection.,"A threat detection service that continuously monitors AWS accounts, workloads, and data for malicious or unauthorized activity."
+What is Amazon Inspector?,Think vulnerability management.,A vulnerability management service that continually scans supported AWS workloads for software vulnerabilities and unintended network exposure.
+What is Amazon Macie?,Think sensitive data in S3.,A data security and privacy service that uses machine learning and pattern matching to discover and protect sensitive data in Amazon S3.
+What is AWS Security Hub?,Think centralized security findings.,A service that provides a centralized view of security findings and security posture across AWS services and supported third-party products.
+What is AWS WAF?,Think web application firewall.,A web application firewall that helps protect applications from common web exploits.
+What is AWS Shield?,Think DDoS protection.,A managed service providing protection against distributed denial-of-service attacks.
+What is AWS Firewall Manager?,Think centrally manage firewall rules across accounts.,A service for centrally configuring and managing firewall rules across AWS accounts and resources.
+What is AWS Artifact?,Think compliance documents.,A self-service portal providing access to AWS security and compliance reports and agreements.
+What is AWS Audit Manager?,Think collect evidence for audits.,A service that helps automate evidence collection for audits and compliance assessments.
+What is AWS CloudTrail?,Think record API activity.,"A service that records AWS API calls and account activity for auditing, governance, compliance, and security analysis."
+What is Amazon CloudWatch?,"Think metrics, logs, alarms, and monitoring.","A monitoring and observability service for collecting metrics, logs, and events and creating alarms."
+What is AWS Config?,Think track resource configurations and compliance.,A service that records and evaluates AWS resource configurations against desired rules.
+What is AWS Trusted Advisor?,"Think recommendations for cost, security, performance, fault tolerance, and service limits.",A service that provides recommendations for optimizing AWS environments.
+What is AWS Systems Manager?,Think manage and operate AWS and hybrid resources.,"A service providing operational tools for managing, monitoring, and automating resources."
+What is AWS CloudFormation?,Think infrastructure as code using templates.,A service for defining and provisioning AWS infrastructure using templates.
+What is AWS Organizations?,Think manage multiple AWS accounts centrally.,A service for centrally managing multiple AWS accounts.
+What is AWS Control Tower?,Think governed multi-account AWS environment.,A service that helps set up and govern a multi-account AWS environment using automated landing zones and controls.
+What is AWS Health Dashboard?,Think personalized information about AWS service health affecting your resources.,A dashboard providing personalized information about AWS events that may affect your AWS resources.
+What is AWS Health API?,Think programmatic access to AWS Health events.,An API that provides programmatic access to AWS Health information.
+What is AWS License Manager?,Think manage software licenses.,"A service for tracking, managing, and controlling software license usage."
+What is Service Quotas?,Think AWS limits.,"A service for viewing and managing service quotas, which are limits on AWS resources and operations."
+What is the AWS Well-Architected Tool?,Think review workloads against Well-Architected best practices.,A service that helps review AWS workloads against the AWS Well-Architected Framework.
+What is AWS Migration Hub?,Think central place to track migrations.,A service providing a central location to track application migrations across AWS migration tools.
+What is AWS Application Migration Service?,Think migrate servers to AWS.,"A service that automates migration of physical, virtual, or cloud servers into AWS."
+What is AWS Database Migration Service (DMS)?,Think migrate databases.,A service for migrating databases and data stores to AWS with minimal downtime.
+What is AWS Snow Family?,Think physical devices for moving data or running workloads at the edge.,A family of physical devices designed for data transfer and edge computing when network connectivity is limited or impractical.
+What is Migration Evaluator?,Think analyze migration costs and business case.,A service that helps assess on-premises environments and develop data-driven AWS migration business cases.
+What is AWS Application Discovery Service?,Think discover on-premises applications and dependencies.,"A service that gathers information about on-premises servers, applications, and dependencies to support migration planning."
+What is AWS Schema Conversion Tool?,Think convert database schemas.,A tool that helps convert database schemas and code when migrating between different database engines.
+What is Amazon Athena?,Think SQL queries directly against data in S3.,A serverless interactive query service that uses SQL to analyze data stored in Amazon S3.
+What is Amazon Kinesis?,Think streaming data.,"A collection of services for collecting, processing, and analyzing real-time streaming data."
+What is AWS Glue?,Think data integration and ETL.,"A serverless data integration service used to discover, prepare, move, and integrate data."
+What is Amazon Redshift?,Think data warehouse.,A fully managed cloud data warehouse service.
+What is Amazon OpenSearch Service?,Think search and log analytics.,"A managed service for search, analytics, and observability workloads."
+What is Amazon QuickSight?,Think business intelligence dashboards.,A business intelligence service used to create interactive dashboards and visualizations.
+What is Amazon SageMaker AI?,"Think build, train, and deploy machine learning models.","A managed service providing tools to build, train, and deploy machine learning models."
+What is Amazon Rekognition?,Think image and video analysis.,A machine learning service for analyzing images and videos.
+What is Amazon Textract?,Think extract text and structured data from documents.,"A service that extracts text, forms, and tables from scanned documents."
+What is Amazon Transcribe?,Think speech to text.,A service that converts speech into text.
+What is Amazon Polly?,Think text to speech.,A service that converts text into lifelike speech.
+What is Amazon Translate?,Think language translation.,A neural machine translation service.
+What is Amazon Comprehend?,Think natural language processing.,A natural language processing service that extracts insights and relationships from text.
+What is Amazon Lex?,Think conversational chatbots and voice bots.,A service for building conversational interfaces using voice and text.
+What is Amazon Kendra?,Think intelligent enterprise search.,An intelligent search service for finding information across enterprise content.
+What is Amazon Q?,Think generative AI assistant for work and development.,A generative AI-powered assistant designed to provide answers and assistance using organizational data and AWS capabilities.
+What is Amazon EventBridge?,Think event bus.,A serverless event bus service that connects applications and routes events between sources and targets.
+What is Amazon SNS?,Think publish/subscribe notifications.,A fully managed pub/sub messaging service used to send notifications and messages to subscribers.
+What is Amazon SQS?,Think message queue.,A fully managed message queuing service used to decouple applications and components.
+What is AWS Step Functions?,Think coordinate workflows.,A serverless workflow service for coordinating multiple AWS services and application steps.
+What is Amazon Connect?,Think cloud contact center.,A cloud-based contact center service.
+What is Amazon SES?,Think email service.,A cloud-based email sending service.
+What is AWS CodeBuild?,Think compile and test code.,"A fully managed build service that compiles source code, runs tests, and produces deployable software packages."
+What is AWS CodePipeline?,Think CI/CD pipeline.,A continuous integration and continuous delivery service for automating software release pipelines.
+What is AWS X-Ray?,Think trace requests through distributed applications.,A service for analyzing and tracing requests as they travel through distributed applications.
+What is Amazon AppStream 2.0?,Think stream applications to users without installing them locally.,A fully managed application streaming service.
+What is Amazon WorkSpaces?,Think virtual desktop.,A managed desktop-as-a-service offering providing virtual desktops.
+What is Amazon WorkSpaces Secure Browser?,Think secure browser access to internal websites and web applications.,A managed service providing secure browser-based access to websites and web applications.
+What is AWS Amplify?,Think build and deploy web and mobile applications.,A set of tools and services for building and deploying web and mobile applications.
+What is AWS AppSync?,Think managed GraphQL APIs.,A managed service for building APIs and connecting applications to data sources using GraphQL.
+What is AWS IoT Core?,Think connect IoT devices to AWS.,A managed service that lets connected devices securely communicate with cloud applications and other devices.
+What is AWS Auto Scaling?,Think automatically adjust resource capacity.,A service that automatically scales supported AWS resources to match demand.
+What is AWS Batch?,Think run batch computing jobs.,A managed service for running batch computing workloads at scale.
+What is Amazon Aurora Serverless?,Think Aurora with automatically managed capacity.,A serverless configuration of Amazon Aurora that automatically adjusts database capacity based on workload.
+What is Amazon S3 durability?,Think S3 is designed to prevent object loss.,Amazon S3 is designed for extremely high object durability.
+"What is the difference between object, block, and file storage?","Think S3, EBS, and EFS respectively.",Object storage stores objects with metadata; block storage provides raw storage volumes; file storage provides shared hierarchical file systems.
+What is a VPC route table?,Think determines where network traffic goes.,A set of routing rules that determine where traffic from a subnet or gateway is directed.
+What is an Elastic IP address?,Think persistent public IPv4 address.,A static public IPv4 address designed for dynamic cloud computing.
+What is AWS PrivateLink used for?,Think private connectivity to services.,It provides private connectivity from VPCs to supported AWS or endpoint services without requiring internet access.
+What is the difference between a security group and a network ACL?,One is stateful and associated with network interfaces; the other is stateless and subnet-level.,Security groups are stateful and operate at the resource/network-interface level; network ACLs are stateless and operate at the subnet level.
+What is a database read replica?,Think copy used primarily to handle read traffic.,A read-only replica of a database used to scale read workloads.
+What is database Multi-AZ deployment in Amazon RDS?,Think high availability rather than read scaling.,A configuration that maintains a standby database in another Availability Zone for high availability and failover.
+What is Amazon DynamoDB designed to provide?,Think predictable performance at large scale without managing database servers.,"A managed NoSQL database designed for scalable, low-latency key-value and document workloads."
+What is serverless computing?,Think AWS manages the servers and you focus on code or workloads.,A cloud model in which the provider manages the underlying server infrastructure and customers pay for resource consumption.
+What does 'managed service' mean in AWS?,AWS handles operational work that customers would otherwise perform themselves.,An AWS service where AWS manages some or most underlying infrastructure and operational tasks.
+What is the AWS Management Console?,Think browser-based AWS interface.,A web-based interface for managing AWS resources and services.
+What is the AWS CLI?,Think AWS management from the command line.,A command-line interface for interacting with AWS services.
+What are AWS SDKs?,Think programming access to AWS APIs.,Software development kits that provide programming libraries and tools for interacting with AWS services.
+What is an AWS API?,Think programmatic interface to AWS services.,An interface that allows software to interact programmatically with AWS services.
+What is AWS CloudShell?,Think browser-based command-line environment inside AWS.,A browser-based shell environment with AWS CLI access and preinstalled tools.
+What is an AWS Region's relationship to Availability Zones?,A Region contains multiple isolated locations.,An AWS Region consists of multiple Availability Zones.
+What is the benefit of selecting a Region close to users?,Think network distance.,It can reduce network latency between users and workloads.
+What is the benefit of choosing a Region based on compliance requirements?,Think laws and where data is stored.,Some organizations must keep data within specific geographic jurisdictions to meet legal or regulatory requirements.
+What is AWS Local Zones primarily intended for?,Think workloads requiring very low latency near a specific metropolitan area.,Running selected AWS resources closer to end users or on-premises locations in specific geographic areas.
+What is a Dedicated Host primarily useful for?,Think licensing and physical-server visibility.,"Workloads requiring dedicated physical server tenancy, physical placement visibility, or certain server-bound software licenses."
+What is AWS Organizations consolidated billing?,Think one bill across multiple AWS accounts.,A feature that combines billing for multiple AWS accounts under an organization.
+What are AWS cost allocation tags?,Think label resources so costs can be categorized.,"Tags used to organize and attribute AWS costs to resources, teams, projects, or other categories."
+What is AWS Cost Explorer?,Think analyze historical and current AWS spending.,"A tool for visualizing, analyzing, and understanding AWS costs and usage over time."
+What is AWS Budgets?,Think set thresholds and receive alerts.,"A service for creating budgets and monitoring costs, usage, or other metrics against defined thresholds."
+What is the AWS Pricing Calculator?,Think estimate before deploying.,A tool for estimating the cost of AWS services and architectures.
+What is the AWS Cost and Usage Report?,Think detailed billing data.,A report providing detailed information about AWS costs and usage.
+What is AWS Marketplace?,Think third-party software and services.,"A digital catalog where customers can find, purchase, deploy, and manage third-party software and services."
+What is an AWS cost allocation tag used for?,Think billing categorization.,It helps identify and categorize AWS costs associated with tagged resources.
+What is an AWS Savings Plan?,Think discounted compute in exchange for usage commitment.,A pricing model providing lower prices in exchange for a commitment to a consistent amount of compute usage.
+What is an On-Demand pricing model best suited for?,Think unpredictable usage and no commitment.,Workloads with variable or short-term usage where flexibility is more important than discounted commitment pricing.
+What is Spot pricing best suited for?,Think workloads that can tolerate interruption.,Flexible workloads that can tolerate interruptions and take advantage of spare AWS capacity.
+What is Reserved Instance pricing best suited for?,Think predictable long-term EC2 usage.,Workloads with predictable EC2 usage where a commitment can provide a discount.
+What is the difference between Reserved Instances and Savings Plans?,"Both involve commitment, but Savings Plans are generally more flexible.","Reserved Instances provide discounts tied to specific EC2 configurations and terms, while Savings Plans provide discounts in exchange for a compute usage commitment with greater flexibility."
+What is AWS Free Tier?,Think limited free usage of eligible AWS services.,A program providing limited usage of certain AWS services at no charge under specified conditions.
+What is AWS Support?,Think technical assistance and account support.,"AWS resources and support options that help customers with technical, account, and service-related needs."
+What is AWS re:Post?,Think AWS community questions and answers.,"An AWS-managed community where customers can ask questions, share knowledge, and find technical answers."
+What is the AWS Knowledge Center?,Think searchable AWS troubleshooting and how-to information.,"A collection of AWS articles addressing common questions, configuration issues, and service usage."
+What is AWS Prescriptive Guidance?,Think recommended strategies and implementation guidance.,"AWS guidance providing strategies, patterns, and best practices for implementing AWS solutions."
+What is AWS Professional Services?,Think AWS experts helping organizations plan and implement solutions.,"A global team that helps customers plan, design, and implement AWS solutions."
+What is the AWS Partner Network?,Think ecosystem of AWS partners.,"A global network of partners that provide software, services, consulting, and technology solutions around AWS."
+What is an Independent Software Vendor (ISV) in AWS?,Think company that builds software.,A software company that develops and sells its own software products.
+What is a System Integrator (SI) in AWS?,Think company that helps integrate and implement technology.,"A company that designs, integrates, and implements technology solutions, often using multiple products or services."
+What is AWS Trusted Advisor used for?,Think recommendations across several categories.,"It provides recommendations for areas such as cost optimization, security, performance, fault tolerance, and service quotas."
+What is the AWS Trust and Safety team responsible for?,Think abuse and harmful use of AWS resources.,Handling reports and investigations involving abuse of AWS resources and services.
+What is the difference between AWS CloudTrail and Amazon CloudWatch?,CloudTrail records activity; CloudWatch monitors systems and metrics.,"CloudTrail records API calls and account activity; CloudWatch collects and monitors metrics, logs, and events."
+What is the difference between AWS Config and CloudTrail?,One tracks configuration state; the other records API activity.,AWS Config records and evaluates resource configurations; CloudTrail records AWS API calls and account activity.
+What is the difference between GuardDuty and Inspector?,One detects threats; the other looks for vulnerabilities.,GuardDuty provides threat detection; Inspector identifies vulnerabilities and unintended network exposure in supported workloads.
+What is the difference between Macie and GuardDuty?,One focuses on sensitive data; the other focuses on threats.,Macie discovers and protects sensitive data in S3; GuardDuty detects malicious or unauthorized activity.
+What is the difference between AWS WAF and AWS Shield?,One filters web requests; the other focuses on DDoS protection.,AWS WAF protects web applications from common web exploits; AWS Shield provides DDoS protection.
+What is the difference between Amazon SNS and Amazon SQS?,One is primarily pub/sub messaging; the other is a queue.,SNS publishes messages to subscribers; SQS stores messages in queues for consumers to process.
+What is the difference between Amazon ECS and Amazon EKS?,Think AWS-native orchestration versus Kubernetes.,ECS is AWS's container orchestration service; EKS is AWS's managed Kubernetes service.
+What is the difference between Amazon EBS and Amazon EFS?,Think block versus file.,EBS provides block storage for EC2; EFS provides a managed elastic file system that can be shared across resources.
+What is the difference between Amazon S3 and Amazon EBS?,Think object versus block.,S3 is object storage; EBS is block storage designed primarily for EC2.
+What is the difference between Amazon RDS and DynamoDB?,Think relational SQL databases versus serverless NoSQL.,RDS provides managed relational databases; DynamoDB provides managed NoSQL key-value and document storage.
+What is the difference between Amazon Aurora and Amazon RDS?,Aurora is one database engine available within the RDS family of managed relational databases.,Aurora is an AWS-built relational database engine compatible with MySQL and PostgreSQL; RDS is the managed relational database service supporting multiple engines.
+What is the difference between Amazon Athena and Amazon Redshift?,Think serverless SQL over S3 versus data warehouse.,Athena queries data directly in S3 using SQL; Redshift is a managed cloud data warehouse.
+What is the difference between Kinesis and SQS?,Think streaming data versus application message queues.,Kinesis is designed for streaming data ingestion and processing; SQS provides message queuing for decoupling applications.
+What is the difference between CloudFront and Route 53?,One delivers content; the other handles DNS.,CloudFront is a CDN; Route 53 is a DNS and domain service.
+What is the difference between Direct Connect and Site-to-Site VPN?,One uses a dedicated connection; the other uses encrypted tunnels over existing networks.,Direct Connect provides a dedicated network connection to AWS; Site-to-Site VPN establishes encrypted tunnels over the internet.
+What is AWS Artifact used for?,"Think compliance paperwork, not infrastructure.","Accessing AWS compliance reports, certifications, and agreements."
+What is AWS IAM used for?,Think who can access what.,Managing identities and permissions for AWS resources.
+What is the root user of an AWS account?,Think original account identity with unrestricted access.,The identity created when an AWS account is first created and associated with the account's email address; it has full access and should be protected carefully.
+Should the AWS account root user be used for everyday tasks?,"Think emergency/account-management identity, not a normal administrator.",No. AWS recommends using IAM identities or IAM Identity Center for everyday access and reserving the root user for tasks that specifically require it.
+What is MFA in AWS?,Think password plus another authentication factor.,Multi-factor authentication requiring an additional authentication factor beyond the primary credential.
+What is an IAM permission boundary?,Think maximum permissions an identity can receive.,A policy that sets the maximum permissions an IAM user or role can have.
+What is an AWS Organizations Service Control Policy (SCP)?,Think account-level permission guardrail.,A policy that defines the maximum available permissions for principals in AWS accounts within an organization.
+What is an IAM policy?,Think permissions attached to identities or resources.,A JSON-based document that defines allowed or denied actions on AWS resources.
+What is the difference between an IAM role and IAM user?,One has long-term identity credentials; the other is commonly assumed for temporary access.,An IAM user is a persistent identity; an IAM role is an identity that can be assumed to obtain temporary credentials.
+What is AWS RAM?,Think share resources across accounts.,"AWS Resource Access Manager allows supported AWS resources to be shared across AWS accounts, organizational units, or the organization."
+What is AWS Directory Service?,Think managed directory options.,A service offering managed directory capabilities such as Microsoft Active Directory integration.
+What is Amazon Cognito primarily for?,Think application users rather than AWS administrators.,Adding authentication and user identity capabilities to web and mobile applications.
+What is AWS CloudFormation used for?,Think repeatable infrastructure deployment.,Defining and provisioning AWS resources using templates.
+What is AWS Control Tower used for?,Think governed multi-account environment.,Automating setup and governance of a secure multi-account AWS environment.
+What is AWS Service Catalog?,Think approved catalog of deployable resources.,A service for creating and managing catalogs of approved IT services and resources for users to deploy.
+What is AWS Compute Optimizer?,Think right-size resources.,A service that provides recommendations for optimizing supported AWS resource configurations based on utilization data.
+What is Amazon Lightsail intended for compared with EC2?,Think simpler experience.,"Lightsail provides simplified, predictable infrastructure for smaller applications and workloads, while EC2 offers much broader configuration and control."
+What is AWS Fargate intended for?,Think containers without server management.,Running containers without managing the underlying EC2 instances.
+What is AWS Lambda's billing model generally based on?,Think executions and compute duration.,"Lambda pricing is primarily based on requests and compute duration, with other applicable charges depending on features and usage."
+What is an AWS Lambda function?,Think the unit of code Lambda executes.,A piece of code deployed to AWS Lambda that runs in response to events or invocations.
+What is an event-driven architecture?,Think events trigger actions.,An architecture in which systems respond to events rather than relying solely on direct synchronous requests.
+What is decoupling in cloud architecture?,Think components don't depend tightly on one another.,Designing components so they can operate independently and communicate through interfaces or messaging mechanisms.
+What AWS service is commonly used to decouple applications with queues?,Think managed message queue.,Amazon SQS.
+What AWS service is commonly used for pub/sub notifications?,Think publish to many subscribers.,Amazon SNS.
+What AWS service routes events between AWS services and applications?,Think event bus.,Amazon EventBridge.
+What AWS service orchestrates multi-step serverless workflows?,Think state machine/workflow.,AWS Step Functions.
+What is AWS Marketplace used for?,Think third-party products available through AWS.,"Finding, purchasing, deploying, and managing third-party software and services."
+What are AWS Support plans used for?,Think technical and account assistance.,"They provide different levels of AWS technical support, guidance, and response depending on the plan."
+What is the AWS Support Center?,Think central place to manage AWS support cases.,The AWS interface used to create and manage AWS Support cases and access support resources.

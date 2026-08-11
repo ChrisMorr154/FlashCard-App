@@ -1,0 +1,147 @@
+,,
+Question,Hint,Answer
+What are the three components of an Azure RBAC role assignment?,"Think who gets access, what they can do, and where it applies.","Security principal, role definition, and scope."
+What is a security principal in Azure RBAC?,Think who receives the permissions.,"A user, group, service principal, or managed identity."
+What is a role definition in Azure RBAC?,Think the permissions themselves.,A collection of permissions defining which actions a principal can perform.
+What are the four common Azure RBAC scopes?,Think from broadest to narrowest.,"Management group, subscription, resource group, and resource."
+"If a role is assigned at the resource-group scope, what resources does it affect?",Permissions flow downward through the hierarchy.,The resource group and its child resources.
+What is the difference between Owner and Contributor?,The important difference is access management.,Owner can manage resources and assign RBAC roles; Contributor can manage resources but cannot assign RBAC roles.
+What can the Reader role do?,Think view without modification.,View Azure resources but not modify them.
+What is the User Access Administrator role used for?,Think permissions rather than resource management.,Managing user access to Azure resources.
+What is a Microsoft Entra dynamic group?,Membership isn't manually maintained.,Membership is automatically determined by rules based on user or device attributes.
+What is a Microsoft Entra guest user?,Think someone outside your organization.,An external identity invited into your Microsoft Entra tenant.
+What does self-service password reset (SSPR) allow users to do?,Think password recovery without calling an administrator.,Reset their own Microsoft Entra password when configured and authorized.
+What is Microsoft Entra ID?,Think Microsoft's cloud identity platform.,Microsoft's cloud-based identity and access management service.
+What is Azure Policy used for?,Think enforce organizational requirements.,"To enforce, audit, or remediate resource configurations according to organizational rules."
+What is the difference between Azure Policy and Azure RBAC?,One controls configuration compliance; the other controls access.,Azure Policy evaluates resource configuration and compliance; Azure RBAC controls who can perform actions on resources.
+What does the Azure Policy 'Deny' effect do?,Think block the operation.,Prevents a resource operation when it violates the policy.
+What does the Azure Policy 'Audit' effect do?,Think allow it but record the violation.,Allows the operation but records the resource as noncompliant.
+What does the Azure Policy 'Modify' effect do?,Think automatically change the resource.,Adds or updates resource properties to bring resources toward compliance.
+What is an Azure resource lock used for?,Think protection against accidental operations.,To prevent accidental deletion or modification of Azure resources.
+What is the difference between CanNotDelete and ReadOnly locks?,One blocks deletion; the other is much more restrictive.,CanNotDelete prevents deletion but allows modifications; ReadOnly prevents modification and deletion.
+What is the Azure resource hierarchy?,Think from organization-wide governance down to an individual resource.,Management groups → subscriptions → resource groups → resources.
+What is an Azure resource group?,Think logical management container.,A logical container for related Azure resources.
+Can resources in the same resource group exist in different Azure regions?,Resource groups aren't geographic boundaries.,Yes.
+What happens to resources when their resource group is deleted?,Deleting the container has consequences for its contents.,The resources contained in the resource group are deleted.
+What is an Azure subscription used for?,"Think billing, access, quotas, and resource organization.",A management and billing boundary containing Azure resources.
+What are Azure tags used for?,Think metadata for organization and reporting.,"Name-value metadata used to organize, categorize, filter, and track Azure resources."
+What is an Azure budget?,Think spending threshold.,A cost-management feature used to define spending or usage thresholds and trigger alerts.
+What is Azure Advisor used for?,Think recommendations rather than enforcement.,"Providing recommendations for cost, performance, reliability, security, and operational excellence."
+What is an Azure storage account?,Think the top-level Azure Storage resource.,A resource that provides access to Azure Storage services and defines storage configuration.
+What are Azure Blob Storage containers used for?,Think logical organization of objects.,They organize blobs within a storage account.
+What are the three Azure Blob types?,"Remember block, append, and page.","Block blobs, append blobs, and page blobs."
+What are block blobs primarily used for?,Think normal files and objects.,"Storing text and binary data such as documents, images, videos, and backups."
+What are append blobs designed for?,Think data continuously added to the end.,Workloads such as logging where data is appended sequentially.
+What are page blobs commonly used for?,Think random-access disk storage.,They support random read/write operations and are used for Azure VM disks.
+What is Azure Files?,Think managed cloud file shares.,A managed file-sharing service supporting protocols such as SMB and NFS.
+What protocols can Azure Files use?,Think traditional network file sharing.,"SMB and NFS, depending on the configuration."
+What is Azure Storage Explorer used for?,Think graphical Azure Storage management.,Managing and transferring data across Azure Storage accounts using a graphical interface.
+What is AzCopy used for?,Think command line and bulk transfers.,A command-line utility for copying data to and from Azure Storage.
+What is the difference between AzCopy and Storage Explorer?,One is command-line based; the other is graphical.,AzCopy is a command-line transfer tool; Storage Explorer is a graphical management tool.
+What is a Shared Access Signature (SAS)?,Think temporary delegated access to storage.,A token that grants limited access to Azure Storage resources.
+What can a SAS restrict?,Think permissions plus time and location.,"It can restrict allowed operations, resources, validity period, and network/protocol conditions."
+What are Azure Storage account access keys?,Think powerful credentials for storage.,Keys that provide access to storage account data and services.
+How many access keys does an Azure Storage account have?,Think primary and backup.,Two: a primary key and a secondary key.
+Why are there two storage account access keys?,Think credential rotation.,One key can be regenerated while applications continue using the other.
+What is LRS?,Think redundancy inside one physical location.,"Locally redundant storage, which maintains multiple copies within a single physical location."
+What is ZRS?,Think Availability Zones.,"Zone-redundant storage, which replicates data synchronously across Availability Zones in the primary region."
+What is GRS?,Think primary region plus secondary region.,"Geo-redundant storage, which maintains redundancy in the primary region and asynchronously replicates data to a secondary region."
+What is GZRS?,Think zones in primary region plus another region.,"Geo-zone-redundant storage, combining zone redundancy in the primary region with geographic replication."
+What is the difference between LRS and ZRS?,Focus on physical failure boundaries.,LRS keeps copies within one physical location; ZRS distributes copies across Availability Zones.
+What is the difference between GRS and GZRS?,Both replicate to another region.,GRS uses LRS in the primary region; GZRS uses ZRS in the primary region.
+What is Blob lifecycle management?,Think automatically change tiers or delete data.,Rules that automatically move blobs between access tiers or delete blobs based on conditions.
+What are the Azure Blob access tiers?,Think frequency and retrieval requirements.,"Hot, Cool, Cold, and Archive."
+What is the Hot tier intended for?,Think frequently accessed data.,Data that is accessed frequently.
+What is the Cool tier intended for?,Think infrequently accessed data that remains online.,Data that is accessed less frequently but still needs relatively quick access.
+What is the Cold tier intended for?,Think very infrequent access but still online.,Data that is rarely accessed but requires online availability.
+What is the Archive tier intended for?,Think long-term storage where retrieval delay is acceptable.,Long-term archival data with infrequent access and higher retrieval latency.
+What is blob versioning?,Think preserve previous versions automatically.,A feature that maintains previous versions of blobs when they are modified or overwritten.
+What is blob soft delete?,Think recover deleted blobs.,A feature that retains deleted blobs for a configured period so they can be restored.
+What is container soft delete?,Think recover an accidentally deleted container.,A feature that allows deleted blob containers to be restored during the retention period.
+What is an Azure Files snapshot?,Think point-in-time copy of a share.,A read-only point-in-time copy of an Azure file share.
+What is Azure Files soft delete?,Think recover a deleted share.,A feature that retains deleted file shares for recovery during a configured retention period.
+What is an ARM template?,Think declarative Azure infrastructure.,A JSON file that declaratively defines Azure resources and their configuration.
+What is Bicep?,Think easier alternative to ARM JSON.,A declarative language for defining Azure infrastructure that is compiled into ARM deployments.
+What is the main advantage of Bicep over raw ARM JSON?,"Same Azure deployment system, less painful syntax.",Bicep provides a simpler and more readable syntax while using Azure Resource Manager for deployment.
+What is an ARM template parameter?,Think value supplied when deploying.,An input value used to customize a deployment.
+What is an ARM template variable?,Think reusable value inside the template.,A named value defined within the template for reuse.
+What is an ARM template resource section used for?,Think what Azure actually creates or configures.,It defines the Azure resources to be deployed.
+What is an ARM template output?,Think information returned by the deployment.,A value produced after deployment that can be displayed or consumed elsewhere.
+What Azure CLI command signs into Azure?,The command starts with 'az'.,az login
+What Azure CLI command lists resource groups?,Think 'az group' plus 'list'.,az group list
+What Azure CLI command creates a resource group?,Think 'az group' plus 'create'.,az group create
+What Azure CLI command lists virtual machines?,Think 'az vm' plus 'list'.,az vm list
+What is an Azure virtual machine?,Think Infrastructure as a Service.,A virtualized server in Azure where you manage the operating system and installed software.
+What is an Azure VM size?,Think hardware specification.,"A predefined combination of CPU, memory, storage, and networking capacity."
+What is an Azure managed disk?,Think Azure manages the underlying disk storage.,A virtual disk whose storage management is handled by Azure.
+What is an OS disk?,Think where Windows or Linux lives.,The disk containing the VM's operating system.
+What is a data disk?,Think additional persistent storage.,A managed disk attached to a VM for application or user data.
+What is the temporary disk on an Azure VM used for?,Don't put anything critical there.,"Temporary storage intended for transient data; data can be lost during maintenance, redeployment, or other VM events."
+What is an Azure Availability Zone?,Think separate physical datacenter location inside a region.,"A physically separate zone within an Azure region with independent power, cooling, and networking."
+Why distribute VMs across Availability Zones?,Think protect against a datacenter-zone failure.,To improve availability by placing workloads in physically separate zones.
+What is an Azure availability set?,Think fault domains and update domains.,A logical grouping that distributes VMs across fault domains and update domains.
+What is a fault domain?,Think shared physical infrastructure.,A group of VMs that share a common physical power and network failure boundary.
+What is an update domain?,Think planned maintenance.,A group of VMs that can be restarted together during planned maintenance.
+What is the difference between an availability set and Availability Zones?,One separates VMs logically; the other physically.,Availability sets distribute VMs across fault/update domains; Availability Zones place VMs in physically separate zones.
+What are Azure Virtual Machine Scale Sets?,Think many similar VMs managed together.,A service for deploying and managing a group of load-balanced VMs that can scale.
+What is horizontal scaling?,Think more or fewer instances.,Increasing or decreasing the number of instances.
+What is vertical scaling?,Think a bigger or smaller VM.,Increasing or decreasing the resources assigned to an instance.
+What is Azure Container Registry (ACR)?,Think private registry for container images.,A managed Azure service for storing and managing container images and related artifacts.
+What is Azure Container Instances (ACI)?,Think run a container without managing VMs.,A service for running containers directly in Azure without managing the underlying virtual machines.
+What is Azure Container Apps?,Think managed platform for containerized applications.,A managed service for running containerized applications with built-in scaling and application features.
+What is the difference between ACI and Container Apps?,Think simple container execution versus a managed application platform.,ACI is designed for straightforward container execution; Container Apps provides a managed application platform with scaling and application-oriented capabilities.
+What is an App Service plan?,Think compute underneath App Service apps.,The compute resources and pricing tier used by App Service applications.
+Can multiple App Service apps run in the same App Service plan?,Think shared compute.,Yes.
+What happens when you scale an App Service plan?,Think every app using that plan.,The compute resources available to the apps in that plan are changed.
+What is an App Service deployment slot?,Think separate live environment for an app.,A separate environment within an App Service app used to host another version of the application.
+What is a common reason to use deployment slots?,Think test before production.,To deploy and test a new version before swapping it into production.
+What is an App Service slot swap?,Think exchange environments.,An operation that swaps application content and configuration between deployment slots.
+What is a custom domain in Azure App Service?,Think use your own hostname.,A domain name configured to point to an App Service application.
+What is App Service TLS used for?,Think secure HTTPS connections.,Encrypting network traffic between clients and the App Service application.
+What is an Azure Virtual Network (VNet)?,Think private network in Azure.,A logically isolated network used to connect Azure resources securely.
+What is a subnet?,Think subdivision of a VNet.,A defined range of IP addresses within a virtual network.
+What is VNet peering?,Think privately connect two Azure VNets.,A connection that allows traffic between VNets over Microsoft's backbone network.
+What is global VNet peering?,Think VNet peering across regions.,VNet peering between VNets in different Azure regions.
+What is a private IP address in Azure?,Think internal network address.,An IP address used for communication within Azure virtual networks and connected private networks.
+What is a public IP address in Azure?,Think internet-facing address.,An IP address that can provide internet connectivity to supported Azure resources.
+What is a user-defined route (UDR)?,Think override or add custom routing.,A custom route created by an administrator to control where network traffic is sent.
+What is an Azure route table?,Think collection of custom routes.,A resource containing user-defined routes that can be associated with subnets.
+What is a Network Security Group (NSG)?,Think Azure network traffic filter.,A collection of inbound and outbound rules that allow or deny network traffic.
+Where can an NSG be associated?,Think two network levels.,A subnet or a network interface.
+What properties can an NSG rule evaluate?,"Think who, where, what protocol, and which port.","Source, destination, source port, destination port, protocol, direction, and priority."
+Which NSG rule has higher priority: 100 or 200?,Lower number means higher priority.,Priority 100.
+What happens when an NSG rule matches traffic?,Think the first applicable rule wins.,Its Allow or Deny action is applied.
+What are the default inbound NSG rules?,"Remember VNet, Azure Load Balancer, then deny everything else.","AllowVNetInBound, AllowAzureLoadBalancerInBound, and DenyAllInBound."
+What are the default outbound NSG rules?,Think VNet and internet allowed by default.,"AllowVNetOutBound, AllowInternetOutBound, and DenyAllOutBound."
+What is an Application Security Group (ASG)?,Think group network interfaces by application role.,A logical grouping of network interfaces used to simplify NSG rules.
+What is Azure Bastion?,Think secure RDP/SSH through the Azure portal.,A managed service that provides RDP and SSH access to VMs without requiring public IP addresses on the VMs.
+Does Azure Bastion require a public IP on the target VM?,That's one of its main purposes.,No.
+What is an Azure service endpoint?,Think VNet access to supported Azure services using their service endpoints.,A VNet feature that allows traffic from a subnet to supported Azure services over the Azure backbone while providing subnet-based access control.
+What is an Azure private endpoint?,Think private IP for a PaaS service.,A network interface that gives a supported Azure service a private IP address inside a VNet.
+What is the key difference between a service endpoint and private endpoint?,Focus on the address used to reach the service.,A service endpoint secures access from a VNet while the service uses its public endpoint; a private endpoint gives the service a private IP in the VNet.
+What is an Azure public DNS zone?,Think internet DNS.,A DNS zone hosted in Azure for publicly resolvable domain records.
+What is an Azure private DNS zone?,Think DNS resolution inside private networks.,A DNS zone used for name resolution within VNets and connected private environments.
+What is an Azure Load Balancer?,Think Layer 4 load balancing.,A service that distributes TCP and UDP traffic across backend resources.
+What is the difference between a public and internal Azure Load Balancer?,Look at the frontend IP.,A public Load Balancer uses a public frontend IP; an internal Load Balancer uses a private frontend IP.
+What is an Azure Load Balancer health probe?,Think determine whether a backend can receive traffic.,A probe that checks whether a backend instance is healthy.
+What happens when a Load Balancer backend fails its health probe?,Don't send new traffic to a dead backend.,The Load Balancer stops sending new traffic to that unhealthy backend.
+What is Azure Monitor?,Think central monitoring platform.,"A service for collecting, analyzing, and acting on telemetry from Azure resources and applications."
+What is an Azure Monitor metric?,Think numerical measurement.,A numerical measurement of resource or application behavior collected over time.
+What are Azure Monitor logs?,Think detailed telemetry records.,Log data collected from Azure resources and applications for analysis and troubleshooting.
+What is Log Analytics?,Think query Azure Monitor logs.,A capability for storing and querying log data using Kusto Query Language.
+What language is used to query Azure Monitor Logs?,Think Microsoft's analytics query language.,Kusto Query Language (KQL).
+What is an Azure Monitor alert rule?,Think condition that causes an alert.,A rule that evaluates a signal or condition and generates an alert when its criteria are met.
+What is an action group?,Think what happens after an alert fires.,A reusable collection of notification and automation actions used by Azure Monitor alerts.
+What is an alert processing rule?,Think modify or suppress alert behavior.,A rule that modifies alert processing or suppresses notifications for specified alerts.
+What is Azure VM Insights?,Think enhanced VM monitoring.,An Azure Monitor capability that provides detailed performance and health information for virtual machines.
+What is Azure Network Watcher used for?,Think Azure network troubleshooting tools.,"Monitoring, diagnosing, and analyzing Azure network connectivity."
+What is Network Watcher Connection Monitor?,Think continuously test a connection.,A capability that monitors connectivity between endpoints and reports connection performance and failures.
+What is a Recovery Services vault?,Think backup and disaster recovery management.,A vault used by Azure Backup and Azure Site Recovery to store and manage recovery information.
+What is Azure Backup?,Think backup and restore.,A managed service for backing up and restoring supported workloads.
+What is an Azure Backup policy?,Think schedule plus retention.,A policy defining when backups occur and how long recovery points are retained.
+What is a recovery point?,Think restorable state.,A point-in-time representation of backed-up data that can be used for recovery.
+What is Azure Site Recovery?,Think disaster recovery replication.,A service that replicates workloads and provides failover capabilities to a secondary location.
+What is the difference between Azure Backup and Site Recovery?,One protects data; the other provides workload failover.,Azure Backup provides backup and restore; Site Recovery provides replication and disaster recovery failover.
+What is a planned failover?,Think controlled disaster-recovery test or migration.,A controlled failover performed while the primary environment is still available.
+What is an unplanned failover?,Think primary site is unavailable.,A failover performed because the primary environment has experienced an outage or disaster.
+```,,

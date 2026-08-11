@@ -1,0 +1,352 @@
+Question,Hint,Answer
+What does the CIA Triad mean?,"Think about what security is trying to protect: data secrecy, correctness, and access.","Confidentiality, Integrity, and Availability."
+What does confidentiality protect against?,Think: who is allowed to see the data?,Unauthorized disclosure of information.
+What does integrity protect against?,Think: has the data been changed or tampered with?,Unauthorized modification or destruction of data.
+What does availability ensure?,Think: can authorized users get to the resource when they need it?,Systems and data are accessible to authorized users when needed.
+What is non-repudiation?,Think: preventing someone from denying that they performed an action.,Assurance that a party cannot credibly deny performing an action or transaction.
+What is authentication?,Think: proving who you are.,Verifying the identity of a subject.
+What is authorization?,Think: what are you allowed to do after you're identified?,Determining what an authenticated subject is permitted to access or perform.
+What is accounting in security?,Think: keeping track of what happened.,Recording and tracking user or system activity.
+What is AAA?,"Three things: prove identity, determine permissions, and track activity.","Authentication, Authorization, and Accounting."
+What is the difference between identification and authentication?,One claims an identity; the other proves it.,Identification claims an identity; authentication verifies it.
+What is multifactor authentication (MFA)?,It requires factors from more than one category.,Authentication using two or more different factor types.
+What are the three authentication factor categories?,"Know, have, and are.","Something you know, something you have, and something you are."
+What is a knowledge factor?,You can memorize it.,"Something you know, such as a password or PIN."
+What is a possession factor?,You physically possess it.,"Something you have, such as a hardware token or smart card."
+What is an inherence factor?,It is a physical characteristic of you.,"Something you are, such as a fingerprint or retina."
+What is geolocation as an authentication factor?,Think about where the user is.,"Something you are, or a location-based factor depending on the authentication system."
+What is geofencing?,Think geographic boundaries enforced by technology.,Using geographic boundaries to trigger or restrict actions.
+What is least privilege?,Give users only what they actually need.,Providing only the minimum permissions necessary to perform required tasks.
+What is the principle of need to know?,"Even if someone has access, they don't automatically need every piece of information.",Access to information is limited to what a subject requires to perform its duties.
+What is separation of duties?,Don't give one person every step of a sensitive process.,Dividing critical responsibilities among multiple people.
+What is job rotation?,People periodically switch responsibilities.,Rotating employees between roles to reduce fraud risk and improve detection.
+What is zero trust?,The key idea is not trusting something merely because it is inside the network.,"A security model that continuously verifies users, devices, and access rather than inherently trusting them."
+"What does 'never trust, always verify' describe?",This is the classic phrase for a security architecture.,Zero trust.
+What is control risk?,Think about whether a security control actually works.,The risk that a security control is ineffective or insufficient.
+What is a preventive control?,It tries to stop the bad event before it happens.,A control designed to prevent an incident from occurring.
+What is a detective control?,It finds something that has already happened or is happening.,A control designed to identify an event or incident.
+What is a corrective control?,It fixes the problem after detection.,A control designed to remediate or repair an issue.
+What is a deterrent control?,It tries to convince an attacker not to try.,A control intended to discourage unwanted behavior.
+What is a compensating control?,It provides an alternative when the preferred control cannot be implemented.,An alternative control that provides equivalent or similar protection.
+What is a directive control?,It tells people what they are required to do.,A control that directs or mandates behavior.
+What is a technical control?,Implemented with technology.,A security control implemented through hardware or software.
+What is an administrative control?,"Think policies, procedures, and management decisions.","A control based on policies, procedures, standards, or management actions."
+What is a physical control?,"Think doors, cameras, and barriers.","A control that physically protects people, facilities, or systems."
+What is defense in depth?,Don't rely on one security mechanism.,Using multiple layers of security controls to protect assets.
+What is a honeypot?,It is intentionally attractive to attackers.,A system designed to attract and detect attackers.
+What is a honeynet?,Think multiple honeypots working together.,A network of decoy systems designed to attract and monitor attackers.
+What is a honeyfile?,The decoy is a file rather than a machine.,A deliberately created file used to detect unauthorized access.
+What is a honeypot primarily used for?,It is more about detection and intelligence than normal production work.,Detecting and studying unauthorized activity.
+What is a threat?,It is the potential cause of harm.,A circumstance or event that could negatively affect an asset.
+What is a vulnerability?,Think weakness.,A weakness that can be exploited.
+What is an exploit?,Think the method used to take advantage of a weakness.,"A technique, code, or mechanism used to exploit a vulnerability."
+What is risk?,Think likelihood combined with impact.,The potential for loss or damage resulting from a threat exploiting a vulnerability.
+What is an attack vector?,Think the path used to attack a target.,The route or method used to gain unauthorized access or cause harm.
+What is an attack surface?,Think every possible place an attacker could interact with a system.,The collection of possible entry points or exposed areas that could be attacked.
+What is threat intelligence?,Information about threats that helps security teams understand them.,"Collected and analyzed information about threats, threat actors, indicators, tactics, techniques, and procedures."
+What is an indicator of compromise (IoC)?,Think evidence that a compromise may have occurred.,A technical artifact or observable sign associated with malicious activity.
+What does TTP stand for?,Threat actors have ways of operating.,"Tactics, Techniques, and Procedures."
+What is a zero-day vulnerability?,The vendor has not had time to provide a fix.,A previously unknown vulnerability or one for which no patch is currently available.
+What is a zero-day exploit?,It exploits the vulnerability before a fix is available.,An exploit targeting a zero-day vulnerability.
+What is a threat actor?,The entity carrying out or sponsoring malicious activity.,"An individual, group, or organization that conducts malicious activity."
+What is a nation-state threat actor?,Think government-backed operations.,A threat actor sponsored or supported by a national government.
+What is a hacktivist?,Think hacking motivated by a cause.,An attacker who uses hacking to promote a political or social cause.
+What is an insider threat?,The threat originates from someone with legitimate organizational access.,A security threat originating from an authorized user or someone with internal access.
+What is a script kiddie?,Usually relies on tools created by others.,An inexperienced attacker who uses existing tools or exploits without necessarily understanding them deeply.
+What is a shadow IT system?,Think technology being used without organizational approval.,"Hardware, software, or services used without the organization's knowledge or approval."
+What is social engineering?,The attacker targets people instead of primarily exploiting technology.,Manipulating people into revealing information or performing actions that compromise security.
+What is phishing?,Usually delivered electronically and tries to trick the victim.,A social engineering attack that attempts to obtain information or trigger an action through deceptive electronic communication.
+What is spear phishing?,Phishing aimed at a specific person or group.,A targeted phishing attack.
+What is whaling?,The target is high-value.,A phishing attack targeting executives or other high-profile individuals.
+What is smishing?,Think SMS.,Phishing conducted through text messages or SMS.
+What is vishing?,Think voice.,Phishing conducted through voice calls or voice communication.
+What is pharming?,The victim may enter the correct site address but gets redirected.,"An attack that redirects users to fraudulent destinations, often by manipulating DNS or host resolution."
+What is tailgating?,An attacker follows someone through a secured entrance.,Gaining physical access by following an authorized person through a controlled entry point.
+What is shoulder surfing?,Look over someone's shoulder.,"Observing sensitive information directly, such as passwords or PINs."
+What is dumpster diving?,The attacker searches discarded material.,"Obtaining sensitive information from discarded documents, equipment, or media."
+What is pretexting?,The attacker invents a believable story or identity.,Creating a fabricated scenario to persuade a victim to provide information or perform an action.
+What is baiting?,The victim is tempted with something attractive.,A social engineering technique that uses an enticing object or offer to trick a victim.
+What is quid pro quo social engineering?,The attacker offers something in exchange.,Providing a supposed benefit or service in exchange for information or access.
+What is malware?,The umbrella term for malicious software.,"Software designed to damage, disrupt, spy on, gain unauthorized access to, or otherwise compromise systems."
+What is a virus?,It needs a host file or program.,Malware that attaches to a legitimate file or program and typically requires user execution to spread.
+What is a worm?,"Unlike a virus, it can spread on its own.",Self-replicating malware that can spread across systems or networks without requiring a host file.
+What is a Trojan?,It pretends to be something legitimate.,Malware disguised as legitimate software or files.
+What is ransomware?,Think data held hostage.,Malware that encrypts or otherwise blocks access to data and demands payment.
+What is a rootkit?,Think stealth at a privileged level.,Malware designed to hide its presence and maintain privileged access to a system.
+What is a bootkit?,It targets the boot process.,Malware that compromises the boot process or bootloader.
+What is spyware?,It secretly watches activity.,Malware designed to collect information about users or systems without authorization.
+What is a keylogger?,It records what gets typed.,Software or hardware that captures keystrokes.
+What is a botnet?,Think many compromised devices controlled together.,A network of compromised systems controlled by an attacker.
+What is a command-and-control server?,Compromised systems communicate with it.,Infrastructure used by an attacker to communicate with and control compromised systems.
+What is a logic bomb?,It waits for a condition.,Malicious code that executes when a specified condition or trigger occurs.
+What is a backdoor?,It bypasses normal authentication or security mechanisms.,A mechanism that provides unauthorized or hidden access to a system.
+What is a brute-force attack?,Try many possible passwords.,Systematically attempting many credential combinations until one succeeds.
+What is a password spraying attack?,One common password is tested against many accounts.,Trying a small number of commonly used passwords against many accounts.
+What is credential stuffing?,The attacker already has username/password pairs.,Using stolen credentials from one service to attempt authentication on another service.
+What is a dictionary attack?,Use a list of likely words and passwords.,Attempting authentication using a predefined list of common passwords or words.
+What is a rainbow table?,Think precomputed password hashes.,A database of precomputed password hashes used to help recover passwords.
+What is salting?,Add unique random data before hashing.,Adding a unique random value to a password before hashing to make precomputed attacks more difficult.
+What is pass-the-hash?,The attacker uses the hash instead of recovering the plaintext password.,Using a captured password hash to authenticate without knowing the original password.
+What is pass-the-ticket?,Think Kerberos tickets.,Using a stolen Kerberos ticket to authenticate as another user.
+What is Kerberoasting?,It targets Kerberos service tickets.,An attack that obtains Kerberos service tickets and attempts to crack the associated service account credentials offline.
+What is an on-path attack?,The attacker gets between two communicating parties.,An attack where an adversary intercepts or potentially modifies communications between two parties.
+What is ARP poisoning?,ARP maps IP addresses to MAC addresses.,Sending forged ARP information to associate an attacker's MAC address with another host's IP address.
+What is DNS poisoning?,Think false DNS information.,Corrupting DNS information so users are directed to incorrect or malicious destinations.
+What is DNS hijacking?,The attacker takes control of DNS resolution.,Manipulating DNS settings or infrastructure to redirect DNS queries.
+What is a denial-of-service attack?,The goal is to make a service unavailable.,An attack that prevents legitimate users from accessing a service or resource.
+What is a distributed denial-of-service attack?,Many systems participate in the attack.,A denial-of-service attack launched from multiple systems.
+What is an amplification attack?,A small request creates a much larger response.,An attack that abuses a service or protocol to generate traffic much larger than the attacker's original request.
+What is a reflection attack?,The victim receives traffic from third-party systems.,An attack where requests are sent to intermediary systems with the victim's address spoofed as the source.
+What is an evil twin?,Think fake Wi-Fi access point.,A rogue wireless access point designed to imitate a legitimate wireless network.
+What is a rogue access point?,An unauthorized AP connected to or operating within an organization's environment.,An unauthorized wireless access point.
+What is deauthentication?,It forces wireless clients off an access point.,An attack that sends forged deauthentication frames to disconnect wireless clients.
+What is a downgrade attack?,Force communication onto a weaker security option.,"An attack that causes a system to use an older or weaker protocol, cipher, or security mechanism."
+What is a supply-chain attack?,The compromise happens through a trusted supplier or dependency.,"An attack that compromises software, hardware, services, or dependencies through a supplier or third party."
+What is an SQL injection attack?,The attacker manipulates database queries.,Injecting malicious SQL syntax into an application's database queries.
+What is cross-site scripting (XSS)?,Think malicious script running in a user's browser.,Injecting malicious client-side script into content viewed by other users.
+What is cross-site request forgery (CSRF)?,The victim's browser is tricked into making an unwanted authenticated request.,An attack that causes an authenticated user's browser to perform an unauthorized action.
+What is a buffer overflow?,Think data exceeding a memory buffer's boundaries.,Writing more data into a memory buffer than it can hold.
+What is a race condition?,Two operations interact incorrectly because of timing.,A vulnerability caused by the timing or ordering of concurrent operations.
+What is directory traversal?,Think escaping the intended directory.,An attack that manipulates file paths to access files outside the intended directory.
+What is privilege escalation?,The attacker gains more permissions than originally available.,Increasing access privileges beyond those originally authorized.
+What is lateral movement?,"Once inside, the attacker moves to other systems.",Moving through a compromised environment to access additional systems or resources.
+What is data exfiltration?,Think data leaving the environment.,Unauthorized transfer of data from a system or organization.
+What is data poisoning?,Corrupt the data used by a system.,Deliberately modifying or injecting malicious data into a dataset.
+What is a hypervisor?,It manages virtual machines.,Software or firmware that creates and manages virtual machines.
+What is a Type 1 hypervisor?,It runs directly on the physical hardware.,A hypervisor that runs directly on host hardware.
+What is a Type 2 hypervisor?,It runs on top of a host operating system.,A hypervisor that runs as an application on a conventional operating system.
+What is VM escape?,The attacker breaks out of a virtual machine.,An attack that allows code running inside a virtual machine to interact with the host or other environments outside the VM.
+What is containerization?,Containers share the host kernel.,A virtualization approach that isolates applications while sharing the host operating system kernel.
+What is serverless computing?,The provider manages the underlying servers.,A cloud model where the provider manages server infrastructure and customers execute functions or applications without managing servers.
+What is infrastructure as a service (IaaS)?,You rent infrastructure.,"A cloud model providing virtualized computing resources such as servers, storage, and networking."
+What is platform as a service (PaaS)?,You get a platform for developing and deploying applications.,A cloud model providing an application development and deployment platform managed by the provider.
+What is software as a service (SaaS)?,You use the provider's application.,A cloud model in which the provider delivers a complete application to customers.
+What is public cloud?,Shared provider infrastructure.,Cloud infrastructure available to multiple customers through a cloud provider.
+What is private cloud?,Dedicated to one organization.,Cloud infrastructure dedicated to a single organization.
+What is hybrid cloud?,A combination of cloud environments.,An environment combining private and public cloud resources.
+What is community cloud?,Multiple organizations share infrastructure because they have common requirements.,Cloud infrastructure shared by organizations with common concerns or requirements.
+What is a DMZ?,Think isolated network for publicly accessible services.,A network segment designed to separate publicly accessible services from an internal network.
+What is network segmentation?,Break one network into smaller security zones.,Dividing a network into separate segments to limit access and contain threats.
+What is microsegmentation?,Make the security boundaries much smaller.,"Applying segmentation controls at a granular level, often around individual workloads or applications."
+What is a VLAN?,It logically separates a switched network.,A logical Layer 2 network created within a physical switching infrastructure.
+What is a VPN?,Think encrypted tunnel over an untrusted network.,A virtual private network that provides protected communication across another network.
+What is a site-to-site VPN?,The endpoints are networks rather than individual users.,A VPN connecting two or more networks.
+What is a remote-access VPN?,An individual user connects into a protected network.,A VPN allowing a remote user or device to connect securely to a private network.
+What is split tunneling?,Some traffic uses the VPN while other traffic does not.,A VPN configuration where only selected traffic uses the VPN tunnel.
+What is full tunneling?,Send essentially all network traffic through the VPN.,A VPN configuration where all applicable traffic is routed through the VPN tunnel.
+What is TLS?,Think encrypted application-layer communications.,"Transport Layer Security, a protocol used to provide confidentiality, integrity, and authentication for network communications."
+What is SSL?,It is the predecessor to TLS.,"Secure Sockets Layer, an older protocol superseded by TLS."
+What port does HTTPS normally use?,HTTP plus encryption.,TCP 443.
+What port does HTTP normally use?,The unencrypted web protocol.,TCP 80.
+What port does SSH use?,Secure remote command-line access.,TCP 22.
+What port does Telnet use?,"Old, insecure remote terminal access.",TCP 23.
+What port does SMTP normally use?,Think sending email.,TCP 25.
+What port does DNS normally use?,Think name resolution.,"UDP 53, with TCP 53 also used for certain DNS operations."
+What port does DHCP use?,Remember DHCP uses two UDP ports.,UDP 67 for servers and UDP 68 for clients.
+What port does POP3 use?,Think retrieving email without encryption.,TCP 110.
+What port does IMAP4 use?,Think email synchronization and retrieval.,TCP 143.
+What port does SNMP use?,Think network monitoring.,UDP 161.
+What port does SNMP trap use?,Traps are sent to the management system.,UDP 162.
+What port does LDAP use?,Directory services.,TCP/UDP 389.
+What port does LDAPS use?,LDAP protected with TLS.,TCP 636.
+What port does Kerberos use?,Authentication in Active Directory environments.,TCP/UDP 88.
+What port does RDP use?,Windows remote desktop.,TCP/UDP 3389.
+What port does SMB use?,Windows file and printer sharing.,TCP 445.
+What port does FTP use for control?,FTP has separate control and data channels.,TCP 21.
+What port does FTP traditionally use for data?,Remember the second FTP port.,TCP 20.
+What port does TFTP use?,The lightweight file transfer protocol.,UDP 69.
+What port does NTP use?,Think clock synchronization.,UDP 123.
+What port does Syslog normally use?,Think centralized logging.,UDP 514.
+What port does SIP normally use?,Think VoIP signaling.,TCP/UDP 5060.
+What port does SIP over TLS normally use?,Encrypted SIP signaling.,TCP 5061.
+What is SFTP?,Don't confuse it with FTP over a random port.,"SSH File Transfer Protocol, which operates through SSH, normally TCP 22."
+What is FTPS?,FTP protected with TLS.,FTP secured using TLS.
+What is IPsec?,Think network-layer VPN security.,A suite of protocols used to secure IP communications.
+What is AH in IPsec?,"It provides authentication and integrity, not encryption.",Authentication Header.
+What is ESP in IPsec?,This is the IPsec protocol associated with encryption.,Encapsulating Security Payload.
+What is IKE?,It establishes security associations for IPsec.,Internet Key Exchange.
+What is AES?,A modern symmetric encryption standard.,"Advanced Encryption Standard, a symmetric block cipher."
+What is RSA?,Think asymmetric cryptography.,An asymmetric cryptographic algorithm commonly used for encryption and digital signatures.
+What is ECC?,Think strong asymmetric security using smaller keys.,Elliptic Curve Cryptography.
+What is 3DES?,An older symmetric cipher based on DES.,Triple Data Encryption Standard.
+What is a symmetric encryption algorithm?,Same secret key for encryption and decryption.,"An encryption algorithm that uses the same key, or a directly related shared secret, for encryption and decryption."
+What is an asymmetric encryption algorithm?,Uses a key pair.,An encryption system using a public key and a private key.
+What is hashing?,It is one-way and used to verify data integrity.,Transforming data into a fixed-length digest using a hash function.
+What is SHA-256?,It belongs to the SHA-2 family.,A cryptographic hash function that produces a 256-bit digest.
+What is SHA-1?,Know it as an obsolete weak hash.,A legacy 160-bit hash algorithm considered cryptographically weak.
+What is MD5?,Older hash with serious collision weaknesses.,A legacy 128-bit hash algorithm that is not suitable for security-sensitive integrity or password applications.
+What is a digital signature?,"Think integrity, authentication, and non-repudiation.",A cryptographic mechanism used to verify the signer and detect unauthorized modification.
+What is a digital certificate?,Think identity binding for a public key.,A digitally signed document that binds an identity to a public key.
+What is a certificate authority (CA)?,The trusted organization that signs certificates.,An entity trusted to issue and digitally sign certificates.
+What is PKI?,Think the complete certificate ecosystem.,"Public Key Infrastructure, including certificates, certificate authorities, keys, policies, and related processes."
+What is a certificate revocation list (CRL)?,A published list of certificates that should no longer be trusted.,A list of revoked certificates maintained by a certificate authority.
+What is OCSP?,It checks certificate status without downloading a full revocation list.,"Online Certificate Status Protocol, used to query whether a certificate has been revoked."
+What is key escrow?,A trusted party holds a copy of a cryptographic key.,A process in which encryption keys are stored by an authorized third party for controlled recovery.
+What is key rotation?,Replace keys periodically.,Changing cryptographic keys according to a defined schedule or security requirement.
+What is data at rest?,Think stored data.,Data stored on devices or media.
+What is data in transit?,Think data moving between systems.,Data being transmitted across a network or communication channel.
+What is data in use?,Think data actively being processed.,Data currently being accessed or processed by a system.
+What is tokenization?,Replace sensitive data with a non-sensitive token.,Replacing sensitive information with a surrogate token that has no exploitable value by itself.
+What is data masking?,Hide portions of sensitive data.,Modifying data so sensitive portions are concealed while retaining some usable representation.
+What is DLP?,Think stopping sensitive data from leaving.,"Data Loss Prevention, technologies and policies designed to detect and prevent unauthorized disclosure or transmission of sensitive data."
+What is an HSM?,Think dedicated hardware for protecting cryptographic keys.,"Hardware Security Module, a specialized device used for secure cryptographic operations and key protection."
+What is an endpoint detection and response (EDR) system?,It monitors endpoints and investigates suspicious activity.,"A security technology that continuously monitors endpoints and provides detection, investigation, and response capabilities."
+What is an intrusion detection system (IDS)?,It alerts on suspicious activity.,A system that detects and reports potentially malicious network or host activity.
+What is an intrusion prevention system (IPS)?,It can actively block malicious traffic.,A security system that detects and can automatically prevent or block malicious activity.
+What is a firewall?,It controls traffic based on security rules.,A security device or software that filters network traffic according to defined rules.
+What is a stateful firewall?,It remembers connections.,A firewall that tracks the state of network connections when making filtering decisions.
+What is a stateless firewall?,Each packet is evaluated independently.,A firewall that filters packets without maintaining connection state.
+What is a proxy server?,It acts as an intermediary between clients and destinations.,A server that makes requests on behalf of clients.
+What is a forward proxy?,It represents clients to external destinations.,A proxy that sits between internal clients and external resources.
+What is a reverse proxy?,It represents servers to external clients.,A proxy that sits in front of servers and receives requests on their behalf.
+What is a web application firewall (WAF)?,It protects web applications rather than simply filtering IP traffic.,A firewall designed to inspect and protect HTTP/HTTPS application traffic.
+What is a security information and event management (SIEM) system?,Think centralized security logs plus analysis.,"A system that aggregates, correlates, analyzes, and reports security event data."
+What is SOAR?,Think automating security operations.,"Security Orchestration, Automation, and Response."
+What is a vulnerability scanner?,It searches for known weaknesses.,"A tool that identifies potential vulnerabilities in systems, applications, or networks."
+What is penetration testing?,Authorized simulated attacks.,An authorized security test that attempts to exploit vulnerabilities to evaluate defenses.
+What is a false positive?,The system says bad when it actually isn't.,A security alert indicating malicious activity when the activity is actually benign.
+What is a false negative?,The system misses something malicious.,A failure to detect activity that is actually malicious.
+What is a security baseline?,Think the approved normal configuration.,A documented standard configuration or security state used for comparison and compliance.
+What is configuration drift?,Systems slowly move away from their approved state.,Changes that cause a system's configuration to deviate from its established baseline.
+What is a secure configuration?,Remove unnecessary attack opportunities.,A system configuration designed to minimize vulnerabilities and unnecessary exposure.
+What is hardening?,Reduce the system's attack surface.,"Applying security configurations and removing unnecessary services, software, accounts, and access."
+What is patch management?,Keep systems updated against known weaknesses.,"The process of identifying, testing, approving, deploying, and verifying software updates."
+What is a vulnerability assessment?,Find and evaluate weaknesses.,"A process of identifying, analyzing, and prioritizing vulnerabilities."
+What is penetration testing different from vulnerability scanning?,One attempts exploitation; the other primarily identifies weaknesses.,"Penetration testing attempts to exploit vulnerabilities to validate impact, while vulnerability scanning identifies potential vulnerabilities."
+What is a tabletop exercise?,It is a discussion-based test.,A discussion-based exercise used to evaluate response plans and decision-making.
+What is a business continuity plan (BCP)?,Keep critical business functions operating.,A plan for maintaining or restoring essential business operations during disruption.
+What is a disaster recovery plan (DRP)?,Focus on recovering IT and systems after disruption.,"A documented plan for restoring technology, systems, and services after a disruptive event."
+What is a disaster recovery site?,Think backup location for operations.,A facility or environment used to restore or continue IT operations after a disaster.
+What is an RPO?,Think acceptable data loss measured in time.,Recovery Point Objective: the maximum acceptable amount of data loss measured as a time interval.
+What is an RTO?,Think how quickly the service must return.,Recovery Time Objective: the maximum acceptable time to restore a service or system.
+What is an MTTR?,Think how long it takes to repair.,"Mean Time to Repair or Restore, depending on organizational usage."
+What is an MTBF?,Think average time between failures.,Mean Time Between Failures.
+What is a hot site?,Almost ready to operate immediately.,A disaster recovery facility with systems and infrastructure ready for rapid operation.
+What is a warm site?,Partially prepared; some setup is still required.,A disaster recovery facility with some infrastructure and equipment available but requiring additional configuration or restoration.
+What is a cold site?,Mostly just the facility and basic resources.,A disaster recovery facility with minimal equipment that requires significant setup before operation.
+What is incident response?,Think organized handling of security incidents.,"A structured process for detecting, analyzing, containing, eradicating, and recovering from security incidents."
+What is incident containment?,Stop the incident from spreading.,Actions taken to limit the scope and impact of an active security incident.
+What is eradication?,Remove the cause of the compromise.,"Eliminating malware, attacker persistence, vulnerabilities, and other causes of an incident."
+What is recovery in incident response?,Return systems to normal operation.,"Restoring affected systems and services to normal, secure operation."
+What is a lessons-learned process?,Review what happened after the incident.,"A post-incident activity used to identify improvements to security controls, procedures, and response."
+What is chain of custody?,Think proving evidence was controlled correctly.,"Documentation showing how digital or physical evidence was collected, handled, transferred, and stored."
+What is forensic imaging?,Make a bit-for-bit copy for investigation.,Creating a forensic copy of digital media while preserving the original evidence.
+What is volatile data?,It disappears when power is lost.,Data that is lost or changed when a system is powered off or otherwise altered.
+What is memory forensics?,Investigate RAM.,"Analyzing volatile memory to identify processes, connections, malware, credentials, and other evidence."
+What is an acceptable use policy (AUP)?,It defines how organizational technology may be used.,A policy specifying permitted and prohibited uses of organizational systems and resources.
+What is a data classification policy?,It determines how sensitive information is categorized and handled.,A policy defining categories of data sensitivity and the security requirements for each category.
+What is data ownership?,The owner decides how data should be handled.,"Responsibility for determining how data is classified, accessed, protected, and managed."
+What is a data custodian?,The custodian handles the technical protection of data.,A person or group responsible for implementing and maintaining controls for data.
+What is data sovereignty?,Think which country's laws apply to data.,The concept that data is subject to the laws and regulations of the country where it is physically located.
+What is data residency?,Think where the data is stored.,The physical or geographic location in which data is stored.
+What is data retention?,How long must information be kept?,The defined period for which data must be preserved.
+What is data destruction?,Securely dispose of information when it is no longer needed.,The process of securely eliminating data so it cannot be recovered.
+What is sanitization?,Make storage media safe to reuse or dispose of.,The process of removing sensitive information from media so it cannot be reasonably recovered.
+What is governance?,Think organizational direction and oversight.,"The framework through which an organization directs, manages, and oversees security and risk."
+What is risk appetite?,How much risk is the organization willing to accept?,The amount and type of risk an organization is willing to pursue or accept.
+What is risk tolerance?,Think acceptable variation around the organization's risk appetite.,The acceptable level of variation from risk expectations or objectives.
+What is risk avoidance?,Don't perform the risky activity.,A risk response that eliminates the activity or condition causing the risk.
+What is risk mitigation?,Reduce likelihood or impact.,A risk response that reduces the likelihood or impact of a risk.
+What is risk transfer?,Move some financial or operational consequences to another party.,"A risk response that shifts some or all risk to another party, often through insurance or contracts."
+What is risk acceptance?,Know the risk and consciously live with it.,A risk response in which an organization formally accepts a known risk.
+What is a qualitative risk assessment?,Uses descriptive categories rather than precise monetary calculations.,"Risk analysis using categories such as low, medium, and high."
+What is a quantitative risk assessment?,Uses numerical values.,Risk analysis using numerical measurements such as monetary values or probabilities.
+What is an asset?,Think something valuable that needs protection.,Anything of value to an organization that requires protection.
+What is an asset owner?,The person accountable for the asset.,"The individual or organization responsible for an asset's classification, protection requirements, and use."
+What is an audit?,Think independent examination against requirements.,"A systematic examination of systems, controls, processes, or records against defined requirements."
+What is a compliance requirement?,"Think laws, regulations, contracts, or standards the organization must follow.",A mandatory or contractual requirement governing how an organization operates or protects information.
+What is a security policy?,High-level organizational security direction.,"A formal statement defining an organization's security expectations, requirements, and responsibilities."
+What is a standard in security governance?,More specific and mandatory than a general policy.,A formally established mandatory requirement or specification.
+What is a guideline?,Recommended rather than normally mandatory.,A recommended practice or suggestion for achieving security objectives.
+What is a procedure?,The exact steps for performing a task.,A documented sequence of steps used to perform a specific activity.
+What is an NDA?,Think keeping information confidential between parties.,A Non-Disclosure Agreement that legally restricts disclosure of specified information.
+What is a memorandum of understanding (MOU)?,Think agreement describing cooperation without necessarily being a binding contract.,A document describing the intentions and understanding between parties.
+What is an SLA?,Think measurable service commitments.,A Service Level Agreement defining expected service performance and responsibilities.
+What is third-party risk?,The security risk introduced by vendors or external organizations.,"Risk arising from relationships with suppliers, contractors, partners, or other external entities."
+What is due diligence?,Investigate before making a decision.,The process of investigating and evaluating risks before entering into or continuing a relationship.
+What is due care?,Actually implement reasonable protections.,The ongoing responsibility to take reasonable precautions to protect assets and reduce risk.
+What is a supply-chain risk?,Security weaknesses can enter through dependencies.,"Risk introduced through vendors, suppliers, software dependencies, hardware, or other components in a supply chain."
+What is a business impact analysis (BIA)?,Determine what matters most and what disruption costs.,An analysis that identifies critical business functions and the effects of their disruption.
+What is a critical business function?,"If it stops, the organization is significantly affected.",A business activity essential to organizational operations.
+What is a security awareness program?,Train users to recognize and avoid security threats.,"An organized program for educating users about security responsibilities, threats, and safe behavior."
+What is phishing simulation?,A controlled test of user susceptibility to phishing.,An authorized simulated phishing campaign used to measure and improve security awareness.
+What is an insider threat that is intentional?,The person deliberately causes harm.,A malicious insider threat caused by intentional actions.
+What is an insider threat that is unintentional?,The user makes a mistake rather than intending harm.,An accidental or negligent action by an authorized user that creates security risk.
+What is account lockout?,Too many failed attempts trigger it.,A security control that temporarily or permanently disables an account after a defined number of failed authentication attempts.
+What is password history?,It prevents immediate reuse of old passwords.,A control that prevents users from reusing previously used passwords.
+What is password complexity?,It defines character requirements.,Rules requiring passwords to use specified characteristics such as length or character diversity.
+What is an authentication token?,Think a credential that proves access.,A physical or software object used to authenticate a user or system.
+What is a smart card?,A physical card containing authentication or cryptographic capabilities.,"A card containing an embedded chip used for identification, authentication, or cryptographic operations."
+What is biometrics?,Measure a physical or behavioral characteristic.,Authentication or identification using measurable human characteristics.
+What is false acceptance in biometrics?,An unauthorized person gets accepted.,A biometric system incorrectly authenticates an unauthorized person.
+What is false rejection in biometrics?,An authorized person gets rejected.,A biometric system incorrectly rejects an authorized person.
+What is FAR in biometrics?,Think unauthorized people getting accepted.,False Acceptance Rate: the percentage of unauthorized authentication attempts incorrectly accepted.
+What is FRR in biometrics?,Think authorized people getting rejected.,False Rejection Rate: the percentage of authorized authentication attempts incorrectly rejected.
+What is multifactor authentication stronger than single-factor authentication because of?,Think independent factor categories.,It requires multiple authentication factors from different categories.
+What is SSO?,One login for multiple services.,"Single Sign-On, allowing a user to authenticate once and access multiple authorized services."
+What is federation?,Think identity trust across organizations or security domains.,An arrangement allowing identities and authentication information to be trusted across separate security domains.
+What is SAML?,Commonly associated with web-based identity federation.,"Security Assertion Markup Language, an XML-based standard for exchanging authentication and authorization information."
+What is OAuth?,Think delegated authorization rather than proving identity.,An authorization framework that allows applications to obtain limited access to resources without exposing the user's credentials.
+What is OpenID Connect?,Think authentication built on OAuth 2.0.,An identity layer built on OAuth 2.0 used for authentication and identity information.
+What is RADIUS?,Commonly used for centralized network access authentication.,"Remote Authentication Dial-In User Service, a protocol for centralized authentication, authorization, and accounting."
+What is TACACS+?,Think centralized AAA with Cisco environments.,A Cisco-developed AAA protocol that separates authentication and authorization and encrypts the entire payload.
+What is LDAP?,Think directory services.,"Lightweight Directory Access Protocol, used to access and manage directory information."
+What is Kerberos?,Think ticket-based authentication.,A network authentication protocol using tickets and symmetric cryptography.
+What is a ticket-granting ticket (TGT)?,It lets a user request service tickets without repeatedly entering credentials.,A Kerberos ticket used to obtain service tickets.
+What is access control?,It determines who can access what.,Security mechanisms that regulate access to resources.
+What is DAC?,The resource owner controls permissions.,"Discretionary Access Control, where owners can control access to their resources."
+What is MAC?,Access is based on centrally enforced classifications and labels.,"Mandatory Access Control, where access is controlled according to centrally defined security classifications and policies."
+What is RBAC?,Permissions are assigned to job roles.,"Role-Based Access Control, where permissions are associated with roles rather than individual users."
+What is ABAC?,Think attributes.,"Attribute-Based Access Control, where access decisions are based on attributes of users, resources, actions, and environmental conditions."
+What is rule-based access control?,Access is determined by predefined rules.,An access control model in which access decisions are based on defined rules or conditions.
+What is a privileged account?,It has elevated permissions.,An account with permissions beyond those normally granted to standard users.
+What is privileged access management (PAM)?,Think controlling and monitoring powerful accounts.,"Security controls and technologies used to manage, secure, monitor, and limit privileged access."
+What is just-in-time access?,Privileged access exists only when needed.,Granting elevated permissions temporarily for a specific task or time period.
+What is network access control (NAC)?,It controls which devices can connect to a network.,A security technology that evaluates and controls device access to a network.
+What is endpoint security?,Protect individual devices.,"Security controls designed to protect endpoints such as laptops, desktops, and servers."
+What is application allowlisting?,Only approved applications are permitted to run.,A security control that allows execution only of explicitly approved software.
+What is application blocklisting?,Known bad applications are prohibited.,A security control that prevents specified applications from executing.
+What is sandboxing?,Isolate code from the rest of the system.,Running code or applications in a restricted environment to limit potential damage.
+What is a secure enclave?,Think isolated hardware-backed security area.,A protected execution or storage environment designed to isolate sensitive operations or data.
+What is a trusted platform module (TPM)?,Think hardware-backed keys and platform security.,"A hardware security component used for cryptographic operations, key storage, and platform integrity functions."
+What is measured boot?,The system records measurements of boot components.,A boot process in which components are measured and recorded to support integrity verification.
+What is secure boot?,Only trusted boot components should execute.,A firmware feature that verifies the digital signatures of boot components before execution.
+What is a hardware root of trust?,Start security from a trusted hardware component.,A hardware-based foundation used to establish and verify system trust.
+What is cryptographic obfuscation?,"Make information harder to understand, but don't confuse it with encryption.",Transforming information to make it difficult to understand without necessarily providing cryptographic security.
+What is steganography?,Hide the existence of the message rather than simply encrypting it.,Concealing information within another file or medium.
+What is a brute-force cryptographic attack?,Try possible keys until one works.,An attack that systematically attempts possible cryptographic keys.
+What is a collision in hashing?,Two different inputs produce the same hash.,A situation where two distinct inputs produce the same hash value.
+What is a cryptographic nonce?,Think number used once.,A unique or sufficiently unpredictable value used once in a cryptographic operation.
+What is perfect forward secrecy?,Compromise of a long-term key should not expose old sessions.,A property where compromise of a long-term private key does not allow decryption of previously captured sessions.
+What is a digital certificate's private key used for in a digital signature?,The signer uses the private half.,The private key is used to create the digital signature.
+What key is used to verify a digital signature?,Use the matching public half.,The signer's public key.
+What key encrypts data for a recipient in public-key encryption?,You need the recipient to be the only one able to decrypt it.,The recipient's public key.
+What key decrypts public-key encrypted data?,The recipient keeps this secret.,The recipient's private key.
+What is key stretching?,Make password guessing more computationally expensive.,Applying a computationally expensive process to a password or key material to slow brute-force and dictionary attacks.
+What is PBKDF2?,Think password-based key derivation.,A password-based key derivation function that uses repeated cryptographic operations to make password cracking more expensive.
+What is bcrypt?,A password hashing function designed to be computationally expensive.,A password hashing algorithm designed to resist brute-force attacks through configurable computational cost.
+What is Argon2?,Modern password hashing designed to resist specialized cracking hardware.,A password hashing function designed to be memory-hard and resistant to brute-force attacks.
+What is the purpose of a cryptographic salt?,Make identical passwords produce different stored hashes.,A unique random value added to password input before hashing.
+What is certificate pinning?,The application expects a specific certificate or public key.,A technique that restricts trusted certificates or public keys for a specific application or service.
+What is a self-signed certificate?,The certificate is signed by itself rather than a trusted CA.,A certificate signed by its own private key instead of by an external certificate authority.
+What is a wildcard certificate?,One certificate covers multiple hostnames under a domain.,A certificate containing a wildcard name that can authenticate multiple subdomains.
+What is a root CA?,It is at the top of the certificate trust chain.,A certificate authority whose certificate is inherently trusted by a system or trust store.
+What is an intermediate CA?,It sits between the root CA and end-entity certificates.,A subordinate certificate authority that issues certificates on behalf of a root or higher-level CA.
+What is certificate expiration?,Certificates have a validity period.,The point at which a certificate is no longer considered valid because its defined validity period has ended.
+What is a certificate revocation?,Invalidate a certificate before its normal expiration.,The process of declaring a certificate no longer trusted before its expiration.
+What is a security control gap?,Think missing or inadequate protection.,"A situation where required security protection is absent, insufficient, or ineffective."
+What is a vulnerability disclosure program?,A formal way for researchers to report security weaknesses.,A program that provides a defined process for reporting and handling discovered vulnerabilities.
+What is a bug bounty program?,Organizations reward researchers for qualifying security findings.,A program that provides rewards for responsibly reported vulnerabilities.
+What is responsible disclosure?,Report vulnerabilities through an approved process rather than publicly exploiting them.,A practice of reporting security vulnerabilities to the responsible organization and allowing an opportunity for remediation.
+What is CVE?,Think standardized vulnerability identifier.,"Common Vulnerabilities and Exposures, a system providing standardized identifiers for publicly known vulnerabilities."
+What is CVSS?,Think vulnerability severity score.,"Common Vulnerability Scoring System, a framework for rating the severity of vulnerabilities."
+What is CWE?,Think weakness category rather than a specific vulnerability.,"Common Weakness Enumeration, a catalog of common software and hardware weaknesses."
+What is ATT&CK?,Think adversary behavior knowledge base.,"MITRE ATT&CK, a knowledge base of adversary tactics and techniques based on real-world observations."
+What is the Cyber Kill Chain?,Think stages of an attack.,A model describing stages attackers may use during a cyberattack.
+What is reconnaissance?,The attacker gathers information before attacking.,The process of collecting information about a target.
+What is OSINT?,Information gathered from publicly available sources.,Open Source Intelligence.
+What is active reconnaissance?,The target is directly interacted with.,"Reconnaissance involving direct interaction with the target, such as scanning."
+What is passive reconnaissance?,Gather information without directly interacting with the target.,Reconnaissance using publicly available or indirectly obtained information.
+What is port scanning?,Check which network ports are accessible.,"A technique used to identify open, closed, or filtered network ports."
+What is vulnerability scanning?,Look for known weaknesses after identifying systems and services.,Automated or semi-automated identification of known vulnerabilities.
+What is a security control assessment?,Determine whether controls are implemented and effective.,An evaluation of security controls to determine whether they meet defined requirements.
