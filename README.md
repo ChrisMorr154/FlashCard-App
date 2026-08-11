@@ -195,14 +195,6 @@ It helps others discover the project and motivates continued development.
 
 ---
 
-# 📄 License
-
-This project is licensed under the MIT License.
-
-See the `LICENSE.txt` file for more information.
-
----
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
